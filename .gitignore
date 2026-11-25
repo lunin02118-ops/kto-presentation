@@ -1,0 +1,28 @@
+# Исходник с внутренними ссылками Bitrix остаётся только локально
+content.html
+
+# Неиспользуемые прежние файлы медиа
+media/banquette.webp
+media/cube_b.png
+media/cube_w.png
+media/isku_pair.webp
+media/kcell_double.webp
+media/kcell_single.webp
+media/nm0013.webp
+media/nm0014.webp
+media/nmv_pass_p07.webp
+media/nmv_sch_p05.webp
+media/nmv_sch_p09.webp
+media/nomad.webp
+media/pass_p01.webp
+media/pass_p04.webp
+media/pass_p06.webp
+media/pass_p09.webp
+media/scheme_p01.webp
+media/scheme_p08.webp
+
+# Служебные временные файлы
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
