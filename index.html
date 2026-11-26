@@ -765,11 +765,11 @@ dialog.viewer::backdrop{background:rgba(5,12,50,.82);-webkit-backdrop-filter:blu
 
 /* ===== вариант А (11 экранов) ===== */
 .stats.s4{grid-template-columns:repeat(4,1fr)}
-.does-card{margin-top:clamp(18px,2.4vw,28px)}
-.does{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
-.does li{display:flex;align-items:center;gap:14px;padding:10px 14px;border-radius:14px;background:var(--paper);border:1px solid var(--line);font-weight:600;color:var(--navy)}
-.does .ic{width:40px;height:40px;border-radius:12px;background:#fff}
-.does .ic svg{width:21px;height:21px}
+.does-card{margin-top:14px;padding:14px 18px}
+.does{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.does li{display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;border-radius:12px;background:var(--paper);border:1px solid var(--line);font-weight:600;font-size:13.5px;color:var(--navy)}
+.does .ic{width:28px;height:28px;border-radius:8px;background:#fff}
+.does .ic svg{width:16px;height:16px}
 /* ===== срок выдачи КД (экран 02) ===== */
 .kdm{margin-top:clamp(18px,2.4vw,28px)}
 .kdm-row{display:grid;grid-template-columns:minmax(0,.9fr) auto minmax(0,1.7fr);gap:clamp(14px,2vw,28px);align-items:center;margin-top:12px}
@@ -1238,7 +1238,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
     <div>
       <span class="pill rise" style="--i:0">Для отдела продаж · ноябрь 2026</span>
       <h1 class="rise" style="--i:1">Технический отдел: <span class="mark">отвечаем за изделие целиком</span></h1>
-      <p class="lead rise" style="--i:2">От заявки и расчёта до проверенного образца в цехе. Что работает уже сейчас, что внедряем в пилотах и как это помогает в продажах</p>
+      <p class="lead rise" style="--i:2">От заявки и расчёта цены до живого образца в цехе. Что уже работает, что в пилотах и как это помогает продажам</p>
       <ul class="tags rise" style="--i:3"><li>Цифры и KPI</li><li>Архив и библиотека</li><li>Металл + корпус</li><li>Станки</li><li>ИИ и паспорта</li><li>R&amp;D и тесты</li></ul>
       <div class="hero-cta rise" style="--i:4">
         <a class="btn btn-light" href="#numbers">Начать <svg class="i"><use href="#i-arrow"/></svg></a>
@@ -1267,7 +1267,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 <section class="page" id="numbers" data-title="В цифрах">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">02 · Акт I · Реальность · Отдел в цифрах</span>
+      <span class="kicker">02 · Отдел в цифрах</span>
       <h2>Две из трёх СЗ проходят через конструкторов — от расчёта до паспорта</h2>
       <p class="lead">Параллельно с текущими заказами гасим технический долг, строим учёт KPI и растим линейку</p>
     </header>
@@ -1278,7 +1278,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
       <div class="stat card rise" style="--i:4"><span class="big-num" data-count="28">28</span><span>схем сборки для покупателя</span></div>
     </div>
     <div class="fact-strip rise" style="--i:4">
-      <span class="fact-pill"><b>63 %</b> СЗ с КТО (и <b>88 %</b> КД-заказов) содержат нестандарт</span>
+      <span class="fact-pill"><b>63 %</b> СЗ с КТО — с нестандартом (в КД-заказах — <b>88 %</b>)</span>
       <span class="fact-pill">Лист согласования — медиана <b>1 день</b></span>
       <span class="fact-pill">Рекламации — медиана <b>1,5 дня</b> · закрыто <b>79 %</b></span>
     </div>
@@ -1305,16 +1305,16 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
           </ul>
         </div>
       </div>
-      <p class="kdm-how"><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg>Сократить срок помогут единая библиотека и автоматизированная система формирования документации в цех по стандартным изделиям; по корпусной части — пилот «конструктор → станок». Рост измеряем от этой стартовой медианы</p>
+      <p class="kdm-how"><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg>Ускорят единая библиотека и автовыдача КД по стандарту; по корпусу — пилот «конструктор → станок». Рост меряем от этой стартовой медианы</p>
     </div>
     <div class="card does-card rise" style="--i:6">
       <span class="lbl">Что мы делаем для продаж</span>
       <ul class="does">
-        <li><span class="ic"><svg><use href="#i-ruler"/></svg></span><span>Чертежи на каждый заказ — металл и корпус</span></li>
-        <li><span class="ic"><svg><use href="#i-calc"/></svg></span><span>Просчёт себестоимости для КП и тендеров</span></li>
-        <li><span class="ic"><svg><use href="#i-book"/></svg></span><span>Паспорт и схема сборки для заказчика</span></li>
+        <li><span class="ic"><svg><use href="#i-ruler"/></svg></span><span>Чертежи: металл и корпус</span></li>
+        <li><span class="ic"><svg><use href="#i-calc"/></svg></span><span>Себестоимость для КП</span></li>
+        <li><span class="ic"><svg><use href="#i-book"/></svg></span><span>Паспорт и схема сборки</span></li>
         <li><span class="ic"><svg><use href="#i-checkc"/></svg></span><span>Точная деталь по рекламации</span></li>
-        <li><span class="ic"><svg><use href="#i-cubeplus"/></svg></span><span>Новые изделия — от оценки до серии</span></li>
+        <li><span class="ic"><svg><use href="#i-cubeplus"/></svg></span><span>Новые изделия до серии</span></li>
       </ul>
     </div>
     <p class="foot">СЗ, нестандарт и сроки — база задач Bitrix24 за 22.06–22.11.2026; паспорта и схемы — выпущенные документы на 22.11.2026</p>
@@ -1325,9 +1325,9 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 <section class="page" id="debt" data-title="Долг и заявки">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">03 · Акт I · Реальность · Откуда потери времени</span>
-      <h2>Две причины потерь: 10 лет без архива и неполный вход заявок</h2>
-      <p class="lead">Компании 10+ лет — КД системно не фиксировали, а до начала чертежей мы нередко выясняем исходные по заявке днями</p>
+      <span class="kicker">03 · Откуда потери</span>
+      <h2>Откуда потери времени: 10 лет без архива и нечёткий вход заявок</h2>
+      <p class="lead">Раньше чертежи жили в личных папках и памяти людей, а до старта работы мы днями выясняем, что нужно клиенту</p>
     </header>
     <ol class="cascade c5">
       <li style="--i:0;--h:0"><span class="ic"><svg><use href="#i-db"/></svg></span>Нет единого архива</li>
@@ -1361,8 +1361,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
       </div>
       <div class="card rise" style="--i:6">
         <span class="lbl">Потери на входе заявок</span>
-        <h3 style="margin:6px 0 4px">Сначала выясняем, потом делаем</h3>
-        <p class="exp-sub">Нет единой формы и статуса — исходные уточняем днями, иногда неделями</p>
+        <p class="exp-sub" style="margin-top:8px">Нет единой формы и статуса — на уточнение исходных уходят дни, иногда недели</p>
         <ul class="diff">
           <li class="bad"><span class="ic"><svg><use href="#i-eye"/></svg></span><div><b>На фото одно, в описании другое</b><small>На картинке стандартное изделие, по тексту — нестандарт</small></div></li>
           <li class="bad"><span class="ic"><svg><use href="#i-table"/></svg></span><div><b>20 столов под одним наименованием</b><small>Размеры разные, отличаются только техописанием — без своего артикула</small></div></li>
@@ -1371,7 +1370,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         </ul>
       </div>
     </div>
-    <p class="keyline warnline rise" style="--i:8"><svg class="i"><use href="#i-users"/></svg>Решается только вместе: продажи, КТО, производство, руководство. Дальше — какой фундамент строим в ответ</p>
+    <p class="keyline warnline rise" style="--i:8"><svg class="i"><use href="#i-users"/></svg>Одним отделом это не вытянуть — решаем вместе: продажи, КТО, производство, руководство</p>
   </div>
 </section>
 
@@ -1379,7 +1378,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 <section class="page" id="pdm" data-title="Архив и библиотека">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">04 · Акт II · Фундамент · Архив и библиотека</span>
+      <span class="kicker">04 · Архив и библиотека</span>
       <h2>Единый архив и библиотека: одна версия и один крепёж у всех</h2>
       <p class="lead">Переносим серии в общее хранилище и собираем единые 3D-модели крепежа. Целевая схема — правки и выдача в цех только из базы</p>
     </header>
@@ -1392,7 +1391,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
             <div><b data-count="8">8</b><span>изделий Smarty</span></div>
             <div><b data-count="178">178</b><span>файлов библиотеки</span></div>
           </div>
-          <p class="foot">NOMAD — на ручной проверке до выдачи в цех; Smarty перечерчиваем заново. Также в базе тумба/шкаф «Москвы 2.0» и 3D ARco Duo</p>
+          <p class="foot">NOMAD — на проверке до выдачи в цех; Smarty перечерчиваем заново. В базе также тумба/шкаф «Москвы 2.0» и 3D ARco Duo</p>
         </div>
         <article class="card case mis rise" style="--i:2">
           <span class="tag"><svg class="i"><use href="#i-alert"/></svg>Зачем единая библиотека · винт не входит в отверстие</span>
@@ -1420,13 +1419,13 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         </div>
       </div>
       <div class="pdm-side">
-        <span class="lbl rise" style="--i:1">Что внедряем — статусы честно</span>
+        <span class="lbl rise" style="--i:1">Как это работает сейчас</span>
         <ul class="gives">
-          <li class="rise" style="--i:2"><span class="ic"><svg><use href="#i-db"/></svg></span><div><b>Одна версия чертежей у всех</b><small>Металл и корпус в одном хранилище, каждая правка — новая версия. Выдача в цех только из базы — целевая схема</small></div><span class="st pilot">пилот</span></li>
-          <li class="rise" style="--i:3"><span class="ic"><svg><use href="#i-checkc"/></svg></span><div><b>Проверка вторым конструктором</b><small>На пилотных заказах перед выдачей чертежи проверяет второй конструктор</small></div><span class="st pilot">пилот</span></li>
-          <li class="rise" style="--i:4"><span class="ic"><svg><use href="#i-layers"/></svg></span><div><b>Общий крепёж и типовые модули</b><small>Одни 3D-модели крепежа, фурнитуры и деталей для всех — уже ставим в заказы, наполняем и чистим</small></div><span class="st prog">в работе</span></li>
-          <li class="rise" style="--i:5"><span class="ic"><svg><use href="#i-search"/></svg></span><div><b>Рекламационная деталь — по базе</b><small>Деталь приедет с нужными отверстиями и встанет на место — по мере наполнения базы</small></div><span class="st prog">в работе</span></li>
-          <li class="rise" style="--i:6"><span class="ic"><svg><use href="#i-link"/></svg></span><div><b>Автовыдача КД по стандарту и 1С</b><small>Автоматическое формирование комплекта в цех (металл + корпус + список деталей) и коды 1С из модели</small></div><span class="st plan">план</span></li>
+          <li class="rise" style="--i:2"><span class="ic"><svg><use href="#i-db"/></svg></span><div><b>Одна версия у всех</b><small>Металл и корпус в одной базе, правки — только новой версией</small></div><span class="st pilot">пилот</span></li>
+          <li class="rise" style="--i:3"><span class="ic"><svg><use href="#i-checkc"/></svg></span><div><b>Проверка вторым конструктором</b><small>На пилотных заказах чертежи проверяют до выдачи в цех</small></div><span class="st pilot">пилот</span></li>
+          <li class="rise" style="--i:4"><span class="ic"><svg><use href="#i-layers"/></svg></span><div><b>Общий крепёж и типовые узлы</b><small>Одни 3D-модели на весь отдел: уже ставим в заказы и наполняем</small></div><span class="st prog">в работе</span></li>
+          <li class="rise" style="--i:5"><span class="ic"><svg><use href="#i-search"/></svg></span><div><b>Деталь по рекламации из базы</b><small>Приедет с нужными отверстиями и встанет на место без подгонки</small></div><span class="st prog">в работе</span></li>
+          <li class="rise" style="--i:6"><span class="ic"><svg><use href="#i-link"/></svg></span><div><b>Автовыдача КД по стандарту и 1С</b><small>Готовый комплект в цех по стандарту и коды 1С прямо из 3D-модели</small></div><span class="st plan">план</span></li>
         </ul>
         <div class="keep rise" style="--i:7">
           <span class="ic"><svg><use href="#i-users"/></svg></span>
@@ -1443,7 +1442,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 <section class="page" id="combo" data-title="Металл + корпус">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">05 · Акт II · Фундамент · Металл + корпус</span>
+      <span class="kicker">05 · Металл + корпус</span>
       <h2>Металл + корпус: наша сила — и один ответственный за стык</h2>
       <p class="lead">Большая часть линейки — комбинированные изделия. Мало кто на рынке делает и металл, и корпус под одной крышей</p>
     </header>
@@ -1476,7 +1475,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         <div class="joint-box rise" style="--i:3">
           <span class="q" aria-hidden="true">⇄</span>
           <div><b>Стык</b> — <small>точки крепления, крепёж, зазоры, собираемость</small></div>
-          <em>Сейчас стык держится на опыте сборщиков в цехе — пытаемся реализовать единый порядок через правило и общую базу</em>
+          <em>Сейчас стык держится на опыте сборщиков — переводим его на единое правило и общую базу</em>
         </div>
         <div class="pair">
           <figure class="vcard rise" style="--i:4"><img class="still" src="media/lab_shv.webp" alt="Шкаф вытяжной демонстрационный: камера со стеклом на стальных стойках, основание из ЛДСП, мойка и вентилятор — рендер изделия" width="1200" height="900" loading="lazy" data-view="media/lab_shv.webp" data-cap="Шкаф вытяжной демонстрационный · камера на стойках из стальной трубы, основание из ЛДСП, мойка со смесителем, вытяжка с вентилятором, свет и розетки · рендер изделия из каталога"><figcaption><span>Вытяжной шкаф · металл + ЛДСП</span></figcaption></figure>
@@ -1500,7 +1499,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         </ol>
       </div>
     </div>
-    <div class="banner rise" style="--i:6"><svg class="i"><use href="#i-target"/></svg><p><b>Зачем это продажам:</b> цель — чтобы комбинированное изделие собиралось с первого раза, без доработок на объекте. Пытаемся реализовать схему на новых изделиях и позициях «Москвы 2.0»</p></div>
+    <div class="banner rise" style="--i:6"><svg class="i"><use href="#i-target"/></svg><p><b>Зачем это продажам:</b> цель — чтобы изделие собиралось с первого раза, без подгонки на объекте. Отрабатываем на новинках и «Москве 2.0»</p></div>
   </div>
 </section>
 
@@ -1508,7 +1507,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 <section class="page dark" id="pilot" data-title="Станки">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">06 · Акт II · Фундамент · От модели до станка</span>
+      <span class="kicker">06 · Конструктор → станок</span>
       <h2>Конструктор → станок: детали с этикеткой без ручного переноса</h2>
       <p class="lead">Пилот по корпусной мебели: впервые связали конструктора и станки. Поможет сократить срок выдачи КД по стандарту</p>
     </header>
@@ -1549,8 +1548,8 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
           <div><b>Продажам</b>быстрее чертежи в цех и запуск заказа</div>
           <div><b>Производству</b>экономия времени без ручного ввода</div>
         </div>
-        <p class="plan rise" style="--i:7"><b>Планируем:</b> с 2027 года часть проектов, скорее всего, пойдёт с этикетками</p>
-        <p class="plan rise" style="--i:8"><b>Меряем:</b> эффект пилота — по стартовой медиане выдачи КД</p>
+        <p class="plan rise" style="--i:7"><b>Цель на 2027:</b> перевести часть серийных проектов на работу с этикетками</p>
+        <p class="plan rise" style="--i:8"><b>Меряем:</b> эффект увидим по стартовой медиане КД</p>
       </div>
     </div>
   </div>
@@ -1560,7 +1559,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 <section class="page" id="ai-docs" data-title="ИИ и паспорта">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">07 · Акт II · Фундамент · ИИ и документы покупателя</span>
+      <span class="kicker">07 · ИИ и документы покупателя</span>
       <h2>ИИ-логистика, расчёт цены и новый стандарт паспорта</h2>
       <p class="lead">Две прямые пользы продажам: ускоряем ранний расчёт упаковки и себестоимости с ИИ, и уже выдаём покупателю понятные паспорта и схемы сборки</p>
     </header>
@@ -1569,12 +1568,12 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         <span class="lbl">ИИ — логистика, укладка и расчёт себестоимости</span>
         <span class="st pilot">пилот · отлаживаем схему</span>
       </div>
-      <p class="kdm-how" style="margin:0"><svg class="i" aria-hidden="true"><use href="#i-spark"/></svg>Отлаживаем схему работы с ИИ: уже на ранней стадии оперативно прикидываем количество изделий и схему упаковки для предварительного расчёта логистики, сравниваем варианты и прорабатываем конструктив под удобную перевозку. Решение и ответственность — за конструктором</p>
+      <p class="kdm-how" style="margin:0"><svg class="i" aria-hidden="true"><use href="#i-spark"/></svg>С ИИ на ранней стадии прикидываем упаковку, вместимость и логистику — сразу дорабатываем конструктив под удобную перевозку. Решение и ответственность — всегда за конструктором</p>
       <div class="ai-stats">
         <div class="stat card"><span class="big-num" data-count="731">731</span><span>комплект скамьи FLS на машину вместо 440 — та же конструкция, другая укладка</span></div>
         <div class="stat card"><span class="big-num" data-count="252">252</span><span>табурета на паллету 1200 × 1200 — штабель проверен в 3D</span></div>
-        <div class="stat card"><span class="big-num">По модели</span><span>теоретическая себестоимость металла по чистой массе детали; дальше — раскрой 6 м на труборез</span></div>
-        <div class="stat card"><span class="big-num">Дни → часы</span><span>цель по просчёту цены и логистики для КП с ИИ-агентом (вместо недель)</span></div>
+        <div class="stat card"><span class="big-num">По модели</span><span>чистый расход металла по 3D (теоретическая цена); дальше — раскрой 6 м на труборез</span></div>
+        <div class="stat card"><span class="big-num">Дни, не недели</span><span>цель по расчёту цены и укладки для КП с ИИ-агентом</span></div>
       </div>
     </div>
     <div class="card kp-band rise" style="--i:2">
@@ -1604,7 +1603,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 <section class="page" id="products" data-title="Новые изделия">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">08 · Акт III · Доказательство · Новые и обновлённые изделия</span>
+      <span class="kicker">08 · Новые и обновлённые изделия</span>
       <h2>Новые изделия: больше готовых решений для заказчика</h2>
       <p class="lead">От 3D-модели и вариантов исполнения — до живых образцов в цехе. На каждой карточке можно открыть живые фото и короткие видео</p>
     </header>
@@ -1616,7 +1615,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
           <button class="zoom" type="button" data-view="media/banquette_360.mp4" data-cap="Банкетка со спинкой · поворот 360° с итоговой 3D-модели" aria-label="Открыть крупно"><svg class="i"><use href="#i-full"/></svg></button>
         </figure>
         <h3>Банкетка со спинкой</h3>
-        <p>металлокаркас для цеха</p>
+        <p>сварной металлокаркас — готов образец в цехе</p>
         <div class="story-links">
           <button class="sbtn" type="button" data-gallery="banquette">📷 Живой каркас (3 фото)</button>
         </div>
@@ -1630,7 +1629,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         </figure>
         <div class="mini-seg" id="kcellSeg" data-fig="kcellFig" role="group" aria-label="Исполнение стола Kcell"><button type="button" data-k="single" aria-pressed="true">Одинарный</button><button type="button" data-k="double" aria-pressed="false">Двойной</button></div>
         <h3>Столы с перегородкой Kcell</h3>
-        <p>вариант с царгой по просьбе клиента. Цвета на рендере условные</p>
+        <p>вариант с царгой под запрос клиента · прошёл живой тест нагрузки</p>
         <div class="story-links">
           <button class="sbtn" type="button" data-gallery="kcell">📷 Цех и сборка (6)</button>
           <button class="sbtn vid" type="button" data-view="media/live/test_kcell_load.mp4" data-sound="1" data-cap="Испытание стола Kcell на прочность · 19 с · проверка жёсткости и двойная живая нагрузка на столешницу">▶ Тест · 19 с</button>
@@ -1653,7 +1652,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         </div>
         <div class="mini-seg" id="nmView" role="group" aria-label="Вид узла высоты"><button type="button" data-v="in" aria-pressed="true">Изнутри</button><button type="button" data-v="out" aria-pressed="false">Снаружи</button></div>
         <h3>Обновлённый NOMAD</h3>
-        <p>Снаружи без головок винтов, высота — 4 винтами вместо 8. Чертежи на проверке, до серии — пробный образец</p>
+        <p>Снаружи без головок винтов, высота — 4 винтами вместо 8. Чертежи на проверке, до серии — опытный образец</p>
         <div class="story-links">
           <button class="sbtn" type="button" data-gallery="nomad">📷 Заклёпки вживую (2)</button>
           <button class="sbtn vid" type="button" data-view="media/live/proto_desk_test.mp4" data-sound="1" data-cap="Опытный образец ученической парты · 17 с · обзор узлов и проверка устойчивости">▶ Образец · 17 с</button>
@@ -1668,7 +1667,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         </figure>
         <div class="mini-seg" id="iskuSeg" data-fig="iskuFig" role="group" aria-label="Стол или стул по типу ISKU"><button type="button" data-k="table" data-cap="Стол по типу ISKU · ростовые группы 5–7 · поворот 360° с 3D-модели КТО" aria-pressed="true">Стол</button><button type="button" data-k="chair" data-cap="Стул по типу ISKU · ростовые группы 5–7 · поворот 360° с 3D-модели КТО" aria-pressed="false">Стул</button></div>
         <h3>Стол и стул по типу ISKU</h3>
-        <p>экспорт в Латвию, ростовые группы 5⁠–⁠7. КД и калькуляция — КТО, опытные образцы изготовлены. Цвета на рендере условные</p>
+        <p>экспорт в Латвию, ростовые группы 5⁠–⁠7. КД и расчёт — КТО, образцы готовы</p>
         <div class="story-links">
           <button class="sbtn" type="button" data-gallery="isku">📷 Опытные образцы (3 фото)</button>
         </div>
@@ -1691,7 +1690,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
             <span class="chip"><svg class="i"><use href="#i-gauge"/></svg>регулировка по высоте</span>
             <span class="chip"><svg class="i"><use href="#i-layers"/></svg>ростовые группы 5–7</span>
           </div>
-          <p class="exp-sub">Поворот 360° — с 3D-модели; модель переносим в SolidWorks. Цвета на рендере условные</p>
+          <p class="exp-sub">Поворот 360° — с 3D-модели; модель переносим в SolidWorks</p>
         </div>
       </article>
       <article class="card prod-card rise" style="--i:5">
@@ -1704,6 +1703,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         </ul>
       </article>
     </div>
+    <p class="foot">Цвета на 3D-рендерах условные — подбираются по RAL и декорам ЛДСП под конкретный заказ</p>
   </div>
 </section>
 
@@ -1711,7 +1711,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 <section class="page" id="rnd" data-title="R&amp;D и тесты">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">09 · Акт III · Доказательство · R&amp;D и испытания в цехе</span>
+      <span class="kicker">09 · R&amp;D и испытания в цехе</span>
       <h2>Разработка в деле: от 3D-модели до живого образца и теста</h2>
       <p class="lead">Не останавливаемся на картинках — собираем опытные образцы, проверяем жёсткость и нагрузку в цехе до запуска серии</p>
     </header>
@@ -1741,7 +1741,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
     </div>
 
     <div class="rnd-sec-head rise" style="--i:3">
-      <h3>Испытания и образцы — короткие вырезки по главным моментам</h3>
+      <h3>Три живых испытания — без лишнего, по 16–19 секунд</h3>
     </div>
     <div class="rnd-tests">
       <article class="card rnd-tcard rise" style="--i:3">
@@ -1777,7 +1777,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
     </div>
 
     <div class="rnd-sec-head rise" style="--i:6">
-      <h3>Живой фото-коллаж из цеха (нажмите для просмотра галереи ← →)</h3>
+      <h3>Фото из цеха — 5 изделий, 16 кадров <span style="font-weight:500;font-size:13px;color:var(--muted)">· листайте ← →</span></h3>
       <div class="rnd-filters" id="rndFilters" role="group" aria-label="Фильтр фото по изделиям">
         <button type="button" data-cat="all" aria-pressed="true">Все (16)</button>
         <button type="button" data-cat="kcell" aria-pressed="false">Kcell (6)</button>
@@ -1812,7 +1812,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 <section class="page" id="scope" data-title="Границы">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">10 · Акт IV · Правила · Новое изделие и границы</span>
+      <span class="kicker">10 · Границы и новое изделие</span>
       <h2>Что делаем сами, а где нужен специалист</h2>
       <p class="lead">Доработать и адаптировать изделие под наше производство — наша работа. Новое с нуля, свет и несущие конструкции — другие специалисты и другие сроки</p>
     </header>
@@ -1835,8 +1835,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         <li class="ext"><span class="mk"><svg class="i"><use href="#i-users"/></svg></span><div><b>Несущие конструкции и проектные разделы</b><small>капремонт, переустройство, актовые залы</small></div><span class="st pilot">подрядчик с лицензией</span></li>
       </ol>
     </div>
-    <p class="keyline rise" style="--i:7"><svg class="i"><use href="#i-layers"/></svg>Пример — «Москва 2.0»: 17 позиций по чужим ТЗ, 2 готовы, 5 в работе. Сроки по ним — только через КТО</p>
-    <p class="keyline warnline rise" style="--i:8"><svg class="i"><use href="#i-alert"/></svg>Для продаж: новое изделие, чужой каталог, свет или несущие конструкции — сначала к нам. Сроки и цена — после оценки, до обещания клиенту</p>
+    <p class="keyline warnline rise" style="--i:7"><svg class="i"><use href="#i-alert"/></svg>Пример — «Москва 2.0» (17 позиций по чужим ТЗ: 2 готовы, 5 в работе). Новое изделие, чужой каталог, свет или несущие — сначала на оценку в КТО, и только потом сроки клиенту</p>
   </div>
 </section>
 
@@ -1844,15 +1843,15 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 <section class="page" id="help" data-title="Как помочь">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">11 · Акт IV · Правила · Как вы можете помочь</span>
+      <span class="kicker">11 · Как ускорить заказ</span>
       <h2>Шесть правил, которые ускорят ваш заказ</h2>
       <p class="lead">Чем точнее вход — тем быстрее и точнее расчёт себестоимости и выше качество изделия. Чертежи — уже финальный шаг</p>
     </header>
     <div class="asks">
       <div class="card ask rise" style="--i:1"><span class="n">1</span><span class="ic"><svg><use href="#i-doc"/></svg></span><h3>Полная СЗ и исходные — до старта</h3><p>Все позиции, материалы, размеры, ТЗ</p></div>
       <div class="card ask rise" style="--i:2"><span class="n">2</span><span class="ic"><svg><use href="#i-files"/></svg></span><h3>Документы объекта — запросите у клиента</h3><p>Проект здания, обмерные планы, фото, видео — для предварительного расчёта часто хватает без замера</p></div>
-      <div class="card ask rise" style="--i:3"><span class="n">3</span><span class="ic"><svg><use href="#i-pen"/></svg></span><h3>Изменения — только через СЗ</h3><p>Данные заказчика вовремя, не устно</p></div>
-      <div class="card ask rise" style="--i:4"><span class="n">4</span><span class="ic"><svg><use href="#i-gauge"/></svg></span><h3>Реалистичный срок в КП</h3><p>Заложите время на расчёт, конструктив и чертежи — поможем оценить</p></div>
+      <div class="card ask rise" style="--i:3"><span class="n">3</span><span class="ic"><svg><use href="#i-pen"/></svg></span><h3>Изменения — только через СЗ</h3><p>Все правки клиента фиксируем в СЗ — не в чатах и не на словах</p></div>
+      <div class="card ask rise" style="--i:4"><span class="n">4</span><span class="ic"><svg><use href="#i-gauge"/></svg></span><h3>Реалистичный срок в КП</h3><p>Закладывайте время на расчёт, конструктив и КД — поможем оценить до КП</p></div>
       <div class="card ask rise" style="--i:5"><span class="n">5</span><span class="ic"><svg><use href="#i-bulb"/></svg></span><h3>Новое изделие, свет, несущие конструкции — сначала к нам</h3><p>Оценим до обещания клиенту и скажем, нужен ли подрядчик</p></div>
       <div class="card ask hot rise" style="--i:6"><span class="n">6</span><span class="ic"><svg><use href="#i-users"/></svg></span><h3>На объекте — один ответственный с первого дня</h3><p>Размещение согласовано с вентиляцией, светом и отделкой до чертежей</p></div>
     </div>
@@ -1868,11 +1867,11 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
     <div class="result">
       <div class="pop" style="--i:8">Полная СЗ и документы объекта</div>
       <span class="arr pop" style="--i:9" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span>
-      <div class="pop" style="--i:10">Точный расчёт и себестоимость</div>
+      <div class="pop" style="--i:10">Точный расчёт цены</div>
       <span class="arr pop" style="--i:11" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span>
-      <div class="pop" style="--i:12">Концепт и конструктив, затем чертежи</div>
+      <div class="pop" style="--i:12">Конструктив и чертежи</div>
       <span class="arr pop" style="--i:13" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span>
-      <div class="pop" style="--i:14">Качество изделия, заказ в срок</div>
+      <div class="pop" style="--i:14">Качество и заказ в срок</div>
     </div>
   </div>
 </section>
@@ -1882,9 +1881,9 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   <div class="hero-bg" aria-hidden="true"><div class="grid-lines"></div></div>
   <div class="wrap">
     <div class="final-head">
-      <span class="kicker rise">12 · Акт IV · Честный итог</span>
+      <span class="kicker rise">12 · Итог на ноябрь 2026</span>
       <h2 class="rise" style="--i:1">Мы не просто чертим по СЗ — <span class="mark">отвечаем за изделие целиком</span></h2>
-      <p class="lead rise" style="--i:2">Честная карта состояния на ноябрь 2026: что уже даёт результат, что отлаживаем в пилотах и куда идём в 2027</p>
+      <p class="lead rise" style="--i:2">Где мы сейчас: что уже даёт результат, что в пилотах и план на 2027</p>
     </div>
     <div class="final-cols">
       <article class="fcol ok rise" style="--i:3">
@@ -1907,7 +1906,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
       <article class="fcol plan rise" style="--i:5">
         <div class="fcol-h"><h3>План на 2027</h3><span class="fbadge">План</span></div>
         <ul>
-          <li><svg class="i"><use href="#i-gauge"/></svg><span><b>Сокращение потерь по стандарту:</b> автовыдача КД в цех (металл в тот же день, корпус ≤ 1 дня)</span></li>
+          <li><svg class="i"><use href="#i-gauge"/></svg><span><b>Быстрый запуск стандарта:</b> автовыдача КД в цех (металл в тот же день, корпус ≤ 1 дня)</span></li>
           <li><svg class="i"><use href="#i-tag"/></svg><span><b>Станки и этикетки:</b> часть проектов с этикетками, раскрой 6 м трубы на труборез</span></li>
           <li><svg class="i"><use href="#i-link"/></svg><span><b>Единый комплект и 1С:</b> выпуск «металл + корпус + список деталей» и артикулы 1С из 3D-модели</span></li>
         </ul>
