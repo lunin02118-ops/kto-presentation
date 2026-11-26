@@ -1001,14 +1001,61 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 .viewer-foot .viewer-cap{padding:0;border:0;margin:0}
 .viewer-cnt{flex:none;font-size:12.5px;font-weight:800;color:var(--blue);background:var(--ice);padding:4px 10px;border-radius:999px;font-variant-numeric:tabular-nums}
 
-/* фикс контраста финального экрана (аудит v26) */
+/* фикс контраста финального экрана + 4-актная перестройка v29 */
+.st.pilot{background:#FFF1D6;color:#7A4D00}
+.st.prog{background:#E6EEFF;color:#173EB5}
+.fact-strip{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.fact-pill{display:inline-flex;align-items:center;gap:7px;padding:7px 12px;border-radius:12px;background:#fff;border:1px solid var(--line);font-size:13.5px;color:var(--text);font-weight:500;box-shadow:0 4px 12px -10px rgba(10,26,110,.35)}
+.fact-pill b{font-family:var(--f-display);font-weight:800;color:var(--blue);font-size:13.5px}
+.fact-pill.warn b{color:var(--red)}
+.debt-split{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+.debt-col{display:grid;gap:12px}
+.debt-smarty{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;background:#FDECEC;border:1px solid #F6CACA;color:#7A1F1F;font-size:14px;line-height:1.38}
+.debt-smarty b{font-family:var(--f-display);font-weight:800;font-size:20px;color:var(--red);white-space:nowrap}
+.ai-top{display:grid;gap:12px}
+.ai-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.ai-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ai-stats .stat{padding:16px}
+.ai-stats .big-num{font-size:clamp(26px,2.5vw,38px)}
+.ai-stats span:last-child{font-size:13.5px;line-height:1.35}
+#ai-docs .kp-band{margin-top:16px}
+.help-sys{margin-top:16px;display:grid;gap:10px}
+.help-sys-list{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.help-sys-item{display:flex;flex-direction:column;justify-content:space-between;gap:8px;padding:12px 14px;border-radius:14px;background:var(--paper);border:1px solid var(--line)}
+.help-sys-item b{color:var(--navy);font-size:14px;line-height:1.25}
+.help-sys-item small{display:block;color:var(--muted);font-size:12.5px;line-height:1.32;margin-top:3px}
+.help-sys-item .st{align-self:flex-start;font-size:10.5px;padding:3px 8px}
+
+/* экран 12: честный Итог в 3 колонки */
+.final .wrap{display:block;min-height:0}
+.final-head{max-width:900px;margin-bottom:clamp(18px,2.2vw,26px)}
+.final-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch}
+.fcol{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:var(--r);padding:18px 20px;display:flex;flex-direction:column;gap:12px}
+.fcol.ok{border-top:4px solid #3CD08B}
+.fcol.pilot{border-top:4px solid var(--orange)}
+.fcol.plan{border-top:4px dashed var(--sky);background:rgba(255,255,255,.05)}
+.fcol-h{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.fcol-h h3{font-size:17px;color:#fff;margin:0}
+.fcol .fbadge{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:999px;white-space:nowrap}
+.fcol.ok .fbadge{background:#3CD08B;color:#06291A}
+.fcol.pilot .fbadge{background:var(--orange);color:var(--navy)}
+.fcol.plan .fbadge{background:rgba(185,204,255,.18);color:var(--sky);border:1px dashed rgba(185,204,255,.45)}
+.fcol ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.fcol li{display:grid;grid-template-columns:18px 1fr;gap:9px;align-items:start;font-size:14.5px;line-height:1.38;color:#EEF3FF}
+.fcol li b{color:#fff}
+.fcol li svg{width:17px;height:17px;margin-top:2px;flex:none}
+.fcol.ok li svg{color:#3CD08B}
+.fcol.pilot li svg{color:var(--orange)}
+.fcol.plan li svg{color:var(--sky)}
+.final-foot{margin-top:clamp(18px,2.2vw,26px);display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding-top:16px;border-top:1px solid rgba(255,255,255,.14)}
+.final-foot .sign{margin:0}
 .final .concl .ck{background:var(--orange);color:var(--navy);border:0}
 .final .concl .ck svg{stroke:var(--navy);stroke-width:2.6;fill:none;width:16px;height:16px}
 .final .plan{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.26);color:#EEF3FF}
 .final .plan b{color:var(--orange)}
 
-@media (max-width:1050px){.rnd-hero{grid-template-columns:1fr}.rnd-tests{grid-template-columns:1fr 1fr}.rnd-gal{grid-template-columns:repeat(3,1fr)}}
-@media (max-width:640px){.rnd-tests,.rnd-gal{grid-template-columns:1fr 1fr}.rnd-tests{grid-template-columns:1fr}}
+@media (max-width:1050px){.rnd-hero{grid-template-columns:1fr}.rnd-tests{grid-template-columns:1fr 1fr}.rnd-gal{grid-template-columns:repeat(3,1fr)}.ai-stats,.help-sys-list{grid-template-columns:1fr 1fr}.final-cols{grid-template-columns:1fr}.debt-split{grid-template-columns:1fr}}
+@media (max-width:640px){.rnd-tests,.rnd-gal{grid-template-columns:1fr 1fr}.rnd-tests,.ai-stats,.help-sys-list{grid-template-columns:1fr}}
 
 /* ===== адаптив ===== */
 @media (max-width:1100px){
@@ -1163,18 +1210,16 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   <nav class="tabs" aria-label="Разделы презентации">
     <a href="#home"><span class="n">01</span>Главная</a>
     <a href="#numbers"><span class="n">02</span>В цифрах</a>
-    <a href="#debt"><span class="n">03</span>Долг</a>
-    <a href="#changes"><span class="n">04</span>Было → стало</a>
-    <a href="#intake"><span class="n">05</span>Заявка и объект</a>
-    <a href="#scope"><span class="n">06</span>Где нужен специалист</a>
-    <a href="#combo"><span class="n">07</span>Металл + корпус</a>
-    <a href="#pdm"><span class="n">08</span>Архив чертежей</a>
-    <a href="#library"><span class="n">09</span>Библиотека</a>
-    <a href="#pilot"><span class="n">10</span>Конструктор → станок</a>
-    <a href="#products"><span class="n">11</span>Новые изделия</a>
-    <a href="#rnd"><span class="n">12</span>R&amp;D и тесты</a>
-    <a href="#help"><span class="n">13</span>Как помочь</a>
-    <a href="#final"><span class="n">14</span>Итог</a>
+    <a href="#debt"><span class="n">03</span>Долг и заявки</a>
+    <a href="#pdm"><span class="n">04</span>Архив и библиотека</a>
+    <a href="#combo"><span class="n">05</span>Металл + корпус</a>
+    <a href="#pilot"><span class="n">06</span>Станки</a>
+    <a href="#ai-docs"><span class="n">07</span>ИИ и паспорта</a>
+    <a href="#products"><span class="n">08</span>Новые изделия</a>
+    <a href="#rnd"><span class="n">09</span>R&amp;D и тесты</a>
+    <a href="#scope"><span class="n">10</span>Границы</a>
+    <a href="#help"><span class="n">11</span>Как помочь</a>
+    <a href="#final"><span class="n">12</span>Итог</a>
   </nav>
   <button class="tbtn" id="notesBtn" type="button" aria-expanded="false" aria-controls="notes" title="Заметки докладчика (N)"><svg class="i"><use href="#i-notes"/></svg></button>
   <button class="tbtn" id="fsBtn" type="button" title="Во весь экран (F)"><svg class="i"><use href="#i-full"/></svg></button>
@@ -1193,8 +1238,8 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
     <div>
       <span class="pill rise" style="--i:0">Для отдела продаж · ноябрь 2026</span>
       <h1 class="rise" style="--i:1">Технический отдел: <span class="mark">отвечаем за изделие целиком</span></h1>
-      <p class="lead rise" style="--i:2">От заявки до цеха. Что изменилось за 5 месяцев, куда идём и чем это поможет вам в продажах</p>
-      <ul class="tags rise" style="--i:3"><li>Заявка</li><li>Металл + корпус</li><li>Единый архив</li><li>Библиотека</li><li>Станки</li><li>Новые изделия</li></ul>
+      <p class="lead rise" style="--i:2">От заявки и расчёта до проверенного образца в цехе. Что работает уже сейчас, что внедряем в пилотах и как это помогает в продажах</p>
+      <ul class="tags rise" style="--i:3"><li>Цифры и KPI</li><li>Архив и библиотека</li><li>Металл + корпус</li><li>Станки</li><li>ИИ и паспорта</li><li>R&amp;D и тесты</li></ul>
       <div class="hero-cta rise" style="--i:4">
         <a class="btn btn-light" href="#numbers">Начать <svg class="i"><use href="#i-arrow"/></svg></a>
         <span class="hint">или стрелки ← → на клавиатуре</span>
@@ -1222,15 +1267,20 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 <section class="page" id="numbers" data-title="В цифрах">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">02 · Отдел в цифрах</span>
+      <span class="kicker">02 · Акт I · Реальность · Отдел в цифрах</span>
       <h2>Две из трёх СЗ проходят через конструкторов — от расчёта до паспорта</h2>
-      <p class="lead">Параллельно с текущими заказами гасим технический долг и растим линейку</p>
+      <p class="lead">Параллельно с текущими заказами гасим технический долг, строим учёт KPI и растим линейку</p>
     </header>
     <div class="stats s4">
       <div class="stat card rise" style="--i:1"><span class="big-num" data-count="917">917</span><span>служебных записок за 5 месяцев — 8–9 в рабочий день</span></div>
       <div class="stat card rise" style="--i:2"><span class="big-num">64 %</span><span>СЗ — с участием конструкторов: 591 из 917</span></div>
       <div class="stat card rise" style="--i:3"><span class="big-num" data-count="37">37</span><span>паспортов изделия в новом формате</span></div>
       <div class="stat card rise" style="--i:4"><span class="big-num" data-count="28">28</span><span>схем сборки для покупателя</span></div>
+    </div>
+    <div class="fact-strip rise" style="--i:4">
+      <span class="fact-pill"><b>63 %</b> СЗ с КТО (и <b>88 %</b> КД-заказов) содержат нестандарт</span>
+      <span class="fact-pill">Лист согласования — медиана <b>1 день</b></span>
+      <span class="fact-pill">Рекламации — медиана <b>1,5 дня</b> · закрыто <b>79 %</b></span>
     </div>
     <div class="card kdm rise" style="--i:5">
       <span class="lbl">KPI, метрики и учёт СЗ — заложили фундамент</span>
@@ -1267,182 +1317,133 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         <li><span class="ic"><svg><use href="#i-cubeplus"/></svg></span><span>Новые изделия — от оценки до серии</span></li>
       </ul>
     </div>
-    <p class="foot">СЗ и срок КД — задачи Bitrix24 за 22.06–22.11.2026, срок КД — по отметкам готовности; паспорта и схемы — выпущенные документы на 22.11.2026</p>
+    <p class="foot">СЗ, нестандарт и сроки — база задач Bitrix24 за 22.06–22.11.2026; паспорта и схемы — выпущенные документы на 22.11.2026</p>
   </div>
 </section>
 
-<!-- 03 ДОЛГ -->
-<section class="page" id="debt" data-title="Долг">
+<!-- 03 ДОЛГ И ЗАЯВКИ -->
+<section class="page" id="debt" data-title="Долг и заявки">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">03 · Технический долг</span>
-      <h2>Технический долг: 10 лет без единого архива чертежей</h2>
-      <p class="lead">Компании 10+ лет. КД системно не фиксировали — многое живёт в памяти сборщиков и операторов</p>
+      <span class="kicker">03 · Акт I · Реальность · Откуда потери времени</span>
+      <h2>Две причины потерь: 10 лет без архива и неполный вход заявок</h2>
+      <p class="lead">Компании 10+ лет — КД системно не фиксировали, а до начала чертежей мы нередко выясняем исходные по заявке днями</p>
     </header>
     <ol class="cascade c5">
       <li style="--i:0;--h:0"><span class="ic"><svg><use href="#i-db"/></svg></span>Нет единого архива</li>
       <li style="--i:1;--h:.25"><span class="ic"><svg><use href="#i-files"/></svg></span>У каждого свои файлы</li>
-      <li style="--i:2;--h:.5"><span class="ic"><svg><use href="#i-factory"/></svg></span>В цех уходят разные чертежи</li>
+      <li style="--i:2;--h:.5"><span class="ic"><svg><use href="#i-factory"/></svg></span>В цех — разные версии</li>
       <li style="--i:3;--h:.75"><span class="ic"><svg><use href="#i-users"/></svg></span>Спрашивают сборщика</li>
       <li style="--i:4;--h:1"><span class="ic"><svg><use href="#i-alert"/></svg></span>Ошибки и рекламации</li>
     </ol>
-    <div class="debt-grid">
-      <article class="card root-card rise" style="--i:5"><span class="ic"><svg><use href="#i-db"/></svg></span><div><span class="lbl">Корневая проблема 1</span><h3>Нет единой базы и архива КД</h3><p>Версии, схемы сборки и отверстий, история изменений. Сделанное раньше не найти — изделие проектируют заново</p></div></article>
-      <article class="card root-card rise" style="--i:6"><span class="ic"><svg><use href="#i-route"/></svg></span><div><span class="lbl">Корневая проблема 2</span><h3>Нет сквозного цикла</h3><p>Разработка → проверка → выдача в цех → архив. Чертежи уходили без обязательной проверки</p></div></article>
-      <article class="card case rise" style="--i:7">
-        <span class="tag"><svg class="i"><use href="#i-alert"/></svg>Случай · схемы отверстий</span>
-        <span class="big2">2 из 10</span>
-        <div class="people" aria-label="2 из 10 конструкторов">
-          <svg class="lit" style="--i:0"><use href="#i-person"/></svg><svg class="lit" style="--i:1"><use href="#i-person"/></svg><svg style="--i:2"><use href="#i-person"/></svg><svg style="--i:3"><use href="#i-person"/></svg><svg style="--i:4"><use href="#i-person"/></svg><svg style="--i:5"><use href="#i-person"/></svg><svg style="--i:6"><use href="#i-person"/></svg><svg style="--i:7"><use href="#i-person"/></svg><svg style="--i:8"><use href="#i-person"/></svg><svg style="--i:9"><use href="#i-person"/></svg>
+    <div class="debt-split">
+      <div class="debt-col">
+        <article class="card case rise" style="--i:5">
+          <span class="tag"><svg class="i"><use href="#i-alert"/></svg>Долг · схемы отверстий</span>
+          <span class="big2">2 из 10</span>
+          <div class="people" aria-label="2 из 10 конструкторов">
+            <svg class="lit" style="--i:0"><use href="#i-person"/></svg><svg class="lit" style="--i:1"><use href="#i-person"/></svg><svg style="--i:2"><use href="#i-person"/></svg><svg style="--i:3"><use href="#i-person"/></svg><svg style="--i:4"><use href="#i-person"/></svg><svg style="--i:5"><use href="#i-person"/></svg><svg style="--i:6"><use href="#i-person"/></svg><svg style="--i:7"><use href="#i-person"/></svg><svg style="--i:8"><use href="#i-person"/></svg><svg style="--i:9"><use href="#i-person"/></svg>
+          </div>
+          <p>конструкторов знали, где лежат схемы отверстий. Чертежи для цеха потеряны — собирали по памяти</p>
+        </article>
+        <article class="card case rise" style="--i:6">
+          <span class="tag"><svg class="i"><use href="#i-alert"/></svg>Долг · разные версии стеллажей</span>
+          <div class="depth">
+            <div class="row" style="--i:0"><span>Версия КД 1</span><i style="--w:.956"></i><b>430 мм</b></div>
+            <div class="row" style="--i:1"><span>Версия КД 2</span><i style="--w:1"></i><b>450 мм</b></div>
+            <span class="delta">Разница 20 мм → рекламация</span>
+          </div>
+        </article>
+        <div class="debt-smarty rise" style="--i:7">
+          <b>23 из 72</b>
+          <span>рекламаций за 5 месяцев — по серии <b>Smarty</b>: в архиве были только общие виды без чертежей деталей. Сейчас перечерчиваем Smarty с нуля</span>
         </div>
-        <p>конструкторов знали, где лежат схемы отверстий под крепёж. Чертежи для цеха потеряны — собирали по памяти</p>
-      </article>
-      <article class="card case rise" style="--i:8">
-        <span class="tag"><svg class="i"><use href="#i-alert"/></svg>Случай · стеллажи</span>
-        <div class="depth">
-          <div class="row" style="--i:0"><span>Версия КД 1</span><i style="--w:.956"></i><b>430 мм</b></div>
-          <div class="row" style="--i:1"><span>Версия КД 2</span><i style="--w:1"></i><b>450 мм</b></div>
-          <span class="delta">Разница 20 мм</span>
-        </div>
-        <p>Одно изделие — разная глубина из-за разных версий КД. <b>Итог — рекламация</b></p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- 04 ЧТО ИЗМЕНИЛОСЬ ЗА 5 МЕСЯЦЕВ -->
-<section class="page" id="changes" data-title="Было → стало">
-  <div class="wrap">
-    <header class="head rise">
-      <span class="kicker">04 · Было → внедряем</span>
-      <h2>Что запустили за 5 месяцев</h2>
-      <p class="lead">Технический долг гасим параллельно с текущими заказами. Большинство процессов сейчас внедряем — пока на уровне пилотов</p>
-    </header>
-    <div class="chg">
-      <article class="card chg-card rise" style="--i:1">
-        <div class="chg-h"><span class="ic"><svg><use href="#i-db"/></svg></span><h3>Чертежи</h3><span class="st wip">пилот · на проверке</span></div>
-        <p class="cw"><span class="t">Было</span><span>Свои файлы у каждого, в цех — разные версии. У Smarty — только общие виды, без чертежей деталей</span></p>
-        <p class="cn"><span class="t">Внедряем</span><span>NOMAD и Smarty перенесли в базу (Smarty чертим заново). Целевая схема — правки и выдача в цех только из базы</span></p>
-      </article>
-      <article class="card chg-card rise" style="--i:2">
-        <div class="chg-h"><span class="ic"><svg><use href="#i-calc"/></svg></span><h3>Себестоимость</h3><span class="st wip">пилот</span></div>
-        <p class="cw"><span class="t">Было</span><span>Подетального расхода материала не было</span></p>
-        <p class="cn"><span class="t">Внедряем</span><span>По моделям в базе получаем чистый расход на деталь и считаем теоретическую себестоимость</span></p>
-      </article>
-      <article class="card chg-card rise" style="--i:3">
-        <div class="chg-h"><span class="ic"><svg><use href="#i-checkc"/></svg></span><h3>Проверка</h3><span class="st wip">пилот</span></div>
-        <p class="cw"><span class="t">Было</span><span>Чертежи уходили в цех без обязательной проверки</span></p>
-        <p class="cn"><span class="t">Внедряем</span><span>На пилотных заказах перед выдачей чертежи проверяет второй конструктор</span></p>
-      </article>
-      <article class="card chg-card rise" style="--i:4">
-        <div class="chg-h"><span class="ic"><svg><use href="#i-users"/></svg></span><h3>Знания</h3><span class="st wip">внедряем</span></div>
-        <p class="cw"><span class="t">Было</span><span>Где лежат схемы отверстий, знали <b>2</b> конструктора из 10</span></p>
-        <p class="cn"><span class="t">Внедряем</span><span>Собираем решения и опыт в общий архив. Библиотека типового — <b>178</b> файлов, наполняем</span></p>
-      </article>
-      <article class="card chg-card rise" style="--i:5">
-        <div class="chg-h"><span class="ic"><svg><use href="#i-cnc"/></svg></span><h3>Станки</h3><span class="st wip">пилот</span></div>
-        <p class="cw"><span class="t">Было</span><span>Данные для станков переносили вручную</span></p>
-        <p class="cn"><span class="t">Внедряем</span><span>В пилоте по корпусу станок запускает программу отверстий по штрихкоду с этикетки</span></p>
-      </article>
-      <article class="card chg-card rise" style="--i:6">
-        <div class="chg-h"><span class="ic"><svg><use href="#i-book"/></svg></span><h3>Паспорт и сборка</h3><span class="st ok">работает</span></div>
-        <p class="cw"><span class="t">Было</span><span>Паспорта в прежнем формате</span></p>
-        <p class="cn"><span class="t">В работе</span><span><b>37</b> паспортов в новом формате и <b>28</b> схем сборки картинками — вводим постепенно</span></p>
-      </article>
-      <article class="card chg-card rise" style="--i:7">
-        <div class="chg-h"><span class="ic"><svg><use href="#i-grid"/></svg></span><h3>Логистика и укладка</h3><span class="st wip">пилот</span></div>
-        <p class="cw"><span class="t">Было</span><span>Упаковку и логистику на старте не считали (FLS: <b>440</b> шт. на машину)</span></p>
-        <p class="cn"><span class="t">Внедряем</span><span>С ИИ прикидываем упаковку и вместимость на ранней стадии — дорабатываем конструктив под логистику (FLS: <b>731</b>)</span></p>
-      </article>
-      <article class="card chg-card chg-next rise" style="--i:8">
-        <div class="chg-h"><span class="ic"><svg><use href="#i-factory"/></svg></span><h3>Следующий этап</h3><span class="st plan">план</span></div>
-        <p class="cw"><span class="t">Сейчас</span><span>Нетиповые изделия считаем укрупнённо — по 6-метровым трубам</span></p>
-        <p class="cn"><span class="t">Дальше</span><span>Раскрой трубы на труборез, режимы и оснастка — фактическая себестоимость</span></p>
-      </article>
-    </div>
-    <p class="foot">Внедряем поэтапно: большинство направлений сейчас в пилоте на части заказов, масштабируем после отработки. Состояние на 25.11.2026</p>
-  </div>
-</section>
-
-<!-- 05 ЗАЯВКА И ОБЪЕКТ -->
-<section class="page" id="intake" data-title="Заявка и объект">
-  <div class="wrap">
-    <header class="head rise">
-      <span class="kicker">05 · От заявки до изделия</span>
-      <h2>Сначала выясняем, потом делаем</h2>
-      <p class="lead">Чёткая заявка — половина работы. Сегодня до начала чертежей мы выясняем, что нужно клиенту, — днями, иногда неделями</p>
-    </header>
-    <div class="kpi-grid">
-      <div class="card rise" style="--i:1">
-        <span class="lbl">Сегодня</span>
-        <h3>Время уходит на выяснение</h3>
-        <p class="exp-sub">По наблюдениям отдела, не замер</p>
+      </div>
+      <div class="card rise" style="--i:6">
+        <span class="lbl">Потери на входе заявок</span>
+        <h3 style="margin:6px 0 4px">Сначала выясняем, потом делаем</h3>
+        <p class="exp-sub">Нет единой формы и статуса — исходные уточняем днями, иногда неделями</p>
         <ul class="diff">
-          <li class="bad"><span class="ic"><svg><use href="#i-doc"/></svg></span><div><b>Нет единой формы и статуса заявки</b><small>Приходит в любом виде, и непонятно, на каком она этапе</small></div></li>
-          <li class="bad"><span class="ic"><svg><use href="#i-eye"/></svg></span><div><b>На картинке одно, в описании другое</b><small>На фото стандартное изделие, по описанию — нестандартное</small></div></li>
-          <li class="bad"><span class="ic"><svg><use href="#i-table"/></svg></span><div><b>20 столов под одним наименованием</b><small>Размеры разные, отличаются только техописанием</small></div></li>
-          <li class="bad"><span class="ic"><svg><use href="#i-back"/></svg></span><div><b>Согласование — уже после запуска</b><small>Задачу поняли по-разному — переделка</small></div></li>
-          <li class="bad"><span class="ic"><svg><use href="#i-users"/></svg></span><div><b>Большой объект без одного ответственного</b><small>Общежитие: декор сделали по картинке, а на месте он не встал — мешали вентиляция и светильники. Перепиливали на объекте</small></div></li>
-        </ul>
-      </div>
-      <div class="card rise" style="--i:2">
-        <span class="lbl">Что внедряем</span>
-        <ul class="diff st3">
-          <li><span class="ic"><svg><use href="#i-files"/></svg></span><div><b>Единая форма заявки</b><small>Понятный вход и статус каждой заявки</small></div><span class="st plan">план</span></li>
-          <li><span class="ic"><svg><use href="#i-tag"/></svg></span><div><b>Свой артикул у каждого изделия</b><small>Другое изделие — другой артикул, а не новое техописание</small></div><span class="st wip">в работе</span></li>
-          <li><span class="ic"><svg><use href="#i-check"/></svg></span><div><b>Согласование — до производства</b><small>В цех — по согласованной заявке и проверенным чертежам</small></div><span class="st plan">план</span></li>
-          <li><span class="ic"><svg><use href="#i-person"/></svg></span><div><b>На объекте — один ответственный</b><small>С первого дня сводит размещение с вентиляцией, светом и отделкой</small></div><span class="st plan">план</span></li>
-          <li><span class="ic"><svg><use href="#i-route"/></svg></span><div><b>Один путь в едином архиве</b><small>Заявка → согласование → чертежи → проверка → цех</small></div><span class="st wip">пилот</span></li>
+          <li class="bad"><span class="ic"><svg><use href="#i-eye"/></svg></span><div><b>На фото одно, в описании другое</b><small>На картинке стандартное изделие, по тексту — нестандарт</small></div></li>
+          <li class="bad"><span class="ic"><svg><use href="#i-table"/></svg></span><div><b>20 столов под одним наименованием</b><small>Размеры разные, отличаются только техописанием — без своего артикула</small></div></li>
+          <li class="bad"><span class="ic"><svg><use href="#i-back"/></svg></span><div><b>Согласование уже после запуска</b><small>Задачу поняли по-разному — переделка в цехе</small></div></li>
+          <li class="bad"><span class="ic"><svg><use href="#i-users"/></svg></span><div><b>Крупный объект без одного ответственного</b><small>Общежитие: декор сделали по картинке, а на месте мешали вентиляция и свет — перепиливали на объекте</small></div></li>
         </ul>
       </div>
     </div>
-    <div class="card intake-route rise" style="--i:3">
-      <span class="lbl">Один путь для каждого заказа</span>
-      <div class="route r5" role="img" aria-label="Этапы: Заявка, Согласование, Чертежи, Проверка, Цех">
-        <div><i>1</i>Заявка</div><div><i>2</i>Согла&shy;сование</div><div><i>3</i>Чертежи</div><div><i>4</i>Проверка</div><div><i>5</i>Цех</div>
-      </div>
-    </div>
-    <p class="keyline warnline rise" style="--i:4"><svg class="i"><use href="#i-users"/></svg>Решается только вместе: продажи, КТО, производство, руководство. Одним отделом это не исправить</p>
+    <p class="keyline warnline rise" style="--i:8"><svg class="i"><use href="#i-users"/></svg>Решается только вместе: продажи, КТО, производство, руководство. Дальше — какой фундамент строим в ответ</p>
   </div>
 </section>
 
-<!-- 06 ГДЕ НУЖЕН СПЕЦИАЛИСТ -->
-<section class="page" id="scope" data-title="Где нужен специалист">
+<!-- 04 ЕДИНЫЙ АРХИВ И БИБЛИОТЕКА -->
+<section class="page" id="pdm" data-title="Архив и библиотека">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">06 · Новое изделие</span>
-      <h2>Что делаем сами, а где нужен специалист</h2>
-      <p class="lead">Доработать и адаптировать изделие под наше производство — наша работа. Новое с нуля, свет и несущие конструкции — другие специалисты и другие сроки</p>
+      <span class="kicker">04 · Акт II · Фундамент · Архив и библиотека</span>
+      <h2>Единый архив и библиотека: одна версия и один крепёж у всех</h2>
+      <p class="lead">Переносим серии в общее хранилище и собираем единые 3D-модели крепежа. Целевая схема — правки и выдача в цех только из базы</p>
     </header>
-    <span class="lbl flow-lbl rise" style="--i:1">Путь нового изделия</span>
-    <ol class="flow6 f5">
-      <li style="--i:0"><span class="ic"><svg><use href="#i-doc"/></svg></span><b>Задача</b><small>от продаж, тендера, рынка</small></li>
-      <li style="--i:1"><span class="ic"><svg><use href="#i-users"/></svg></span><b>Оценка</b><small>с производством и снабжением: технология, материалы, оснастка</small></li>
-      <li style="--i:2"><span class="ic"><svg><use href="#i-cubeplus"/></svg></span><b>Опытный образец</b><small>3D, чертежи, сборка</small><span class="tagc">₸ себестоимость образца</span></li>
-      <li class="gate" style="--i:3"><span class="ic"><svg><use href="#i-target"/></svg></span><b>Решение</b><small>производим или нет, какими сериями</small></li>
-      <li style="--i:4"><span class="ic"><svg><use href="#i-factory"/></svg></span><b>Серия</b><small>чертежи серии, паспорт и схема сборки</small><span class="tagc">₸ себестоимость серии</span></li>
-    </ol>
-    <div class="banner rise" style="--i:5"><svg class="i"><use href="#i-target"/></svg><p><b>Зачем это продажам:</b> новое изделие выходит с проверенной технологией и понятной ценой серии — без сюрпризов после первого заказа</p></div>
-    <div class="card scope-block rise" style="--i:6">
-      <span class="lbl">Сами или со специалистом</span>
-      <ol class="lvl">
-        <li><span class="mk"><svg class="i"><use href="#i-check"/></svg></span><div><b>Повторить по образцу</b><small>каталог, фото, чужое ТЗ</small></div><span class="st ok">можем</span></li>
-        <li><span class="mk"><svg class="i"><use href="#i-check"/></svg></span><div><b>Адаптировать под наше производство</b><small>оборудование, материалы, раскрой, логистика</small></div><span class="st ok">можем</span></li>
-        <li class="ext"><span class="mk"><svg class="i"><use href="#i-spark"/></svg></span><div><b>Новое с нуля</b><small>концепция, форма, свой стиль — это промышленный дизайн</small></div><span class="st wip">нужен специалист</span></li>
-        <li class="ext"><span class="mk"><svg class="i"><use href="#i-bulb"/></svg></span><div><b>Подсветка и свет</b><small>расчёт, светильники, испытания</small></div><span class="st wip">нужен подрядчик</span></li>
-        <li class="ext"><span class="mk"><svg class="i"><use href="#i-users"/></svg></span><div><b>Несущие конструкции и проектные разделы</b><small>капремонт, переустройство, актовые залы</small></div><span class="st wip">подрядчик с лицензией</span></li>
-      </ol>
+    <div class="pdm-grid">
+      <div class="pdm-left">
+        <div class="card rise" style="--i:1">
+          <div class="minis">
+            <span class="lbl">Уже перенесли в базу</span>
+            <div><b data-count="18">18</b><span>изделий NOMAD</span></div>
+            <div><b data-count="8">8</b><span>изделий Smarty</span></div>
+            <div><b data-count="178">178</b><span>файлов библиотеки</span></div>
+          </div>
+          <p class="foot">NOMAD — на ручной проверке до выдачи в цех; Smarty перечерчиваем заново. Также в базе тумба/шкаф «Москвы 2.0» и 3D ARco Duo</p>
+        </div>
+        <article class="card case mis rise" style="--i:2">
+          <span class="tag"><svg class="i"><use href="#i-alert"/></svg>Зачем единая библиотека · винт не входит в отверстие</span>
+          <svg class="pic" viewBox="0 0 128 112" role="img" aria-label="Винт толще отверстия в листе"><rect x="2" y="80" width="46" height="14" rx="2" fill="#C9D6F8" stroke="#0A1A6E" stroke-width="1.5"/><rect x="80" y="80" width="46" height="14" rx="2" fill="#C9D6F8" stroke="#0A1A6E" stroke-width="1.5"/><rect x="38" y="8" width="52" height="14" rx="4" fill="#fff" stroke="#0A1A6E" stroke-width="1.5"/><rect x="44" y="22" width="40" height="56" fill="#fff" stroke="#0A1A6E" stroke-width="1.5"/><path d="M44 32 84 27M44 40 84 35M44 48 84 43M44 56 84 51M44 64 84 59M44 72 84 67" stroke="#0A1A6E" stroke-width="1" fill="none"/><path d="M40 80h12M76 80h12" stroke="#D94848" stroke-width="3.5" stroke-linecap="round"/><path d="M48 102v-6M80 102v-6M48 99h32" stroke="#D94848" stroke-width="1.5" fill="none"/><circle cx="110" cy="20" r="11" fill="#D94848"/><path d="m105 15 10 10m0-10-10 10" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
+          <div class="txt">
+            <p>Раньше у каждого конструктора в чертежах были свои винты без общих артикулов</p>
+            <ul class="mis-leg"><li><i class="a"></i>Отверстие на лазере — по одному чертежу</li><li><i class="b"></i>Винт на комплектации — по другому</li></ul>
+          </div>
+        </article>
+        <div class="card rise" style="--i:3">
+          <span class="lbl">Дальше — привязка библиотеки к 1С</span>
+          <ol class="libflow">
+            <li class="has" style="--i:0"><span class="ic"><svg><use href="#i-screw"/></svg></span>3D&#8209;модель</li>
+            <li style="--i:1"><span class="ic"><svg><use href="#i-doc"/></svg></span>Специ&shy;фикация</li>
+            <li style="--i:2"><span class="ic"><svg><use href="#i-tag"/></svg></span>Артикул 1С</li>
+            <li style="--i:3"><span class="ic"><svg><use href="#i-calc"/></svg></span>Закуп</li>
+            <li style="--i:4"><span class="ic"><svg><use href="#i-assemble"/></svg></span>Комплек&shy;тация</li>
+          </ol>
+          <div class="srow" aria-label="Условный пример строки спецификации">
+            <div><small>Наименование</small><b>Винт</b></div>
+            <div><small>Стандарт</small><b>DIN 7985</b></div>
+            <div><small>Типоразмер</small><b>M6×20</b></div>
+            <div class="c1"><small>Артикул 1С</small><b>из 1С</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="pdm-side">
+        <span class="lbl rise" style="--i:1">Что внедряем — статусы честно</span>
+        <ul class="gives">
+          <li class="rise" style="--i:2"><span class="ic"><svg><use href="#i-db"/></svg></span><div><b>Одна версия чертежей у всех</b><small>Металл и корпус в одном хранилище, каждая правка — новая версия. Выдача в цех только из базы — целевая схема</small></div><span class="st pilot">пилот</span></li>
+          <li class="rise" style="--i:3"><span class="ic"><svg><use href="#i-checkc"/></svg></span><div><b>Проверка вторым конструктором</b><small>На пилотных заказах перед выдачей чертежи проверяет второй конструктор</small></div><span class="st pilot">пилот</span></li>
+          <li class="rise" style="--i:4"><span class="ic"><svg><use href="#i-layers"/></svg></span><div><b>Общий крепёж и типовые модули</b><small>Одни 3D-модели крепежа, фурнитуры и деталей для всех — уже ставим в заказы, наполняем и чистим</small></div><span class="st prog">в работе</span></li>
+          <li class="rise" style="--i:5"><span class="ic"><svg><use href="#i-search"/></svg></span><div><b>Рекламационная деталь — по базе</b><small>Деталь приедет с нужными отверстиями и встанет на место — по мере наполнения базы</small></div><span class="st prog">в работе</span></li>
+          <li class="rise" style="--i:6"><span class="ic"><svg><use href="#i-link"/></svg></span><div><b>Автовыдача КД по стандарту и 1С</b><small>Автоматическое формирование комплекта в цех (металл + корпус + список деталей) и коды 1С из модели</small></div><span class="st plan">план</span></li>
+        </ul>
+        <div class="keep rise" style="--i:7">
+          <span class="ic"><svg><use href="#i-users"/></svg></span>
+          <div><b>Готовое не изобретаем заново</b><small>Люди приходят и уходят — чертежи, библиотека и опыт остаются в компании. Права доступа — по ролям</small>
+            <div class="specs"><span class="chip">SolidWorks + Базис</span><span class="chip">История версий</span><span class="chip">Права по ролям</span></div>
+          </div>
+        </div>
+      </div>
     </div>
-    <p class="keyline rise" style="--i:7"><svg class="i"><use href="#i-layers"/></svg>Пример — «Москва 2.0»: 17 позиций по чужим ТЗ, 2 готовы, 5 в работе. Сроки по ним — только через КТО</p>
-    <p class="keyline warnline rise" style="--i:8"><svg class="i"><use href="#i-alert"/></svg>Для продаж: новое изделие, чужой каталог, свет или несущие конструкции — сначала к нам. Сроки и цена — после оценки, до обещания клиенту</p>
   </div>
 </section>
 
-<!-- 07 МЕТАЛЛ + КОРПУС -->
+<!-- 05 МЕТАЛЛ + КОРПУС -->
 <section class="page" id="combo" data-title="Металл + корпус">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">07 · Металл + корпус</span>
+      <span class="kicker">05 · Акт II · Фундамент · Металл + корпус</span>
       <h2>Металл + корпус: наша сила — и один ответственный за стык</h2>
       <p class="lead">Большая часть линейки — комбинированные изделия. Мало кто на рынке делает и металл, и корпус под одной крышей</p>
     </header>
@@ -1488,7 +1489,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
       <div class="card rise" style="--i:3">
         <div class="rules-head">
           <span class="lbl">Целевая схема · пять правил</span>
-          <span class="live">пытаемся реализовать · проект</span>
+          <span class="st pilot">пилот · пытаемся реализовать</span>
         </div>
         <ol class="steps">
           <li><span class="ic"><svg><use href="#i-person"/></svg></span><div><h3>Ведущий конструктор изделия</h3><p>Один на изделие, обычно конструктор по металлу: отвечает за собираемость</p></div></li>
@@ -1503,106 +1504,13 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   </div>
 </section>
 
-<!-- 08 ЕДИНЫЙ АРХИВ ЧЕРТЕЖЕЙ -->
-<section class="page" id="pdm" data-title="Архив чертежей">
+<!-- 06 КОНСТРУКТОР → СТАНОК -->
+<section class="page dark" id="pilot" data-title="Станки">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">08 · Единый архив чертежей</span>
-      <h2>Единый архив чертежей: одна версия у всех</h2>
-      <p class="lead">Все чертежи и 3D-модели — в одном месте и в одной версии. Отсюда — в цех и на станки. Типовое — из библиотеки</p>
-    </header>
-    <div class="pdm-grid">
-      <div class="pdm-left">
-        <div class="card rise" style="--i:1">
-          <div class="minis">
-            <span class="lbl">Уже в архиве</span>
-            <div><b data-count="5">5</b><span>заказов</span></div>
-            <div><b data-count="9">9</b><span>типовых столов</span></div>
-            <div><b data-count="178">178</b><span>файлов библиотеки</span></div>
-          </div>
-          <p class="foot">Серия NOMAD — практически вся в базе, перед выдачей в цех её проверяет человек</p>
-        </div>
-        <div class="keep rise" style="--i:2">
-          <span class="ic"><svg><use href="#i-users"/></svg></span>
-          <div><b>Готовое не изобретаем заново</b><small>Решение одного конструктора видят все. Изделие, которое уже делали, находим в архиве, проверяем и выдаём в цех. Люди приходят и уходят — чертежи и опыт остаются в компании</small>
-            <div class="specs"><span class="chip">Права доступа по ролям</span><span class="chip">Администрирование</span><span class="chip">История каждого изделия</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="pdm-side">
-        <span class="lbl rise" style="--i:1">Что это даёт продажам</span>
-        <ul class="gives">
-          <li class="rise" style="--i:2"><span class="ic"><svg><use href="#i-db"/></svg></span><div><b>Одна версия у всех</b><small>Металл и корпус в одном хранилище, каждая правка — новая версия</small></div><span class="st ok">работает</span></li>
-          <li class="rise" style="--i:3"><span class="ic"><svg><use href="#i-checkc"/></svg></span><div><b>В цех — проверенное</b><small>Перед выдачей чертежи проверяет второй конструктор</small></div><span class="st wip">пилот</span></li>
-          <li class="rise" style="--i:4"><span class="ic"><svg><use href="#i-layers"/></svg></span><div><b>Типовое — из библиотеки</b><small>Шкафы, тумбы, столы, фурнитура: быстрее чертежи на типовое</small></div><span class="st wip">в работе</span></li>
-          <li class="rise" style="--i:5"><span class="ic"><svg><use href="#i-search"/></svg></span><div><b>Рекламационная деталь — по базе</b><small>Приедет с нужными отверстиями и встанет на место — по мере наполнения библиотеки</small></div><span class="st wip">в работе</span></li>
-          <li class="rise" style="--i:6"><span class="ic"><svg><use href="#i-link"/></svg></span><div><b>Комплект одной версией</b><small>Металл, корпус и список деталей выпускаются вместе</small></div><span class="st plan">план</span></li>
-        </ul>
-      </div>
-    </div>
-    <p class="keyline rise" style="--i:7"><svg class="i"><use href="#i-cubeplus"/></svg>Одна модель — все документы: спецификация, раскрой, отверстия под крепёж. Меньше ручного переноса — меньше расхождений</p>
-  </div>
-</section>
-
-<!-- 09 БИБЛИОТЕКА ПРОЕКТИРОВАНИЯ -->
-<section class="page" id="library" data-title="Библиотека проектирования">
-  <div class="wrap">
-    <header class="head rise">
-      <span class="kicker">09 · Библиотека проектирования</span>
-      <h2>Единая библиотека проектирования: один крепёж у всех</h2>
-      <p class="lead">Крепёж, фурнитура и типовые детали — одни и те же 3D-модели для всех конструкторов. Библиотека наполняется и уже работает</p>
-    </header>
-    <div class="lib-grid">
-      <div class="lib-left">
-        <article class="card case mis rise" style="--i:1">
-          <span class="tag"><svg class="i"><use href="#i-alert"/></svg>Случай · винт не входит в отверстие</span>
-          <svg class="pic" viewBox="0 0 128 112" role="img" aria-label="Винт толще отверстия в листе"><rect x="2" y="80" width="46" height="14" rx="2" fill="#C9D6F8" stroke="#0A1A6E" stroke-width="1.5"/><rect x="80" y="80" width="46" height="14" rx="2" fill="#C9D6F8" stroke="#0A1A6E" stroke-width="1.5"/><rect x="38" y="8" width="52" height="14" rx="4" fill="#fff" stroke="#0A1A6E" stroke-width="1.5"/><rect x="44" y="22" width="40" height="56" fill="#fff" stroke="#0A1A6E" stroke-width="1.5"/><path d="M44 32 84 27M44 40 84 35M44 48 84 43M44 56 84 51M44 64 84 59M44 72 84 67" stroke="#0A1A6E" stroke-width="1" fill="none"/><path d="M40 80h12M76 80h12" stroke="#D94848" stroke-width="3.5" stroke-linecap="round"/><path d="M48 102v-6M80 102v-6M48 99h32" stroke="#D94848" stroke-width="1.5" fill="none"/><circle cx="110" cy="20" r="11" fill="#D94848"/><path d="m105 15 10 10m0-10-10 10" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
-          <div class="txt">
-            <p>Сейчас крепёж толком не задокументирован: у каждого конструктора в чертежах свои винты, артикулы непонятны</p>
-            <ul class="mis-leg"><li><i class="a"></i>Отверстие на лазере — по одному чертежу</li><li><i class="b"></i>Винт на комплектации — по другому</li></ul>
-          </div>
-        </article>
-        <div class="card rise" style="--i:2">
-          <span class="lbl">Дальше — привязка к 1С</span>
-          <ol class="libflow">
-            <li class="has" style="--i:0"><span class="ic"><svg><use href="#i-screw"/></svg></span>3D&#8209;модель</li>
-            <li style="--i:1"><span class="ic"><svg><use href="#i-doc"/></svg></span>Специ&shy;фикация</li>
-            <li style="--i:2"><span class="ic"><svg><use href="#i-tag"/></svg></span>Артикул 1С</li>
-            <li style="--i:3"><span class="ic"><svg><use href="#i-calc"/></svg></span>Закуп</li>
-            <li style="--i:4"><span class="ic"><svg><use href="#i-assemble"/></svg></span>Комплек&shy;тация</li>
-          </ol>
-          <div class="flow-leg"><span><i></i>есть сейчас</span><span><i class="t"></i>в перспективе</span></div>
-          <div class="srow" aria-label="Условный пример строки спецификации">
-            <div><small>Наименование</small><b>Винт</b></div>
-            <div><small>Стандарт</small><b>DIN 7985</b></div>
-            <div><small>Типоразмер</small><b>M6×20</b></div>
-            <div class="c1"><small>Артикул 1С</small><b>из 1С</b></div>
-          </div>
-          <p class="foot">Конструктор перетянул в сборку модель винта — строка спецификации заполнилась сама. Условный пример</p>
-        </div>
-      </div>
-      <div class="pdm-side">
-        <span class="lbl rise" style="--i:1">Что даёт единая библиотека</span>
-        <ul class="gives">
-          <li class="rise" style="--i:2"><span class="ic"><svg><use href="#i-layers"/></svg></span><div><b>Один крепёж у всех</b><small>Болты, гайки, винты, фурнитура и типовые детали — одни 3D-модели для всех конструкторов</small></div><span class="st wip">наполняем</span></li>
-          <li class="rise" style="--i:3"><span class="ic"><svg><use href="#i-cube"/></svg></span><div><b>Уже в работе</b><small>Детали из библиотеки ставим в текущие заказы</small></div><span class="st ok">используем</span></li>
-          <li class="rise" style="--i:4"><span class="ic"><svg><use href="#i-search"/></svg></span><div><b>Доводим до рабочего состояния</b><small>Недочёты находим в работе и сразу исправляем</small></div><span class="st wip">в работе</span></li>
-          <li class="rise" style="--i:5"><span class="ic"><svg><use href="#i-users"/></svg></span><div><b>Новый конструктор — сразу в деле</b><small>Берёт готовые детали, а не рисует свой крепёж. Люди меняются — библиотека остаётся</small></div><span class="st plan">цель</span></li>
-          <li class="rise" style="--i:6"><span class="ic"><svg><use href="#i-assemble"/></svg></span><div><b>Закуп и комплектация — по 3D-модели</b><small>Наименование, стандарт, типоразмер и артикул 1С — прямо из модели конструктора</small></div><span class="st plan">перспектива</span></li>
-        </ul>
-      </div>
-    </div>
-    <div class="banner rise" style="--i:7"><svg class="i"><use href="#i-target"/></svg><p><b>Зачем это продажам:</b> отверстие и крепёж — по одной модели, комплект сходится с чертежом. Меньше доработок на объекте и рекламаций</p></div>
-  </div>
-</section>
-
-<!-- 10 КОНСТРУКТОР → СТАНОК -->
-<section class="page dark" id="pilot" data-title="Конструктор → станок">
-  <div class="wrap">
-    <header class="head rise">
-      <span class="kicker">10 · От модели до станка</span>
+      <span class="kicker">06 · Акт II · Фундамент · От модели до станка</span>
       <h2>Конструктор → станок: детали с этикеткой без ручного переноса</h2>
-      <p class="lead">Пилот по корпусной мебели: впервые связали конструктора и станки</p>
+      <p class="lead">Пилот по корпусной мебели: впервые связали конструктора и станки. Поможет сократить срок выдачи КД по стандарту</p>
     </header>
     <ol class="pipe p5 rise" style="--i:1">
       <li style="--i:0"><span class="dot"><svg><use href="#i-ruler"/></svg></span><b>Чертежи</b></li>
@@ -1615,7 +1523,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
     <div class="legend rise" style="--i:2"><span><i></i>запущено в пилоте</span><span><i class="t"></i>деталь идёт по цепочке</span></div>
     <div class="pilot-grid">
       <div class="card rise" style="--i:3">
-        <span class="lbl">Что уже работает</span>
+        <span class="lbl">Что проверили в пилоте</span>
         <ul class="works">
           <li><svg class="i"><use href="#i-checkc"/></svg>Программу отверстий готовит конструктор — станок запускает её по штрихкоду с этикетки</li>
           <li><svg class="i"><use href="#i-checkc"/></svg>Раскрой — из модели, распил — на пильном центре</li>
@@ -1639,22 +1547,66 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         <div class="warn rise" style="--i:5"><svg class="i"><use href="#i-alert"/></svg><b>Пилот:</b><span>техническая возможность подтверждена, сложности решаем</span></div>
         <div class="benef rise" style="--i:6">
           <div><b>Продажам</b>быстрее чертежи в цех и запуск заказа</div>
-          <div><b>Производству</b>экономия времени</div>
+          <div><b>Производству</b>экономия времени без ручного ввода</div>
         </div>
         <p class="plan rise" style="--i:7"><b>Планируем:</b> с 2027 года часть проектов, скорее всего, пойдёт с этикетками</p>
-        <p class="plan rise" style="--i:8"><b>Меряем:</b> эффект пилота — по медиане срока выдачи КД</p>
+        <p class="plan rise" style="--i:8"><b>Меряем:</b> эффект пилота — по стартовой медиане выдачи КД</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 11 НОВЫЕ ИЗДЕЛИЯ -->
+<!-- 07 ИИ-ЛОГИСТИКА, СЕБЕСТОИМОСТЬ И ПАСПОРТА -->
+<section class="page" id="ai-docs" data-title="ИИ и паспорта">
+  <div class="wrap">
+    <header class="head rise">
+      <span class="kicker">07 · Акт II · Фундамент · ИИ и документы покупателя</span>
+      <h2>ИИ-логистика, расчёт цены и новый стандарт паспорта</h2>
+      <p class="lead">Две прямые пользы продажам: ускоряем ранний расчёт упаковки и себестоимости с ИИ, и уже выдаём покупателю понятные паспорта и схемы сборки</p>
+    </header>
+    <div class="ai-top rise" style="--i:1">
+      <div class="ai-head">
+        <span class="lbl">ИИ — логистика, укладка и расчёт себестоимости</span>
+        <span class="st pilot">пилот · отлаживаем схему</span>
+      </div>
+      <p class="kdm-how" style="margin:0"><svg class="i" aria-hidden="true"><use href="#i-spark"/></svg>Отлаживаем схему работы с ИИ: уже на ранней стадии оперативно прикидываем количество изделий и схему упаковки для предварительного расчёта логистики, сравниваем варианты и прорабатываем конструктив под удобную перевозку. Решение и ответственность — за конструктором</p>
+      <div class="ai-stats">
+        <div class="stat card"><span class="big-num" data-count="731">731</span><span>комплект скамьи FLS на машину вместо 440 — та же конструкция, другая укладка</span></div>
+        <div class="stat card"><span class="big-num" data-count="252">252</span><span>табурета на паллету 1200 × 1200 — штабель проверен в 3D</span></div>
+        <div class="stat card"><span class="big-num">По модели</span><span>теоретическая себестоимость металла по чистой массе детали; дальше — раскрой 6 м на труборез</span></div>
+        <div class="stat card"><span class="big-num">Дни → часы</span><span>цель по просчёту цены и логистики для КП с ИИ-агентом (вместо недель)</span></div>
+      </div>
+    </div>
+    <div class="card kp-band rise" style="--i:2">
+      <div>
+        <div class="ai-head" style="margin-bottom:8px">
+          <span class="lbl">Паспорт и схема сборки для покупателя</span>
+          <span class="st ok">работает</span>
+        </div>
+        <ul class="bul">
+          <li><svg class="i"><use href="#i-checkc"/></svg><span><b>37 паспортов</b> в новом формате и <b>28 схем сборки</b> картинками — уже рабочий инструмент</span></li>
+          <li><svg class="i"><use href="#i-assemble"/></svg><span>Схема сборки картинками — чтобы у покупателя и сборщиков на объекте было меньше вопросов</span></li>
+          <li><svg class="i"><use href="#i-doc"/></svg><span>Единый стандарт для действующих серий, новой линейки, экспорта, КП и тендеров — вводим постепенно</span></li>
+        </ul>
+      </div>
+      <div class="docs">
+        <button class="ps b" type="button" data-view="media/nmv_pass_p11.webp" data-cap="Стол NOMAD V одноместный · паспорт и руководство по эксплуатации, страница 11 — сборка"><img src="media/nmv_pass_p11.webp" alt="Паспорт стола NOMAD V, страница 11: рисунки сборки" width="637" height="900" loading="lazy"></button>
+        <button class="ps a" type="button" data-view="media/nmv_pass_p01.webp" data-cap="Стол NOMAD V одноместный · паспорт и руководство по эксплуатации, обложка"><img src="media/nmv_pass_p01.webp" alt="Паспорт и руководство по эксплуатации стола NOMAD V одноместного, обложка" width="637" height="900" loading="lazy"></button>
+        <button class="sc b" type="button" data-view="media/nmv_sch_p01.webp" data-cap="Стол NOMAD V одноместный · схема сборки, обложка"><img src="media/nmv_sch_p01.webp" alt="Схема сборки стола NOMAD V, обложка с инструментами" width="1500" height="1061" loading="lazy"></button>
+        <button class="sc a" type="button" data-view="media/nmv_sch_p12.webp" data-cap="Стол NOMAD V одноместный · схема сборки, шаг 9: какой шуруп брать, а какой нет"><img src="media/nmv_sch_p12.webp" alt="Схема сборки стола NOMAD V, шаг 9: царга, шурупы и подсказка, какой шуруп не подходит" width="1500" height="1061" loading="lazy"></button>
+        <span class="dt l">Паспорт и РЭ</span><span class="dt r">Схема сборки</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 НОВЫЕ ИЗДЕЛИЯ -->
 <section class="page" id="products" data-title="Новые изделия">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">11 · Новые и обновлённые изделия</span>
+      <span class="kicker">08 · Акт III · Доказательство · Новые и обновлённые изделия</span>
       <h2>Новые изделия: больше готовых решений для заказчика</h2>
-      <p class="lead">База и варианты из типовых модулей — быстрее. Активно внедряем ИИ: решение и ответственность — за конструктором</p>
+      <p class="lead">От 3D-модели и вариантов исполнения — до живых образцов в цехе. На каждой карточке можно открыть живые фото и короткие видео</p>
     </header>
     <div class="prods">
       <article class="prod rise" style="--i:1">
@@ -1732,7 +1684,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         <div class="prod-body">
           <div class="prod-head">
             <h3>ARco Duo — доступная парта</h3>
-            <span class="st wip">в работе</span>
+            <span class="st prog">в работе</span>
           </div>
           <div class="specs">
             <span class="chip"><svg class="i"><use href="#i-users"/></svg>2 места</span>
@@ -1748,44 +1700,18 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         </div>
         <ul class="chair-rows">
           <li><span><b>Стул 5–7</b> — продаётся</span><span class="st ok">работает</span></li>
-          <li><span><b>Стул 3–5</b> — опытные образцы планируем показать после доработки</span><span class="st wip">в работе</span></li>
+          <li><span><b>Стул 3–5</b> — опытные образцы планируем показать после доработки</span><span class="st prog">в работе</span></li>
         </ul>
       </article>
-    </div>
-    <div class="econ-band ai-band rise" style="--i:6">
-      <span class="lbl">ИИ — логистика и конструктив с первого эскиза</span>
-      <p class="kdm-how"><svg class="i" aria-hidden="true"><use href="#i-spark"/></svg>Отлаживаем схему работы с ИИ: уже на ранней стадии оперативно прикидываем количество изделий и схему упаковки для расчёта логистики, сравниваем варианты и прорабатываем конструктив под удобную перевозку</p>
-      <div class="stats">
-        <div class="stat card"><span class="big-num" data-count="731">731</span><span>комплект скамьи FLS на машину вместо 440 — та же конструкция, другая укладка</span></div>
-        <div class="stat card"><span class="big-num" data-count="252">252</span><span>табурета на паллету 1200 × 1200 — штабель проверен в 3D</span></div>
-        <div class="stat card"><span class="big-num">6 м</span><span>трубу режем под детали без отходов — цель</span></div>
-      </div>
-    </div>
-    <div class="card kp-band rise" style="--i:7">
-      <div>
-        <span class="lbl">Паспорт и схема сборки — для покупателя</span>
-        <ul class="bul">
-          <li><svg class="i"><use href="#i-assemble"/></svg>Схема сборки картинками — чтобы при сборке было меньше вопросов</li>
-          <li><svg class="i"><use href="#i-book"/></svg>Паспорт и руководство в новом стиле станут стандартом — и для действующих изделий, и для новой линейки. Вводим постепенно</li>
-          <li><svg class="i"><use href="#i-doc"/></svg>Пригодятся и для экспорта, КП и тендеров</li>
-        </ul>
-      </div>
-      <div class="docs">
-        <button class="ps b" type="button" data-view="media/nmv_pass_p11.webp" data-cap="Стол NOMAD V одноместный · паспорт и руководство по эксплуатации, страница 11 — сборка"><img src="media/nmv_pass_p11.webp" alt="Паспорт стола NOMAD V, страница 11: рисунки сборки" width="637" height="900" loading="lazy"></button>
-        <button class="ps a" type="button" data-view="media/nmv_pass_p01.webp" data-cap="Стол NOMAD V одноместный · паспорт и руководство по эксплуатации, обложка"><img src="media/nmv_pass_p01.webp" alt="Паспорт и руководство по эксплуатации стола NOMAD V одноместного, обложка" width="637" height="900" loading="lazy"></button>
-        <button class="sc b" type="button" data-view="media/nmv_sch_p01.webp" data-cap="Стол NOMAD V одноместный · схема сборки, обложка"><img src="media/nmv_sch_p01.webp" alt="Схема сборки стола NOMAD V, обложка с инструментами" width="1500" height="1061" loading="lazy"></button>
-        <button class="sc a" type="button" data-view="media/nmv_sch_p12.webp" data-cap="Стол NOMAD V одноместный · схема сборки, шаг 9: какой шуруп брать, а какой нет"><img src="media/nmv_sch_p12.webp" alt="Схема сборки стола NOMAD V, шаг 9: царга, шурупы и подсказка, какой шуруп не подходит" width="1500" height="1061" loading="lazy"></button>
-        <span class="dt l">Паспорт и РЭ</span><span class="dt r">Схема сборки</span>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- 12 R&D И ИСПЫТАНИЯ -->
+<!-- 09 R&D И ИСПЫТАНИЯ -->
 <section class="page" id="rnd" data-title="R&amp;D и тесты">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">12 · R&amp;D и испытания в цехе</span>
+      <span class="kicker">09 · Акт III · Доказательство · R&amp;D и испытания в цехе</span>
       <h2>Разработка в деле: от 3D-модели до живого образца и теста</h2>
       <p class="lead">Не останавливаемся на картинках — собираем опытные образцы, проверяем жёсткость и нагрузку в цехе до запуска серии</p>
     </header>
@@ -1882,12 +1808,44 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   </div>
 </section>
 
-<!-- 13 КАК ПОМОЧЬ -->
+<!-- 10 ГРАНИЦЫ И НОВОЕ ИЗДЕЛИЕ -->
+<section class="page" id="scope" data-title="Границы">
+  <div class="wrap">
+    <header class="head rise">
+      <span class="kicker">10 · Акт IV · Правила · Новое изделие и границы</span>
+      <h2>Что делаем сами, а где нужен специалист</h2>
+      <p class="lead">Доработать и адаптировать изделие под наше производство — наша работа. Новое с нуля, свет и несущие конструкции — другие специалисты и другие сроки</p>
+    </header>
+    <span class="lbl flow-lbl rise" style="--i:1">Путь нового изделия</span>
+    <ol class="flow6 f5">
+      <li style="--i:0"><span class="ic"><svg><use href="#i-doc"/></svg></span><b>Задача</b><small>от продаж, тендера, рынка</small></li>
+      <li style="--i:1"><span class="ic"><svg><use href="#i-users"/></svg></span><b>Оценка</b><small>с производством и снабжением: технология, материалы, оснастка</small></li>
+      <li style="--i:2"><span class="ic"><svg><use href="#i-cubeplus"/></svg></span><b>Опытный образец</b><small>3D, чертежи, сборка</small><span class="tagc">₸ себестоимость образца</span></li>
+      <li class="gate" style="--i:3"><span class="ic"><svg><use href="#i-target"/></svg></span><b>Решение</b><small>производим или нет, какими сериями</small></li>
+      <li style="--i:4"><span class="ic"><svg><use href="#i-factory"/></svg></span><b>Серия</b><small>чертежи серии, паспорт и схема сборки</small><span class="tagc">₸ себестоимость серии</span></li>
+    </ol>
+    <div class="banner rise" style="--i:5"><svg class="i"><use href="#i-target"/></svg><p><b>Зачем это продажам:</b> спешка на старте бьёт по себестоимости и даёт переделки в серии. Через образец изделие выходит с проверенной технологией и честной ценой</p></div>
+    <div class="card scope-block rise" style="--i:6">
+      <span class="lbl">Сами или со специалистом</span>
+      <ol class="lvl">
+        <li><span class="mk"><svg class="i"><use href="#i-check"/></svg></span><div><b>Повторить по образцу</b><small>каталог, фото, чужое ТЗ</small></div><span class="st ok">можем</span></li>
+        <li><span class="mk"><svg class="i"><use href="#i-check"/></svg></span><div><b>Адаптировать под наше производство</b><small>оборудование, материалы, раскрой, логистика</small></div><span class="st ok">можем</span></li>
+        <li class="ext"><span class="mk"><svg class="i"><use href="#i-spark"/></svg></span><div><b>Новое с нуля</b><small>концепция, форма, свой стиль — это промышленный дизайн</small></div><span class="st pilot">нужен специалист</span></li>
+        <li class="ext"><span class="mk"><svg class="i"><use href="#i-bulb"/></svg></span><div><b>Подсветка и свет</b><small>расчёт, светильники, испытания</small></div><span class="st pilot">нужен подрядчик</span></li>
+        <li class="ext"><span class="mk"><svg class="i"><use href="#i-users"/></svg></span><div><b>Несущие конструкции и проектные разделы</b><small>капремонт, переустройство, актовые залы</small></div><span class="st pilot">подрядчик с лицензией</span></li>
+      </ol>
+    </div>
+    <p class="keyline rise" style="--i:7"><svg class="i"><use href="#i-layers"/></svg>Пример — «Москва 2.0»: 17 позиций по чужим ТЗ, 2 готовы, 5 в работе. Сроки по ним — только через КТО</p>
+    <p class="keyline warnline rise" style="--i:8"><svg class="i"><use href="#i-alert"/></svg>Для продаж: новое изделие, чужой каталог, свет или несущие конструкции — сначала к нам. Сроки и цена — после оценки, до обещания клиенту</p>
+  </div>
+</section>
+
+<!-- 11 КАК ПОМОЧЬ -->
 <section class="page" id="help" data-title="Как помочь">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">13 · Как вы можете помочь</span>
-      <h2>Шесть вещей, которые ускорят ваш заказ</h2>
+      <span class="kicker">11 · Акт IV · Правила · Как вы можете помочь</span>
+      <h2>Шесть правил, которые ускорят ваш заказ</h2>
       <p class="lead">Чем точнее вход — тем быстрее и точнее расчёт себестоимости и выше качество изделия. Чертежи — уже финальный шаг</p>
     </header>
     <div class="asks">
@@ -1898,37 +1856,66 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
       <div class="card ask rise" style="--i:5"><span class="n">5</span><span class="ic"><svg><use href="#i-bulb"/></svg></span><h3>Новое изделие, свет, несущие конструкции — сначала к нам</h3><p>Оценим до обещания клиенту и скажем, нужен ли подрядчик</p></div>
       <div class="card ask hot rise" style="--i:6"><span class="n">6</span><span class="ic"><svg><use href="#i-users"/></svg></span><h3>На объекте — один ответственный с первого дня</h3><p>Размещение согласовано с вентиляцией, светом и отделкой до чертежей</p></div>
     </div>
+    <div class="card help-sys rise" style="--i:7">
+      <span class="lbl">Что внедряем по заявкам вместе с продажами и производством</span>
+      <div class="help-sys-list">
+        <div class="help-sys-item"><div><b>Единая форма заявки</b><small>Понятный вход и статус каждой СЗ</small></div><span class="st plan">план</span></div>
+        <div class="help-sys-item"><div><b>Свой артикул у каждого изделия</b><small>Другое изделие — другой артикул</small></div><span class="st prog">в работе</span></div>
+        <div class="help-sys-item"><div><b>Согласование до цеха</b><small>В производство — по согласованной СЗ</small></div><span class="st plan">план</span></div>
+        <div class="help-sys-item"><div><b>Один путь в архиве</b><small>Заявка → Согласование → КД → Проверка → Цех</small></div><span class="st pilot">пилот</span></div>
+      </div>
+    </div>
     <div class="result">
-      <div class="pop" style="--i:7">Полная СЗ и документы объекта</div>
-      <span class="arr pop" style="--i:8" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span>
-      <div class="pop" style="--i:9">Точный расчёт и себестоимость</div>
-      <span class="arr pop" style="--i:10" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span>
-      <div class="pop" style="--i:11">Концепт и конструктив, затем чертежи</div>
-      <span class="arr pop" style="--i:12" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span>
-      <div class="pop" style="--i:13">Качество изделия, заказ в срок</div>
+      <div class="pop" style="--i:8">Полная СЗ и документы объекта</div>
+      <span class="arr pop" style="--i:9" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span>
+      <div class="pop" style="--i:10">Точный расчёт и себестоимость</div>
+      <span class="arr pop" style="--i:11" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span>
+      <div class="pop" style="--i:12">Концепт и конструктив, затем чертежи</div>
+      <span class="arr pop" style="--i:13" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span>
+      <div class="pop" style="--i:14">Качество изделия, заказ в срок</div>
     </div>
   </div>
 </section>
 
-<!-- 14 ИТОГ -->
+<!-- 12 ИТОГ -->
 <section class="page dark final" id="final" data-title="Итог">
   <div class="hero-bg" aria-hidden="true"><div class="grid-lines"></div></div>
   <div class="wrap">
-    <div>
-      <span class="kicker rise">14 · Итог</span>
+    <div class="final-head">
+      <span class="kicker rise">12 · Акт IV · Честный итог</span>
       <h2 class="rise" style="--i:1">Мы не просто чертим по СЗ — <span class="mark">отвечаем за изделие целиком</span></h2>
-      <ul class="concl">
-        <li class="rise" style="--i:2"><span class="ck"><svg viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Сначала выясняем, потом делаем: понятная заявка и один ответственный на объекте</li>
-        <li class="rise" style="--i:3"><span class="ck"><svg viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Металл + корпус: один ведущий конструктор, одна сборка, один список деталей</li>
-        <li class="rise" style="--i:4"><span class="ck"><svg viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Единый архив чертежей: одна версия, проверка перед цехом, знания остаются в компании</li>
-        <li class="rise" style="--i:5"><span class="ck"><svg viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Новое изделие и чужой каталог — через оценку, образец и цену серии</li>
-      </ul>
+      <p class="lead rise" style="--i:2">Честная карта состояния на ноябрь 2026: что уже даёт результат, что отлаживаем в пилотах и куда идём в 2027</p>
     </div>
-    <div class="final-side">
-      <div class="scene" aria-hidden="true"><div class="cube3d"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-      <p class="plan rise" style="--i:6"><b>Планируем в 2027:</b> часть проектов — с этикетками, комплект чертежей — одной версией, больше типовых модулей в библиотеке</p>
-      <p class="sign rise" style="--i:7">Руководитель технического отдела<br>ТОО Компания «TROYA»<br><b>Лунин В.И.</b></p>
-      <div class="thanks rise" style="--i:8"><a class="btn btn-orange" href="#home"><svg class="i"><use href="#i-back"/></svg>К началу</a><span class="hint">Спасибо! Готов ответить на вопросы</span></div>
+    <div class="final-cols">
+      <article class="fcol ok rise" style="--i:3">
+        <div class="fcol-h"><h3>Уже работает</h3><span class="fbadge">Работает</span></div>
+        <ul>
+          <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Фундамент KPI:</b> агентский учёт СЗ в Bitrix24 (содержание, исполнители, сроки готовности)</span></li>
+          <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Паспорта и сборка:</b> 37 паспортов в новом стиле и 28 схем сборки картинками</span></li>
+          <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Живой R&amp;D:</b> опытные образцы и нагрузочные испытания в цехе до серии</span></li>
+        </ul>
+      </article>
+      <article class="fcol pilot rise" style="--i:4">
+        <div class="fcol-h"><h3>Внедряем сейчас</h3><span class="fbadge">Пилоты</span></div>
+        <ul>
+          <li><svg class="i"><use href="#i-layers"/></svg><span><b>Единый архив и библиотека:</b> NOMAD (18), Smarty (8), 178 файлов крепежа, проверка вторым конструктором</span></li>
+          <li><svg class="i"><use href="#i-cnc"/></svg><span><b>Конструктор → станок:</b> пилот по корпусу (раскрой, распил, этикетка со штрихкодом)</span></li>
+          <li><svg class="i"><use href="#i-swap"/></svg><span><b>Стык металл + корпус:</b> пытаемся реализовать схему с одним ведущим конструктором</span></li>
+          <li><svg class="i"><use href="#i-spark"/></svg><span><b>ИИ-логистика и цена:</b> ранний расчёт упаковки (FLS 440 → 731) и себестоимости по модели</span></li>
+        </ul>
+      </article>
+      <article class="fcol plan rise" style="--i:5">
+        <div class="fcol-h"><h3>План на 2027</h3><span class="fbadge">План</span></div>
+        <ul>
+          <li><svg class="i"><use href="#i-gauge"/></svg><span><b>Сокращение потерь по стандарту:</b> автовыдача КД в цех (металл в тот же день, корпус ≤ 1 дня)</span></li>
+          <li><svg class="i"><use href="#i-tag"/></svg><span><b>Станки и этикетки:</b> часть проектов с этикетками, раскрой 6 м трубы на труборез</span></li>
+          <li><svg class="i"><use href="#i-link"/></svg><span><b>Единый комплект и 1С:</b> выпуск «металл + корпус + список деталей» и артикулы 1С из 3D-модели</span></li>
+        </ul>
+      </article>
+    </div>
+    <div class="final-foot rise" style="--i:6">
+      <p class="sign">Руководитель технического отдела · ТОО Компания «TROYA»<br><b>Лунин В.И.</b></p>
+      <div class="thanks"><a class="btn btn-orange" href="#home"><svg class="i"><use href="#i-back"/></svg>К началу</a><span class="hint">Спасибо! Готов ответить на вопросы</span></div>
     </div>
   </div>
 </section>
@@ -1944,7 +1931,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 <nav class="pager" aria-label="Листание">
   <span class="progress" aria-hidden="true"></span>
   <button class="pbtn prev" type="button" id="prevBtn" aria-label="Предыдущий раздел"><svg class="i"><use href="#i-back"/></svg><span id="prevName">Назад</span></button>
-  <div class="where" id="where" aria-live="polite"><b>01 / 14</b> · Главная</div>
+  <div class="where" id="where" aria-live="polite"><b>01 / 12</b> · Главная</div>
   <button class="pbtn next" type="button" id="nextBtn" aria-label="Следующий раздел"><span id="nextName">Далее</span><svg class="i"><use href="#i-arrow"/></svg></button>
 </nav>
 
@@ -1969,74 +1956,51 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   'use strict';
   const L = (t) => '<b>' + t + '</b>';
   const NOTES = {
-    home: ['Коллеги, добрый день. Покажу, что делает технический отдел, что изменилось за 5 месяцев и чем это поможет вам в продажах.',
-           'Главная мысль: мы не просто чертим по СЗ — отвечаем за изделие целиком, от заявки до цеха. Пойдём по пути изделия: заявка, металл и корпус, архив чертежей, станки, новые изделия.'],
-    numbers: ['Начну с объёма. За пять месяцев — 917 служебных записок, 8–9 в каждый рабочий день. Две из трёх — 591 — проходят через конструкторов; остальные — рекламации по замене, закупки и склад. Плюс 37 паспортов в новом формате и 28 схем сборки для покупателя.',
-              'По оценке, 63 % СЗ с участием конструкторов содержат хотя бы одно нестандартное изделие. В плане чертежей «Москвы 2.0» — 17 позиций.',
-              'Важно понимать контекст: раньше KPI, метрики и анализ по СЗ отсутствовали совсем — не было даже фундамента. Сейчас фундамент есть: уже работает агентская система учёта СЗ в Bitrix24, ведётся база по содержанию заказов, исполнителям и срокам готовности — теперь есть на чём оценивать KPI и реальный рост.',
-              'Пока есть только данные на старте: медиана от СЗ до выдачи КД — 6 календарных дней (конструкторы по корпусу и металлу отмечают в задаче готовность КД). Это срок КД, а не изготовления: клиенту обещаем срок изготовления из СЗ.',
-              'При этом сегодня конструктор нужен для запуска каждого изделия — в том числе и стандартного. Разброс большой: по готовым изделиям КД уходит в производство за несколько часов, отдельные СЗ затягиваются на месяцы. Цель для стандартных изделий — по металлу в производство в тот же день, по корпусу не больше дня вместе с раскроем, покупными и ведомостями. И так у каждого конструктора, без потери качества документации.',
-              'Главная цель — сокращение потерь на работу по стандартным изделиям (анализ СЗ, подготовка, сопровождение производства). Сократить срок помогут единая библиотека и автоматизированная система формирования документации в цех по стандартным изделиям; по корпусной части — пилот «конструктор → станок». Результат увидим после внедрения — по этой же медиане.',
-              'Всё это — параллельно с текущими заказами. Дальше — откуда мы шли и что меняем.'],
-    debt: ['Компании больше 10 лет, а единой базы и архива КД не было: люди приходили и уходили, многое осталось в памяти сборщиков и операторов.',
-           'Отсюда и двойная работа. Задачу решил один конструктор — другие о ней не знают. Приходит СЗ на изделие, которое уже делали, или автор уволился — данных нет, а сложное изделие в разрозненных папках не найти. Вместо того чтобы взять готовое, проверить и выдать в цех, его изобретают заново.',
-           'Пример — ' + L('СЗ 794-М', 29365) + ': схемы присадки лежали в одной папке, о ней знали 2 конструктора из 10, переданные в цех чертежи потеряны, собирали по памяти.',
-           'Второй пример — ' + L('СЗ 182/1 Аст', 29211) + ': из-за разных версий КД одни и те же стеллажи вышли глубиной 430 и 450 мм, итог — рекламация.'],
-    changes: ['Это мост от долга к делу: что запустили за 5 месяцев. Важно сразу честно обозначить: большинство этих процессов мы сейчас внедряем — пока это пилоты на части заказов, не массовый переход. На каждой карточке сверху — как было, снизу — что внедряем. Последняя карточка — следующий этап.',
-              'Серия NOMAD практически полностью перенесена в единую базу. Осталась ручная проверка человеком перед выдачей в цех. Дальше все правки идут только в базе, и чертежи в цех — только из неё.',
-              'Smarty — пример, с чего начинали. В архиве были 3D-модели, но ни одного чертежа. В заказах — только общие виды с габаритами и файлы для лазера; актуальные модели были у 3 изделий из 8, а одна деталь в цехе вообще отличалась от модели. Сейчас все 8 изделий Smarty в SolidWorks и в базе, чертежи делаем заново — до выдачи в цех их проверит человек.',
-              'Перенос в SolidWorks дал и подетальную выборку: по каждой детали есть чистый расход материала. Поэтому теоретическую себестоимость мы уже считаем по модели. Фактическая будет отличаться — она зависит от раскроя.',
-              'Нетиповые изделия пока считаем укрупнённо, условно разбивая на хлысты. Следующий этап — технологическая подготовка производства: оптимальный раскрой трубы на труборез, подбор режимов обработки и оснастки. Тогда сможем считать и фактическую себестоимость.',
-              'Проверка вторым конструктором и связь конструктора со станками — пилот: работает на части заказов, распространяем постепенно.',
-              'Паспорта и схемы сборки — уже рабочий инструмент: 37 паспортов и 28 схем сборки на 22.11.2026.',
-              'Логистика и укладка — отлаживаем схему работы с ИИ: уже на ранней стадии можно оперативно прикинуть количество изделий и схему упаковки для предварительного расчёта логистики, сравнить оптимальные варианты и проработать конструктив для удобства перевозки. Пример — скамья FLS: до 731 комплекта на машину вместо 440.',
-              'Подробнее о каждом пункте — дальше по экранам.'],
-    intake: ['Почему мы говорим «сначала выясняем, потом делаем». Заявки приходят в разном виде и статусе: единой формы нет. Бывает, на картинке стандартное изделие, а по описанию — нестандартное. Начинаем выяснять — это дни, иногда недели.',
-             'Ещё пример — 20 столов под одним наименованием: размеры разные, отличаются только техописанием. Поэтому внедряем единую систему артикулов: другое изделие — другой артикул.',
-             'Второй уровень — большой объект. Когда нет одного человека, который с первого дня сводит все направления — главного архитектора, главного инженера проекта, — изделия делают по картинке, без привязки к вентиляции, освещению и отделке. Общежитие (заказ 89, КазУТБ, Астана): декор сделали по картинке, на месте он не встал — мешали вентиляция и светильники. Перепиливали на объекте, вид пострадал, конструкторы переделывали и дизайн, и конструкцию.',
-             'Поэтому просьба к менеджерам и руководителям проектов: на крупном объекте с первого дня назначайте ответственного, который согласует размещение до чертежей.',
-             'Решается это только вместе — продажи, КТО, производство, руководство. Что можете сделать вы — в конце, на экране «Как помочь».'],
-    scope: ['Раньше путь был короткий: пришла служебка — нарисовали — отдали в цех. Технологию, оснастку, снабжение и цену серии заранее никто не проверял. Теперь новое изделие идёт через оценку вместе с производством и снабжением, опытный образец и только потом решение: производим или нет и какими сериями. Себестоимость считаем дважды — для образца и для серии.',
-            'Доработать и адаптировать изделие под наше производство мы умеем. Придумать своё с нуля — это промышленный дизайн: профильное образование и годы опыта. Такой компетенции в отделе сегодня нет.',
-            'Свет — отдельная профессия: в отделе нет специалистов по освещению, опыта, технологической и испытательной базы. Нужен подрядчик или свой специалист.',
-            'Несущие конструкции и проектные разделы — капремонт, переустройство, актовые залы — требуют расчёта и подтверждённой компетенции, а для проектных работ — разрешительных документов. Дизайн сделаем, расчёт и документы — через подрядчика с лицензией.',
-            'Пример чужих ТЗ — «Москва 2.0»: 17 позиций, большую часть начали с нуля, ТЗ написаны под другие фабрики. 2 позиции готовы, 5 в работе. Сроки по ним заказчикам не обещайте — уточняйте у КТО.',
-            'Простое правило: новое изделие, чужой каталог, свет или несущие конструкции — сначала к нам. Скажем, сколько это займёт и нужен ли подрядчик.'],
+    home: ['Коллеги, добрый день. Покажу, что делает технический отдел, что реально работает уже сейчас, что внедряем в пилотах и чем это поможет вам в продажах.',
+           'Главная мысль: мы не просто чертим по СЗ — отвечаем за изделие целиком, от заявки и расчёта до проверенного образца в цехе. Пойдём в четыре коротких акта: реальность, фундамент, живое доказательство и общие правила.'],
+    numbers: ['Акт I — реальность. За пять месяцев — 917 служебных записок, 8–9 в каждый рабочий день. Две из трёх — 591 — проходят через конструкторов; плюс 37 паспортов в новом формате и 28 схем сборки для покупателя.',
+              'Важный факт из анализа потока: 63 % СЗ с участием конструкторов (и 88 % КД-заказов на изготовление) содержат нестандартные позиции. При этом медиана листа согласования — 1 день, рекламаций — 1,5 дня, закрыто 79 % рекламаций.',
+              'По KPI важно понимать контекст: раньше KPI, метрики и анализ по СЗ отсутствовали совсем — не было даже фундамента. Сейчас фундамент есть: уже работает агентский учёт СЗ из Bitrix24 — ведётся база по содержанию, исполнителям и срокам готовности. Теперь можно оценивать KPI и рост.',
+              'На старте медиана от СЗ до выдачи КД — 6 календарных дней. Сегодня конструктор нужен для запуска каждого изделия — в том числе стандартного. Цель — сократить потери по стандартным изделиям (анализ СЗ, подготовка, сопровождение производства): металл в тот же день, корпус не больше 1 дня.',
+              'Сократить срок помогут единая библиотека и автоматизированная система формирования документации в цех по стандартным изделиям; по корпусной части — пилот «конструктор → станок». Эффект увидим по этой же медиане.'],
+    debt: ['Откуда берутся потери времени? Две корневые причины: 10-летний технический долг и неполный вход по заявкам.',
+           'По долгу: компании больше 10 лет, а единой базы КД не было. Пример — ' + L('СЗ 794-М', 29365) + ': о папке со схемами присадки знали 2 конструктора из 10. Второй пример — ' + L('СЗ 182/1 Аст', 29211) + ': одни и те же стеллажи вышли 430 и 450 мм из-за разных версий — рекламация.',
+           'И конкретная цифра из аналитики: 23 из 72 рекламаций за 5 месяцев — по серии Smarty. В архиве по ней не было чертежей деталей, только общие виды. Поэтому сейчас перечерчиваем Smarty с нуля.',
+           'По входу заявок: нет единой формы, на картинке одно, в описании другое, 20 столов под одним наименованием, а на крупном объекте без одного ответственного (пример — общежитие, заказ 89, КазУТБ) декор сделали по картинке, и на месте мешали вентиляция и светильники. Решается только вместе — продажи, КТО, производство, руководство.'],
+    pdm: ['Акт II — фундамент, который строим. Объединили две главные опоры: единый архив чертежей (PDM) и единую библиотеку проектирования.',
+          'Честно по цифрам на сегодня: в базу перенесены 18 изделий серии NOMAD (на проверке человеком перед выдачей в цех), все 8 изделий Smarty (чертим заново), тумба и шкаф «Москвы 2.0», 3D-модель ARco Duo и 178 файлов библиотеки крепежа и типовых деталей.',
+          'Зачем единая библиотека: сейчас крепёж толком не задокументирован. Бывает, отверстия на лазере вырезали по одному чертежу, а укомплектовали по другому — и винт не входит в отверстие. Библиотеку уже используем в текущих заказах, наполняем и чистим.',
+          'Честно по статусам: единая версия и проверка вторым конструктором — пока пилот на части заказов; целевая схема — все правки и выдача в цех только из базы. Дальше — автовыдача КД по стандарту и привязка библиотеки к артикулам 1С, чтобы закуп и комплектация шли прямо из 3D-модели.',
+          'Главный эффект: люди приходят и уходят, а чертежи, библиотека и опыт остаются в компании. Права доступа — по ролям.'],
     combo: ['Большая часть нашей линейки — металлический каркас плюс корпус из ЛДСП или МДФ. Это наше преимущество: мало кто делает и то и другое под одной крышей.',
-            'Внутри это две школы: корпусники работают в «Базисе», металлисты — в SolidWorks; крепёж корпуса закладывают одни, соединения металла — другие.',
-            'Самый сложный стык — в лабораторной мебели. Вытяжной шкаф или демонстрационный стол — это металлокаркас, корпус из ЛДСП, мойка с сифоном и электрика, а у шкафа ещё свет и вытяжка. В комплекте одного вытяжного шкафа — 60 позиций крепежа и комплектующих. Сегодня такой стык держится на опыте сборщиков в цехе: в двух разных программах и разрозненных базах конструктор не видит изделие целиком. Единая база этот стык упростит.',
-            'Поэтому сейчас пытаемся реализовать целевую схему из пяти правил: у изделия один ведущий конструктор — обычно конструктор по металлу; до чертежей он фиксирует схему стыков; дальше одна 3D-сборка, один список деталей и контрольная сборка образца до серии.',
-            'Пока это проект: обсуждаем с производством и пытаемся отработать схему на новых изделиях и позициях «Москвы 2.0», чтобы затем закрепить регламентом в едином архиве чертежей.'],
-    pdm: ['Единый архив чертежей — это система управления инженерными данными; в ИТ её называют PDM. Простыми словами — архив чертежей и 3D-моделей с историей версий: оттуда в производство уходят чертежи и программы для станков.',
-          'Здесь металл и корпус становятся одним изделием: в одном хранилище работают оба отдела. Перед выдачей в цех чертежи проверяет второй конструктор; цель — чтобы в цех уходило только проверенное. Если правим деталь библиотеки, архив сразу показывает, какие изделия это задевает.',
-          'Серия NOMAD практически полностью перенесена в базу; осталась ручная проверка перед выдачей в цех. Дальше все правки по NOMAD — только в базе, чертежи в цех — только из неё.',
-          'Строим библиотеку типовых изделий и модулей: шкафы, тумбы, столы, фурнитура. Для вас это быстрее чертежи на типовое, а рекламационную деталь не ищут по памяти — она есть в базе с нужными отверстиями.',
-          'Для корпуса переходим на «Базис-Мебельщик»: спецификация, раскрой и отверстия получаются из одной модели. Команду усилили технологом-конструктором. Переход идёт без остановки текущих заказов.',
-          'И главное: решение одного конструктора теперь видят все. Пришла СЗ на изделие, которое уже делали, — находим его в архиве, проверяем и выдаём в цех, а не изобретаем заново. Люди приходят и уходят, а чертежи, решения и опыт остаются в компании и доступны всем — конструкторам, технологам, производству. Права доступа — по ролям.'],
-    library: ['Создаём единую библиотеку проектирования: болты, гайки, винты, фурнитура и типовые детали — одни и те же 3D-модели для всех конструкторов. Сейчас она наполняется и уже активно используется в работе; недочёты и ошибки, которые находим, сразу исправляем — доводим библиотеку до рабочего состояния.',
-              'Зачем: конструкторы приходят и уходят, а библиотека остаётся. Новый человек берёт готовые детали в свои разработки и не рисует свой крепёж заново.',
-              'Почему это важно: сейчас крепёж толком не задокументирован. У одного конструктора в чертежах одни винты, у другого — другие, какие у них артикулы — непонятно. Бывает, что отверстия на лазере вырезали по одному чертежу, а укомплектовали по другому — и винт не входит в отверстие.',
-              'В перспективе библиотеку привяжем к наименованиям и кодам 1С. Конструктор перетягивает в сборку 3D-модель винта — и в спецификацию сразу попадают наименование, стандарт (ГОСТ или DIN), типоразмер и артикул 1С. Тогда закуп и комплектацию можно вести прямо по 3D-моделям конструктора.'],
-    pilot: ['Мы впервые связали конструктора и станки. Программы отверстий готовит конструктор, раскрой получается из модели, распил идёт на пильном центре HOMAG, этикетки печатаются в порядке выхода деталей с пилы, а станок присадки KDT читает штрихкод с этикетки и сам запускает программу.',
-            'Это пилот: сложности есть, нюансы с лицензиями решаем. Планируем, что с 2027 года часть проектов, скорее всего, пойдёт с этикетками.',
-            'Эффект пилота увидим по метрике: медиане срока от СЗ до выдачи КД по корпусу.'],
-    products: ['Новые и обновлённые изделия. Банкетка со спинкой — ' + L('СЗ Аст-261', 32015) + '; столы Kcell с перегородкой — ' + L('СЗ Ал-70', 31697) + ', вариант с царгой по просьбе клиента подготовили быстро. ИИ помогает с концепцией, вариантами и проверкой, а решение и ответственность за чертежи — у конструктора.',
-               'Стол NOMAD доработали: узел регулировки высоты теперь на заклёпках-гайках вместо пластин, приваренных внутри трубы. Сварки меньше, высоту меняют 4 винтами вместо 8, снаружи винтов не видно. Сдвиньте ползунок: слева прежний узел, справа новый. Чертежи на проверке, до серии — пробный образец.',
-               'Стол и стул по типу ISKU — экспортный заказ для NZ mēbeles (Рига, заказ 632): ТЗ заказчика «по типу ISKU Prima», ростовые группы 5–7. КТО разработало КД и калькуляцию, опытные образцы изготовлены. На карточке — 3D-поворот 360° и кнопка просмотра живых фото опытных образцов.',
-               'ARco Duo — двухместная парта, регулируемая по высоте, ростовые группы 5–7. Планируем в серию как одно из самых доступных решений. На карточке — поворот 360° с 3D-модели; модель переносим в SolidWorks. К ней подбираем стул: 5–7 уже продаётся, по 3–5 опытные образцы планируем показать после доработки.',
-               'Паспорта и схемы сборки — в первую очередь для покупателя: чтобы при сборке было меньше вопросов. На экране — стол NOMAD V одноместный: паспорт с руководством по эксплуатации и новая схема сборки картинками. Новый стиль станет стандартом и для действующих изделий, и для новой линейки, вводим постепенно. Пригодятся и для экспорта, КП и тендеров, в том числе под требования заказчика — например, по ' + L('СЗ 840', 30985) + ' и ' + L('СЗ 872', 31511) + '.',
-               'Отлаживаем схему работы с ИИ для предварительного расчёта логистики: уже на ранней стадии оперативно прикидываем количество изделий и схему упаковки, сравниваем оптимальные варианты и прорабатываем конструктив для дальнейшего удобства логистики. Скамья FLS: при другой укладке — до 731 комплекта на машину вместо 440. Табурет на экспорт — до 252 штук на паллету, штабель проверен в 3D. Трубу 6 м хотим резать под детали без отходов — это цель. Решение по-прежнему за конструктором.',
-               'Отдельно — просчёт себестоимости ускоряем: ИИ-агент считает металл, цель — дни вместо недель, как по ' + L('СЗ Аст-268', 32147) + '.'],
-    rnd: ['Это не только 3D-картинки: отдел реально занимается R&D — от расчёта узлов и 3D-модели до живого образца в металле и проверки нагрузкой в цехе.',
-          'Наверху — короткий 29-секундный промо-ролик с главными моментами из цеха. Ниже — три короткие вырезки живых тестов по 16–19 секунд (можно открыть крупно со звуком): испытание стола Kcell под двойной живой нагрузкой, контрольная сборка покрашенного образца и тест устойчивости опытной парты.',
-          'Внизу — живой фото-коллаж по пяти направлениям (ISKU, NOMAD на заклёпках, Kcell, банкетка, лабораторная тумба с мойкой). Каждую серию можно отфильтровать и пролистать крупно стрелками.'],
-    help: ['Пока единой формы заявки нет, самый быстрый способ ускорить работу — точный вход. Работа начинается не с чертежей: сначала расчёт себестоимости, логистика, концепт и конструктив, и только потом чертежи. Чем точнее вход, тем быстрее и точнее расчёт себестоимости, а за ним — качество изделия. Чертежи — уже финальный итог.',
-           'Полная СЗ и исходные до старта. И просите у клиента всю документацию, которая у него есть: на крупном объекте — проектную, у кафе или ресторана — архитектурные разделы, и документацию на само здание. Для предварительного расчёта часто достаточно проекта здания и референсных фото объекта, можно видео, — тогда на замер можно не ехать, и расчёт будет быстрее.',
-           'Был случай: по заявке считалось, что документации нет, конструктор с дизайнером выехали на замер — а у завхоза на месте нашлись обмерные планы и проектная документация здания. Хватило бы одного вопроса. Спрашивайте прямо: есть ли проект здания, обмерные планы, планировки, фото и видео объекта.',
-           'Изменения — через СЗ, а не устно, и реалистичный срок в КП: на расчёт, конструктив и чертежи — мы поможем его оценить.',
-           'Новое изделие, чужой каталог, свет или несущие конструкции — сначала к нам, до обещания клиенту. И на крупном объекте с первого дня назначайте ответственного, который сводит размещение с вентиляцией, светом и отделкой.'],
-    final: ['Итог. Сначала выясняем, потом делаем: понятная заявка и один ответственный на объекте. Металл и корпус — один ведущий конструктор, одна сборка, один список деталей. Единый архив — одна версия, проверка перед цехом, знания остаются в компании. Новое изделие — через оценку, образец и цену серии.',
-            'Технический долг продолжаем гасить, линейку растим. Мы не просто чертим по СЗ — мы отвечаем за изделие целиком. Спасибо, готов ответить на вопросы.']
+            'Внутри это две школы: корпусники работают в «Базисе», металлисты — в SolidWorks. Самый сложный стык — в лабораторной мебели (в одном вытяжном шкафу до 60 позиций крепежа и комплектующих). Можно открыть живые фото тумбы с мойкой прямо с экрана.',
+            'Сегодня стык держится на опыте сборщиков в цехе. Поэтому сейчас пытаемся реализовать целевую схему из пяти правил: один ведущий конструктор (обычно по металлу), схема стыков до чертежей, одна 3D-сборка, один список деталей и контрольная сборка образца до серии.',
+            'Пока это проект: обсуждаем с производством и отрабатываем на новых изделиях и позициях «Москвы 2.0».'],
+    pilot: ['Пилот по корпусной части — впервые связали конструктора и станки. Программы отверстий готовит конструктор, раскрой идёт из модели, распил на пильном центре HOMAG, этикетки печатаются по порядку выхода деталей, а станок присадки KDT читает штрихкод и сам запускает программу.',
+            'Это именно пилот: техническая возможность подтверждена, рабочие и лицензионные нюансы решаем. Планируем, что с 2027 года часть проектов, скорее всего, пойдёт с этикетками.',
+            'Для продаж и производства это быстрее выдача КД и меньше ручных ошибок. Эффект будем видеть по той же медиане срока выдачи КД.'],
+    'ai-docs': ['Две самые ощутимые пользы продажам уже сейчас: ИИ для логистики/себестоимости и новый стандарт паспорта.',
+                'По логистике и укладке отлаживаем схему работы с ИИ: уже на ранней стадии можно оперативно прикинуть количество изделий и схему упаковки для предварительного расчёта логистики, сравнить оптимальные варианты и проработать конструктив под удобную перевозку. Пример — скамья FLS: до 731 комплекта на машину вместо 440; табурет на экспорт — 252 штуки на паллету, проверено в 3D.',
+                'По себестоимости: по моделям в базе уже получаем чистый расход металла на деталь (теоретическая себестоимость); следующий этап — раскрой 6-метровых труб на труборез для фактической цены. Ускоряем просчёты для КП с помощью ИИ-агентов (пример — ' + L('СЗ Аст-268', 32147) + '). Решение и ответственность всегда за конструктором.',
+                'Вторая часть экрана — уже работающий инструмент: 37 паспортов в новом стиле и 28 схем сборки картинками. На экране — страницы стола NOMAD V (кликабельны). Вводим постепенно для действующих серий, новой линейки, экспорта и тендеров (' + L('СЗ 840', 30985) + ', ' + L('СЗ 872', 31511) + ').'],
+    products: ['Акт III — живое доказательство. Чистая витрина новых и обновлённых изделий: у каждой карточки можно открыть живые фото из цеха и короткие тесты.',
+               'Банкетка со спинкой — ' + L('СЗ Аст-261', 32015) + '; столы Kcell с перегородкой — ' + L('СЗ Ал-70', 31697) + ', вариант с царгой подготовили быстро по просьбе клиента.',
+               'Обновлённый NOMAD: узел регулировки высоты перевели на заклёпки-гайки вместо сварных пластин внутри трубы — 4 винта вместо 8, снаружи головок не видно. Ползунок «Было / Стало» можно открыть во весь экран (кнопка в правом нижнем углу картинки). Чертежи на проверке, до серии — пробный образец.',
+               'Стол и стул по типу ISKU — экспортный заказ в Ригу (ростовые группы 5–7), опытные образцы изготовлены. ARco Duo — доступная двухместная парта 5–7, модель переносим в SolidWorks; стул 5–7 уже продаётся, по 3–5 покажем образцы после доработки.'],
+    rnd: ['Это главный ответ на вопрос «не оторваны ли конструкторы от реальности»: отдел ведёт полный R&D-цикл — от 3D и расчёта узлов до живого образца и нагрузочных тестов в цехе.',
+          'Наверху — 29-секундный промо-ролик с главными моментами. Ниже — три короткие вырезки живых тестов по 16–19 секунд (открываются крупно со звуком): испытание стола Kcell под двойной живой нагрузкой, контрольная сборка покрашенного образца и тест устойчивости опытной парты.',
+          'Внизу — 16 живых кадров по пяти направлениям (Kcell, ISKU, Банкетка, NOMAD, лабмебель) с фильтром и просмотром галереей ← →.'],
+    scope: ['Акт IV — общие правила работы. Раньше новое изделие шло напрямую из СЗ в цех — и спешка на старте била по себестоимости и давала переделки в серии. Теперь путь: оценка с производством и снабжением → опытный образец (цена образца) → решение → серия (цена серии).',
+            'Повторить по образцу и адаптировать под наше производство мы умеем. Новое с нуля (промдизайн), подсветка и свет, несущие конструкции и проектные разделы (КМ/КР с лицензией) требуют профильного специалиста или подрядчика.',
+            'Пример чужих ТЗ — «Москва 2.0»: 17 позиций, 2 готовы, 5 в работе. Сроки по таким проектам обещайте клиенту только после оценки КТО.'],
+    help: ['Пока единой формы заявки нет, самый быстрый способ ускорить заказ — точный вход. Работа начинается не с чертежей: сначала расчёт себестоимости, логистика, концепт и конструктив, и только потом чертежи.',
+           'Шесть практических правил: полная СЗ до старта; запросите у клиента документы здания (был случай — выехали на замер, а у завхоза на месте лежали обмерные планы и проект); изменения только через СЗ; реалистичный срок в КП; новое/свет/несущие сначала к нам; на крупном объекте один ответственный с первого дня.',
+           'Внизу — четыре шага, которые внедряем вместе с продажами и производством: единая форма заявки, свой артикул у каждого изделия, согласование до цеха и один сквозной путь в архиве.'],
+    final: ['Честный итог на ноябрь 2026 — в трёх колонках, без приукрашивания.',
+            'Уже работает: фундамент KPI (агентский учёт СЗ в Bitrix24), 37 паспортов и 28 схем сборки в новом стиле, живой R&D и испытания образцов в цехе.',
+            'Внедряем в пилотах: единый архив (NOMAD 18, Smarty 8) и проверка вторым конструктором, библиотека 178 файлов, пилот «конструктор → станок» по корпусу, стык «металл + корпус», ранний расчёт логистики и себестоимости с ИИ.',
+            'План на 2027: автовыдача КД по стандартным изделиям, часть проектов с этикетками, единый выпуск комплекта и привязка библиотеки к 1С, раскрой 6 м трубы на труборез.',
+            'Мы не просто чертим по СЗ — мы отвечаем за изделие целиком. Спасибо, готов ответить на вопросы!']
   };
 
   const root = document.documentElement;
