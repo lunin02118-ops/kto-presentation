@@ -1042,8 +1042,36 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 .intake-card{padding:11px 13px;border-radius:14px;background:#FDF2F2;border:1px solid #F6D0D0;display:grid;gap:4px;align-content:start}
 .intake-card b{color:#8E1E1E;font-size:13.5px;line-height:1.25}
 .intake-card small{color:#5E3B3B;font-size:12.5px;line-height:1.34}
+/* экран 04: Большая карта системы за 5 месяцев (v32) */
+.arch-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;position:relative;margin-top:4px}
+.acard{position:relative;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:var(--r);padding:16px 15px;display:flex;flex-direction:column;gap:9px;min-width:0}
+.acard.ok{border-top:4px solid #3CD08B}
+.acard.prog{border-top:4px solid #6BA1FF}
+.acard.pilot{border-top:4px solid var(--orange)}
+.acard-top{display:flex;align-items:center;justify-content:space-between;gap:6px}
+.acard .an{font-family:var(--f-display);font-weight:800;font-size:12px;color:var(--sky);letter-spacing:.04em}
+.acard .ab{font-size:10px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:3px 7px;border-radius:999px;white-space:nowrap}
+.acard.ok .ab{background:#3CD08B;color:#06291A}
+.acard.prog .ab{background:#6BA1FF;color:#08184F}
+.acard.pilot .ab{background:var(--orange);color:var(--navy)}
+.acard h3{font-size:15.5px;line-height:1.2;color:#fff;margin:0}
+.acard p{font-size:13px;line-height:1.38;color:#DCE6FF;margin:0}
+.acard p b{color:#fff}
+.acard .atags{margin-top:auto;padding-top:8px;border-top:1px dashed rgba(255,255,255,.16);display:flex;flex-wrap:wrap;gap:5px}
+.acard .atags span{font-size:11px;font-weight:700;padding:3px 7px;border-radius:8px;background:rgba(255,255,255,.1);color:#EEF3FF}
+.arch-foot{margin-top:16px;display:grid;grid-template-columns:1.35fr 1fr;gap:14px;align-items:stretch}
+.arch-ai{display:flex;gap:12px;align-items:center;padding:14px 18px;border-radius:16px;background:rgba(245,165,36,.14);border:1px solid rgba(245,165,36,.45);color:#FFF7E8;font-size:14px;line-height:1.4}
+.arch-ai svg{width:24px;height:24px;color:var(--orange);flex:none}
+.arch-ai b{color:var(--orange)}
+.arch-nums{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.arch-nums div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:10px 12px;display:flex;flex-direction:column;justify-content:center}
+.arch-nums b{font-family:var(--f-display);font-size:19px;color:#fff;line-height:1.1}
+.arch-nums span{font-size:11.5px;color:var(--sky);line-height:1.25;margin-top:3px}
+.ai-stats .stat-top{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-bottom:4px}
+.ai-stats .stat-top .st{font-size:10px;padding:3px 7px}
+@media (max-width:1150px){.arch-grid{grid-template-columns:repeat(3,1fr)}.arch-foot{grid-template-columns:1fr}}
 @media (max-width:1050px){.intake-cards{grid-template-columns:1fr 1fr}}
-@media (max-width:640px){.intake-cards{grid-template-columns:1fr}}
+@media (max-width:640px){.intake-cards,.arch-grid,.arch-nums{grid-template-columns:1fr}}
 
 /* экран 12: честный Итог в 3 колонки */
 .final .wrap{display:block;min-height:0}
@@ -1228,14 +1256,15 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   <a class="brand" href="#home" aria-label="TROYA — на главную"><img src="media/logo_w.png" alt="TROYA" width="660" height="156"></a>
   <nav class="tabs" aria-label="Разделы презентации">
     <a href="#home"><span class="n">01</span>Главная</a>
-    <a href="#numbers"><span class="n">02</span>В цифрах</a>
+    <a href="#numbers"><span class="n">02</span>Точка А</a>
     <a href="#debt"><span class="n">03</span>Техдолг</a>
-    <a href="#system"><span class="n">04</span>Система</a>
-    <a href="#ai-docs"><span class="n">05</span>ИИ и паспорта</a>
-    <a href="#products"><span class="n">06</span>Изделия</a>
-    <a href="#rnd"><span class="n">07</span>R&amp;D и тесты</a>
-    <a href="#rules"><span class="n">08</span>Как помочь</a>
-    <a href="#final"><span class="n">09</span>Итог</a>
+    <a href="#arch"><span class="n">04</span>Карта</a>
+    <a href="#system"><span class="n">05</span>Система</a>
+    <a href="#ai-docs"><span class="n">06</span>Продажам</a>
+    <a href="#products"><span class="n">07</span>Изделия</a>
+    <a href="#rnd"><span class="n">08</span>R&amp;D</a>
+    <a href="#rules"><span class="n">09</span>Правила</a>
+    <a href="#final"><span class="n">10</span>Итог</a>
   </nav>
   <button class="tbtn" id="notesBtn" type="button" aria-expanded="false" aria-controls="notes" title="Заметки докладчика (N)"><svg class="i"><use href="#i-notes"/></svg></button>
   <button class="tbtn" id="fsBtn" type="button" title="Во весь экран (F)"><svg class="i"><use href="#i-full"/></svg></button>
@@ -1252,10 +1281,10 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   </div>
   <div class="wrap">
     <div>
-      <span class="pill rise" style="--i:0">Для отдела продаж · ноябрь 2026</span>
-      <h1 class="rise" style="--i:1">Технический отдел: <span class="mark">отвечаем за изделие целиком</span></h1>
-      <p class="lead rise" style="--i:2">От заявки и расчёта цены до живого образца в цехе. Что уже работает, что в пилотах и как это помогает продажам</p>
-      <ul class="tags rise" style="--i:3"><li>Цифры и KPI</li><li>Архив и библиотека</li><li>Металл + корпус</li><li>Станки</li><li>ИИ и паспорта</li><li>R&amp;D и тесты</li></ul>
+      <span class="pill rise" style="--i:0">Итоги 5 месяцев · для продаж и компании · ноябрь 2026</span>
+      <h1 class="rise" style="--i:1">От ручных чертежей — <span class="mark">к единой инженерной системе TROYA</span></h1>
+      <p class="lead rise" style="--i:2">Что мы построили за 5 месяцев: от учёта заявок, единой базы и связки с 1С — до живых испытаний, рендеров и паспортов для продаж</p>
+      <ul class="tags rise" style="--i:3"><li>KPI и учёт</li><li>PDM и Базис</li><li>Портал + 1С</li><li>Станки</li><li>ИИ и рендеры</li><li>R&amp;D и тесты</li></ul>
       <div class="hero-cta rise" style="--i:4">
         <a class="btn btn-light" href="#numbers">Начать <svg class="i"><use href="#i-arrow"/></svg></a>
         <span class="hint">или стрелки ← → на клавиатуре</span>
@@ -1279,11 +1308,11 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   </div>
 </section>
 
-<!-- 02 В ЦИФРАХ -->
-<section class="page" id="numbers" data-title="В цифрах">
+<!-- 02 ТОЧКА А -->
+<section class="page" id="numbers" data-title="Точка А">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">02 · Отдел в цифрах</span>
+      <span class="kicker">02 · Точка А · Масштаб и фундамент KPI</span>
       <h2>Две из трёх СЗ проходят через конструкторов — от расчёта до паспорта</h2>
       <p class="lead">Параллельно с текущими заказами гасим технический долг, строим учёт KPI и растим линейку</p>
     </header>
@@ -1392,13 +1421,68 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   </div>
 </section>
 
-<!-- 04 СИСТЕМА КТО (3 вкладки: Архив и библиотека / Металл + корпус / Станки) -->
+<!-- 04 БОЛЬШАЯ КАРТА: ЕДИНАЯ ИНЖЕНЕРНАЯ СИСТЕМА ЗА 5 МЕСЯЦЕВ -->
+<section class="page dark" id="arch" data-title="Карта">
+  <div class="hero-bg" aria-hidden="true"><div class="grid-lines"></div></div>
+  <div class="wrap">
+    <header class="head rise">
+      <span class="kicker">04 · 5 месяцев перестройки · Большая картина</span>
+      <h2>Единая инженерная система TROYA: от заявки и 1С до станка и покупателя</h2>
+      <p class="lead">Вместо разрозненных файлов по ПК мы заложили сквозной цифровой контур. Каждый блок закрывает конкретную боль и стыкуется со следующим</p>
+    </header>
+    <div class="arch-grid">
+      <article class="acard ok rise" style="--i:1">
+        <div class="acard-top"><span class="an">01 · ВХОД</span><span class="ab">работает</span></div>
+        <h3>Учёт СЗ и фундамент KPI</h3>
+        <p>Агентский учёт СЗ в <b>Bitrix24</b> ведёт базу по содержанию, исполнителям и срокам готовности — впервые есть на чём измерять рост</p>
+        <div class="atags"><span>917 СЗ</span><span>64 % с КТО</span><span>старт 6 дн.</span></div>
+      </article>
+      <article class="acard prog rise" style="--i:2">
+        <div class="acard-top"><span class="an">02 · ЯДРО</span><span class="ab">в работе</span></div>
+        <h3>Шифры, база и разделение ПО</h3>
+        <p><b>Шифратор</b> (артикулы и цвета) + <b>Ограничительный перечень</b>. Развели контуры: <b>TROYA_PDM</b> (SolidWorks) — металл и лабмебель, <b>Базис</b> — серийный корпус</p>
+        <div class="atags"><span>SolidWorks PDM</span><span>Базис</span><span>178 файлов</span></div>
+      </article>
+      <article class="acard pilot rise" style="--i:3">
+        <div class="acard-top"><span class="an">03 · ЦЕНА И 1С</span><span class="ab">к пилоту</span></div>
+        <h3>Портал «Навигатор PDM» + 1С</h3>
+        <p>Свой веб-портал каталога с 3D, ЛЗК и 1D-раскроем хлыстов. <b>Собран модуль 1С</b>: справочник <b>N кодов → 1 ID</b> и живые закупочные цены</p>
+        <div class="atags"><span>Портал КТО</span><span>1D-раскрой</span><span>живые цены 1С</span></div>
+      </article>
+      <article class="acard pilot rise" style="--i:4">
+        <div class="acard-top"><span class="an">04 · ЦЕХ</span><span class="ab">пилот</span></div>
+        <h3>Автоматизация и станки</h3>
+        <p><b>ESKD-AUTO</b>, генератор столов, расчёт гибки под оснастку цеха (PBH-160), <b>пилот «Базис — станок»</b> (этикетка со штрихкодом)</p>
+        <div class="atags"><span>ESKD-AUTO</span><span>Базис — станок</span><span>оснастка</span></div>
+      </article>
+      <article class="acard ok rise" style="--i:5">
+        <div class="acard-top"><span class="an">05 · КЛИЕНТ</span><span class="ab">работает</span></div>
+        <h3>Инструменты продаж и R&amp;D</h3>
+        <p>Студийные <b>3D-рендеры</b> для КП, <b>37 паспортов</b> и <b>28 схем сборки</b> картинками, ИИ-логистика с эскиза и <b>живые испытания</b> образцов</p>
+        <div class="atags"><span>3D-рендеры</span><span>37 / 28 док.</span><span>живой R&amp;D</span></div>
+      </article>
+    </div>
+    <div class="arch-foot">
+      <div class="arch-ai rise" style="--i:6">
+        <svg class="i" aria-hidden="true"><use href="#i-spark"/></svg>
+        <span><b>Принцип ИИ и автоматизации в КТО:</b> машина делает черновую работу (чертежи, расчёты, раскрой, укладку, рендеры) — человек контролирует, доводит до идеала в ручном режиме и утверждает</span>
+      </div>
+      <div class="arch-nums rise" style="--i:7">
+        <div><b>39 / 39</b><span>тестов модуля себестоимости 1С</span></div>
+        <div><b>18 + 8</b><span>NOMAD и Smarty перенесены в базу</span></div>
+        <div><b>0 → система</b><span>от файлов по ПК к единому порталу</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 СИСТЕМА КТО (3 вкладки: Архив и библиотека / Металл + корпус / Станки) -->
 <section class="page" id="system" data-title="Система">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">04 · Система и пилоты КТО</span>
-      <h2>Какой фундамент строим: база, стык и связь со станками</h2>
-      <p class="lead">Три инженерных направления, которые внедряем в пилотах — переключайтесь между вкладками или покажите только нужное</p>
+      <span class="kicker">05 · Детали системы (вглубь по запросу)</span>
+      <h2>Как устроен фундамент: база и 1С, стык и пилот «Базис — станок»</h2>
+      <p class="lead">Три инженерных направления в деталях — переключайтесь между вкладками или перейдите сразу к инструментам для продаж</p>
     </header>
     <div class="seg-wrap rise" style="--i:1">
       <div class="seg" role="tablist" aria-label="Направления системы КТО">
@@ -1581,25 +1665,25 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   </div>
 </section>
 
-<!-- 05 ИИ-ЛОГИСТИКА, СЕБЕСТОИМОСТЬ И ПАСПОРТА -->
-<section class="page" id="ai-docs" data-title="ИИ и паспорта">
+<!-- 06 ДЛЯ ПРОДАЖ: ЦЕНА, ЛОГИСТИКА, РЕНДЕРЫ И ПАСПОРТА -->
+<section class="page" id="ai-docs" data-title="Продажам">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">05 · ИИ и документы покупателя</span>
-      <h2>ИИ-логистика, расчёт цены и новый стандарт паспорта</h2>
-      <p class="lead">Две прямые пользы продажам: ускоряем ранний расчёт упаковки и себестоимости с ИИ, и уже выдаём покупателю понятные паспорта и схемы сборки</p>
+      <span class="kicker">06 · Инструменты для продаж</span>
+      <h2>Что КТО даёт продажам: цена, логистика, рендеры и паспорта</h2>
+      <p class="lead">Не просто чертежи в цех — четыре конкретных инструмента, которые помогают быстрее готовить КП, выигрывать тендеры и снижать вопросы при монтаже</p>
     </header>
     <div class="ai-top rise" style="--i:1">
       <div class="ai-head">
-        <span class="lbl">ИИ — логистика, укладка и расчёт себестоимости</span>
-        <span class="st pilot">пилот · отлаживаем схему</span>
+        <span class="lbl">Себестоимость, логистика и визуалы для КП</span>
+        <span class="st pilot">пилоты и рабочий инструмент</span>
       </div>
       <p class="kdm-how" style="margin:0"><svg class="i" aria-hidden="true"><use href="#i-spark"/></svg>С ИИ на ранней стадии прикидываем упаковку, вместимость и логистику — сразу дорабатываем конструктив под удобную перевозку. Решение и ответственность — всегда за конструктором</p>
       <div class="ai-stats">
-        <div class="stat card"><span class="big-num" data-count="731">731</span><span>комплект скамьи FLS на машину вместо 440 — та же конструкция, другая укладка</span></div>
-        <div class="stat card"><span class="big-num" data-count="252">252</span><span>табурета на паллету 1200 × 1200 — штабель проверен в 3D</span></div>
-        <div class="stat card"><span class="big-num">PDM + 1С</span><span>нормы 3D-модели × живые закупочные цены из 1С — модуль расчёта себестоимости на портале уже собран</span></div>
-        <div class="stat card"><span class="big-num">Дни, не недели</span><span>цель по расчёту цены и укладки для КП с ИИ-агентом</span></div>
+        <div class="stat card"><div class="stat-top"><span class="st pilot">готов к пилоту</span></div><span class="big-num">PDM + 1С</span><span>нормы 3D-модели × живые закупочные цены из 1С + 1D-раскрой заказа на портале</span></div>
+        <div class="stat card"><div class="stat-top"><span class="st pilot">пилот · ИИ</span></div><span class="big-num" data-count="731">731</span><span>комплект FLS на фуру вместо 440 (и <b>252</b> табурета на паллету) — другая укладка с эскиза</span></div>
+        <div class="stat card"><div class="stat-top"><span class="st ok">работает</span></div><span class="big-num">3D-рендеры</span><span>студийные фотореалистичные ракурсы и цветовые варианты в Blender для КП, закупов и сайта</span></div>
+        <div class="stat card"><div class="stat-top"><span class="st pilot">пилот · ИИ</span></div><span class="big-num">Дни, не недели</span><span>ускоряем просчёт цены и укладки для КП с помощью ИИ-агентов</span></div>
       </div>
     </div>
     <div class="card kp-band rise" style="--i:2">
@@ -1625,11 +1709,11 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   </div>
 </section>
 
-<!-- 06 ИЗДЕЛИЯ -->
+<!-- 07 ИЗДЕЛИЯ -->
 <section class="page" id="products" data-title="Изделия">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">06 · Новые и обновлённые изделия</span>
+      <span class="kicker">07 · Новые и обновлённые изделия</span>
       <h2>Новые изделия: больше готовых решений для заказчика</h2>
       <p class="lead">От 3D-модели и вариантов исполнения — до живых образцов в цехе. На каждой карточке можно открыть живые фото и короткие видео</p>
     </header>
@@ -1733,11 +1817,11 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   </div>
 </section>
 
-<!-- 07 R&D И ИСПЫТАНИЯ -->
-<section class="page" id="rnd" data-title="R&amp;D и тесты">
+<!-- 08 R&D И ИСПЫТАНИЯ -->
+<section class="page" id="rnd" data-title="R&amp;D">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">07 · R&amp;D и испытания в цехе</span>
+      <span class="kicker">08 · R&amp;D и испытания в цехе</span>
       <h2>Разработка в деле: от 3D-модели до живого образца и теста</h2>
       <p class="lead">Не останавливаемся на картинках — собираем опытные образцы, проверяем жёсткость и нагрузку в цехе до запуска серии</p>
     </header>
@@ -1834,11 +1918,11 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   </div>
 </section>
 
-<!-- 08 КАК ПОМОЧЬ (2 вкладки: Заявки и 6 правил / Что сами, где подрядчик) -->
-<section class="page" id="rules" data-title="Как помочь">
+<!-- 09 ПРАВИЛА (2 вкладки: Заявки и 6 правил / Что сами, где подрядчик) -->
+<section class="page" id="rules" data-title="Правила">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">08 · Заявки и как вы можете помочь</span>
+      <span class="kicker">09 · Как работаем вместе</span>
       <h2>Как ускорить ваш заказ и где нужен подрядчик</h2>
       <p class="lead">Сегодня до старта чертежей мы днями выясняем исходные по заявке. Чем точнее вход — тем быстрее расчёт цены и выше качество изделия</p>
     </header>
@@ -1915,39 +1999,39 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   </div>
 </section>
 
-<!-- 09 ИТОГ -->
+<!-- 10 ИТОГ -->
 <section class="page dark final" id="final" data-title="Итог">
   <div class="hero-bg" aria-hidden="true"><div class="grid-lines"></div></div>
   <div class="wrap">
     <div class="final-head">
-      <span class="kicker rise">09 · Итог на ноябрь 2026</span>
-      <h2 class="rise" style="--i:1">Мы не просто чертим по СЗ — <span class="mark">отвечаем за изделие целиком</span></h2>
-      <p class="lead rise" style="--i:2">Где мы сейчас: что уже даёт результат, что в пилотах и план на 2027</p>
+      <span class="kicker rise">10 · Итог на ноябрь 2026</span>
+      <h2 class="rise" style="--i:1">Строим не «папку чертежей» — <span class="mark">единую инженерную систему TROYA</span></h2>
+      <p class="lead rise" style="--i:2">Честная карта состояния: что уже даёт результат, что запускаем в пилотах и план на 2027</p>
     </div>
     <div class="final-cols">
       <article class="fcol ok rise" style="--i:3">
         <div class="fcol-h"><h3>Уже работает</h3><span class="fbadge">Работает</span></div>
         <ul>
           <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Фундамент KPI:</b> агентский учёт СЗ в Bitrix24 (содержание, исполнители, сроки готовности)</span></li>
-          <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Паспорта и сборка:</b> 37 паспортов в новом стиле и 28 схем сборки картинками</span></li>
-          <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Живой R&amp;D:</b> опытные образцы и нагрузочные испытания в цехе до серии</span></li>
+          <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Документы и визуал:</b> 37 паспортов ПС/РЭ, 28 схем сборки картинками, студийные 3D-рендеры для КП</span></li>
+          <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Живой R&amp;D:</b> опытные образцы и нагрузочные испытания в цехе до запуска серии</span></li>
         </ul>
       </article>
       <article class="fcol pilot rise" style="--i:4">
         <div class="fcol-h"><h3>Внедряем сейчас</h3><span class="fbadge">Пилоты</span></div>
         <ul>
-          <li><svg class="i"><use href="#i-layers"/></svg><span><b>Единый архив и библиотека:</b> NOMAD (18), Smarty (8), 178 файлов крепежа, проверка вторым конструктором</span></li>
-          <li><svg class="i"><use href="#i-cnc"/></svg><span><b>Подготовка КТО к интеграции в общую систему:</b> пилот «Базис — станок» по корпусу (раскрой, распил, этикетка со штрихкодом)</span></li>
+          <li><svg class="i"><use href="#i-layers"/></svg><span><b>Единое ядро:</b> Шифратор, Ограничительный перечень, TROYA_PDM (металл/лаб: NOMAD 18, Smarty 8) и Базис (корпус)</span></li>
+          <li><svg class="i"><use href="#i-db"/></svg><span><b>Навигатор PDM + 1С:</b> веб-портал с 1D-раскроем и готовый к пилоту модуль живых цен 1С и себестоимости</span></li>
+          <li><svg class="i"><use href="#i-cnc"/></svg><span><b>Интеграция со станками:</b> пилот «Базис — станок» по корпусу, ESKD-AUTO, ИИ-логистика (FLS 440 → 731)</span></li>
           <li><svg class="i"><use href="#i-swap"/></svg><span><b>Стык металл + корпус:</b> пытаемся реализовать схему с одним ведущим конструктором</span></li>
-          <li><svg class="i"><use href="#i-spark"/></svg><span><b>ИИ-логистика и связка PDM + 1С:</b> ранний расчёт упаковки (FLS 440 → 731); модуль живых цен 1С и себестоимости на портале готов к пилоту</span></li>
         </ul>
       </article>
       <article class="fcol plan rise" style="--i:5">
         <div class="fcol-h"><h3>План на 2027</h3><span class="fbadge">План</span></div>
         <ul>
           <li><svg class="i"><use href="#i-gauge"/></svg><span><b>Стандарт в производство:</b> металл — без участия конструктора (в тот же день), корпус — только оптимальный раскрой на заказ (≤ 1 дня)</span></li>
-          <li><svg class="i"><use href="#i-tag"/></svg><span><b>Станки и этикетки:</b> часть проектов с этикетками, раскрой 6 м трубы на труборез</span></li>
-          <li><svg class="i"><use href="#i-link"/></svg><span><b>Единый комплект и 1С:</b> выпуск «металл + корпус + список деталей» и артикулы 1С из 3D-модели</span></li>
+          <li><svg class="i"><use href="#i-tag"/></svg><span><b>Станки и этикетки:</b> часть серийных проектов с этикетками, раскрой 6 м трубы на труборез</span></li>
+          <li><svg class="i"><use href="#i-link"/></svg><span><b>Единый справочник 1С ↔ КД:</b> сквозные артикулы ГП, закуп и комплектация напрямую по 3D-модели</span></li>
         </ul>
       </article>
     </div>
@@ -1969,7 +2053,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 <nav class="pager" aria-label="Листание">
   <span class="progress" aria-hidden="true"></span>
   <button class="pbtn prev" type="button" id="prevBtn" aria-label="Предыдущий раздел"><svg class="i"><use href="#i-back"/></svg><span id="prevName">Назад</span></button>
-  <div class="where" id="where" aria-live="polite"><b>01 / 09</b> · Главная</div>
+  <div class="where" id="where" aria-live="polite"><b>01 / 10</b> · Главная</div>
   <button class="pbtn next" type="button" id="nextBtn" aria-label="Следующий раздел"><span id="nextName">Далее</span><svg class="i"><use href="#i-arrow"/></svg></button>
 </nav>
 
@@ -2004,6 +2088,11 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
     debt: ['Главный технический долг за 10+ лет — отсутствие единого справочника номенклатуры, который связывает 1С, склад, 3D-модели и чертежи. Поставщики везут комплектующие под разными артикулами, склад приходует их в 1С как разные позиции — в базе множатся дубли кодов. Конструктор в чертеже работает под одним названием. В итоге чертёж один, а на комплектацию уходят разные детали — отсюда путаница и рекламации. Нужен единый справочник номенклатуры и таблица соответствий (артикул поставщика ↔ код 1С ↔ модель КТО).',
            'Из-за этого возникает двойная работа и ошибки. Пример — ' + L('СЗ 794-М', 29365) + ': о папке со схемами присадки знали 2 конструктора из 10, чертежи для цеха потеряны — собирали по памяти. Второй пример — ' + L('СЗ 182/1 Аст', 29211) + ': одни и те же стеллажи вышли глубиной 430 и 450 мм из-за разных версий КД — рекламация.',
            'И показательная цифра за 5 месяцев: 23 из 72 рекламаций — по серии Smarty. В архиве по ней не было чертежей деталей, только общие виды. Поэтому сейчас перечерчиваем Smarty с нуля и собираем единую базу.'],
+    arch: ['Это главный экран презентации — полная картина того, что мы заложили за 5 месяцев вместо разрозненных файлов по ПК. Пять связанных слоёв от входа до покупателя.',
+           '1) Вход и KPI (работает): агентский учёт СЗ в Bitrix24 — впервые есть база и точка отсчёта. 2) Инженерное ядро: единый Шифратор (артикулы и цвета), Ограничительный перечень и чёткое разделение контуров — TROYA_PDM (SolidWorks) для металла, столов и лабмебели, Базис для серийного корпуса.',
+           '3) Веб-портал «Навигатор PDM» + 1С (готов к пилоту): собственный портал с 3D, ЛЗК, 1D-раскроем 6 м хлыстов и только что собранным модулем 1С (39/39 тестов пройдено) — справочник «много кодов 1С → 1 материал КТО» и подтяжка живых закупочных цен.',
+           '4) Автоматизация и цех (пилот): ESKD-AUTO, параметрический генератор столов, расчёт гибки под реальную оснастку цеха (PBH-160), пилот «Базис — станок». 5) Продажи и R&D (работает): студийные 3D-рендеры для КП, 37 паспортов, 28 схем сборки и живые испытания в цехе.',
+           'Главный принцип ИИ: машина делает черновую работу — человек контролирует, доводит до идеала в ручном режиме и утверждает.'],
     system: ['<b>Вкладка 1 · Архив и библиотека.</b> Строим централизованную базу — одну для всех: переносим серии (18 изделий NOMAD на проверке до выдачи в цех, 8 изделий Smarty чертим заново, тумба/шкаф «Москвы 2.0», 3D ARco Duo), собираем 3D-модели крепежа, покупных изделий, фурнитуры и профилей (178 файлов), формируем ограничительный перечень металла. Параллельно переходим на новое гибкое ПО и активно внедряем ИИ по принципу: машина делает — человек контролирует, доводит до идеала в ручном режиме и утверждает. В Навигаторе PDM уже собран справочник соответствий («много кодов 1С → 1 материал КТО») и подтяжка живых цен 1С — готовим к пилоту.',
              '<b>Вкладка 2 · Металл + корпус.</b> Большая часть линейки — комбинированные изделия (в одном вытяжном шкафу до 60 позиций крепежа; живые фото тумбы с мойкой открываются по кнопке). Сейчас стык держится на опыте сборщиков — пытаемся реализовать схему из 5 правил с одним ведущим конструктором, схемой стыков, одной 3D-сборкой и контрольной сборкой.',
              '<b>Вкладка 3 · Конструктор-технолог → станок.</b> Ведётся подготовка конструкторского отдела к быстрой интеграции в общую систему — пилот «Базис — станок» по корпусу: раскрой из модели, распил на HOMAG, этикетки по порядку выхода, присадка KDT читает штрихкод. Техническая возможность подтверждена, нюансы решаем; цель на 2027 — перевести часть серийных проектов на этикетки. Эффект увидим по медиане КД.'],
