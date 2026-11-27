@@ -975,7 +975,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 .rnd-filters{display:flex;flex-wrap:wrap;gap:6px}
 .rnd-filters button{padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--text);font-size:13px;font-weight:700;transition:all .2s}
 .rnd-filters button[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
-.rnd-gal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.rnd-gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .rnd-shot{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff;padding:0;cursor:zoom-in;aspect-ratio:4/3;box-shadow:0 8px 20px -14px rgba(10,26,110,.35);transition:transform .25s var(--ease)}
 .rnd-shot:hover{transform:translateY(-3px)}
 .rnd-shot img{width:100%;height:100%;object-fit:cover;display:block}
@@ -1582,7 +1582,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
             <figure class="vcard rise" style="--i:5"><img class="still" src="media/lab_sd.webp" alt="Стол демонстрационный для химии: металлокаркас, тумбы из ЛДСП, мойка со смесителем и розетки — рендер изделия" width="1200" height="900" loading="lazy" data-view="media/lab_sd.webp" data-cap="Стол демонстрационный для химии · металлокаркас, тумбы из ЛДСП, мойка со смесителем и розетки · рендер изделия из каталога"><figcaption><span>Демо-стол · каркас + тумбы + мойка</span></figcaption></figure>
           </div>
           <div class="story-links rise" style="--i:6">
-            <button class="sbtn" type="button" data-gallery="lab">📷 Живая тумба с мойкой в цехе (2 фото)</button>
+            <button class="sbtn" type="button" data-gallery="lab">📷 Живая тумба с мойкой в процессе сборки</button>
           </div>
         </div>
         <div class="card rise" style="--i:3">
@@ -1718,7 +1718,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         <h3>Банкетка со спинкой</h3>
         <p>сварной металлокаркас — готов образец в цехе</p>
         <div class="story-links">
-          <button class="sbtn" type="button" data-gallery="banquette">📷 Живой каркас (3 фото)</button>
+          <button class="sbtn" type="button" data-gallery="banquette">📷 Живой каркас (2 фото)</button>
         </div>
       </article>
       <article class="prod rise" style="--i:2">
@@ -1732,7 +1732,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         <h3>Столы с перегородкой Kcell</h3>
         <p>вариант с царгой под запрос клиента · прошёл живой тест нагрузки</p>
         <div class="story-links">
-          <button class="sbtn" type="button" data-gallery="kcell">📷 Цех и сборка (6)</button>
+          <button class="sbtn" type="button" data-gallery="kcell">📷 Цех и узел (2)</button>
           <button class="sbtn vid" type="button" data-view="media/live/test_kcell_load.mp4" data-sound="1" data-cap="Испытание стола Kcell на прочность · 19 с · проверка жёсткости и двойная живая нагрузка на столешницу">▶ Тест · 19 с</button>
         </div>
       </article>
@@ -1770,7 +1770,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         <h3>Стол и стул по типу ISKU</h3>
         <p>экспорт в Латвию, ростовые группы 5⁠–⁠7. КД и расчёт — КТО, образцы готовы</p>
         <div class="story-links">
-          <button class="sbtn" type="button" data-gallery="isku">📷 Опытные образцы (3 фото)</button>
+          <button class="sbtn" type="button" data-gallery="isku">📷 Опытные образцы (2 фото)</button>
         </div>
       </article>
     </div>
@@ -1836,7 +1836,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         <div class="rnd-kpis">
           <div><b>5</b><span>изделий на фото</span></div>
           <div><b>3</b><span>живых теста</span></div>
-          <div><b>16</b><span>кадров из цеха</span></div>
+          <div><b>9</b><span>кадров из цеха</span></div>
         </div>
       </div>
     </div>
@@ -1878,33 +1878,26 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
     </div>
 
     <div class="rnd-sec-head rise" style="--i:6">
-      <h3>Фото из цеха — 5 изделий, 16 кадров <span style="font-weight:500;font-size:13px;color:var(--muted)">· листайте ← →</span></h3>
+      <h3>Фото из цеха — 5 изделий, 9 кадров <span style="font-weight:500;font-size:13px;color:var(--muted)">· листайте ← →</span></h3>
       <div class="rnd-filters" id="rndFilters" role="group" aria-label="Фильтр фото по изделиям">
-        <button type="button" data-cat="all" aria-pressed="true">Все (16)</button>
-        <button type="button" data-cat="kcell" aria-pressed="false">Kcell (6)</button>
-        <button type="button" data-cat="isku" aria-pressed="false">ISKU (3)</button>
-        <button type="button" data-cat="banquette" aria-pressed="false">Банкетка (3)</button>
+        <button type="button" data-cat="all" aria-pressed="true">Все (9)</button>
+        <button type="button" data-cat="kcell" aria-pressed="false">Kcell (2)</button>
+        <button type="button" data-cat="isku" aria-pressed="false">ISKU (2)</button>
+        <button type="button" data-cat="banquette" aria-pressed="false">Банкетка (2)</button>
         <button type="button" data-cat="nomad" aria-pressed="false">NOMAD (2)</button>
-        <button type="button" data-cat="lab" aria-pressed="false">Лабмебель (2)</button>
+        <button type="button" data-cat="lab" aria-pressed="false">Лабмебель (1)</button>
       </div>
     </div>
     <div class="rnd-gal" id="rndGal">
       <button class="rnd-shot" type="button" data-cat="isku" data-gallery="isku" data-idx="0"><img src="media/live/isku_pair_live.webp" alt="Комплект ISKU: стол и стул вживую" loading="lazy"><span>ISKU · опытный комплект</span></button>
       <button class="rnd-shot" type="button" data-cat="isku" data-gallery="isku" data-idx="1"><img src="media/live/isku_chair_live.webp" alt="Стул по типу ISKU" loading="lazy"><span>ISKU · стул 5–7</span></button>
-      <button class="rnd-shot" type="button" data-cat="isku" data-gallery="isku" data-idx="2"><img src="media/live/isku_table_live.webp" alt="Стол по типу ISKU" loading="lazy"><span>ISKU · стол 5–7</span></button>
       <button class="rnd-shot" type="button" data-cat="nomad" data-gallery="nomad" data-idx="0"><img src="media/live/nomad_rivet_install.webp" alt="Установка шестигранной заклёпки-гайки" loading="lazy"><span>NOMAD · установка заклёпки</span></button>
       <button class="rnd-shot" type="button" data-cat="nomad" data-gallery="nomad" data-idx="1"><img src="media/live/nomad_rivet_done.webp" alt="Заклёпка-гайка заподлицо в трубе" loading="lazy"><span>NOMAD · заклёпка заподлицо</span></button>
-      <button class="rnd-shot" type="button" data-cat="kcell" data-gallery="kcell" data-idx="0"><img src="media/live/kcell_proto_front.webp" alt="Опытный стол Kcell в сыром металле" loading="lazy"><span>Kcell · опытный стол</span></button>
-      <button class="rnd-shot" type="button" data-cat="kcell" data-gallery="kcell" data-idx="2"><img src="media/live/kcell_raw_frame.webp" alt="Сварной каркас Kcell" loading="lazy"><span>Kcell · сварной каркас</span></button>
-      <button class="rnd-shot" type="button" data-cat="kcell" data-gallery="kcell" data-idx="5"><img src="media/live/kcell_partition_slot.webp" alt="Паз в МДФ под пластину с трубкой" loading="lazy"><span>Kcell · паз перегородки</span></button>
-      <button class="rnd-shot" type="button" data-cat="kcell" data-gallery="kcell" data-idx="4"><img src="media/live/kcell_painted_frame.webp" alt="Покрашенный каркас Kcell" loading="lazy"><span>Kcell · покрашенный каркас</span></button>
-      <button class="rnd-shot" type="button" data-cat="kcell" data-gallery="kcell" data-idx="1"><img src="media/live/kcell_proto_leg.webp" alt="Узел крепления опоры Kcell" loading="lazy"><span>Kcell · узел опоры</span></button>
-      <button class="rnd-shot" type="button" data-cat="kcell" data-gallery="kcell" data-idx="3"><img src="media/live/kcell_raw_corner.webp" alt="Стык траверсы и опоры Kcell" loading="lazy"><span>Kcell · стык траверсы</span></button>
+      <button class="rnd-shot" type="button" data-cat="kcell" data-gallery="kcell" data-idx="0"><img src="media/live/kcell_painted_frame.webp" alt="Покрашенный каркас Kcell" loading="lazy"><span>Kcell · покрашенный каркас</span></button>
+      <button class="rnd-shot" type="button" data-cat="kcell" data-gallery="kcell" data-idx="1"><img src="media/live/kcell_partition_slot.webp" alt="Паз в МДФ под пластину с трубкой" loading="lazy"><span>Kcell · паз перегородки</span></button>
       <button class="rnd-shot" type="button" data-cat="banquette" data-gallery="banquette" data-idx="0"><img src="media/live/banquette_frame_live.webp" alt="Каркас банкетки в цехе" loading="lazy"><span>Банкетка · готовый каркас</span></button>
       <button class="rnd-shot" type="button" data-cat="banquette" data-gallery="banquette" data-idx="1"><img src="media/live/banquette_joint_live.webp" alt="Узел соединения каркаса банкетки" loading="lazy"><span>Банкетка · узел стыка</span></button>
-      <button class="rnd-shot" type="button" data-cat="banquette" data-gallery="banquette" data-idx="2"><img src="media/live/banquette_foot_live.webp" alt="Регулируемая опора банкетки" loading="lazy"><span>Банкетка · регулируемая опора</span></button>
-      <button class="rnd-shot" type="button" data-cat="lab" data-gallery="lab" data-idx="0"><img src="media/live/lab_sink_live_1.webp" alt="Лабораторная тумба с мойкой в цехе" loading="lazy"><span>Лабмебель · тумба с мойкой</span></button>
-      <button class="rnd-shot" type="button" data-cat="lab" data-gallery="lab" data-idx="1"><img src="media/live/lab_sink_live_2.webp" alt="Лабораторная тумба с мойкой, общий вид" loading="lazy"><span>Лабмебель · сборка в цехе</span></button>
+      <button class="rnd-shot" type="button" data-cat="lab" data-gallery="lab" data-idx="0"><img src="media/live/lab_sink_live_1.webp" alt="Лабораторная тумба с мойкой в процессе сборки" loading="lazy"><span>Лабмебель · в процессе сборки</span></button>
     </div>
   </div>
 </section>
@@ -2086,7 +2079,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
                'Стол и стул по типу ISKU — экспортный заказ в Ригу (ростовые группы 5–7), опытные образцы изготовлены. ARco Duo — доступная двухместная парта 5–7, модель переносим в SolidWorks; стул 5–7 уже продаётся, по 3–5 покажем образцы после доработки.'],
     rnd: ['Это главный ответ на вопрос «не оторваны ли конструкторы от реальности»: отдел ведёт полный R&D-цикл — от 3D и расчёта узлов до живого образца и нагрузочных тестов в цехе.',
           'Наверху — 29-секундный промо-ролик с главными моментами. Ниже — три короткие вырезки живых тестов по 16–19 секунд (открываются крупно со звуком): испытание стола Kcell под двойной живой нагрузкой, контрольная сборка покрашенного образца и тест устойчивости опытной парты.',
-          'Внизу — 16 живых кадров по пяти направлениям (Kcell, ISKU, Банкетка, NOMAD, лабмебель) с фильтром и просмотром галереей ← →.'],
+          'Внизу — 9 живых кадров (по 1–2 на каждое изделие: Kcell, ISKU, Банкетка, NOMAD, лабмебель) с фильтром и просмотром галереей ← →.'],
     rules: ['<b>Вкладка 1 · Заявки и 6 правил.</b> Всё, что тормозит работу на входе: нет единой формы, на фото одно, в описании другое, 20 столов под одним наименованием без артикулов, согласование после запуска, и пример общежития (заказ 89, КазУТБ) — декор сделали по картинке, на месте мешали вентиляция и свет, перепиливали на объекте.',
             'Поэтому шесть практических правил для ускорения: полная СЗ до старта; запросите у клиента документы здания (был случай — выехали на замер, а у завхоза лежали обмерные планы и проект); правки только через СЗ; реалистичный срок в КП; новое/свет/несущие сначала к нам; на крупном объекте один ответственный с первого дня. Внизу — 4 шага, которые внедряем вместе.',
             '<b>Вкладка 2 · Что сами, где подрядчик.</b> Спешка на старте бьёт по себестоимости. Новое изделие идёт через оценку с производством, опытный образец (цена образца), решение и серию (цена серии). Повторить и адаптировать умеем сами; промдизайн с нуля, подсветка и несущие конструкции (КМ/КР с лицензией) — профильный специалист/подрядчик. Пример — «Москва 2.0» (17 позиций: 2 готовы, 5 в работе): сроки только через оценку КТО.'],
@@ -2279,28 +2272,21 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
     isku: [
       { src: 'media/live/isku_pair_live.webp', cap: 'Стол и стул по типу ISKU · живой опытный комплект (ростовые группы 5–7)' },
       { src: 'media/live/isku_chair_live.webp', cap: 'Стул по типу ISKU · опытный образец с гнутой фанерой' },
-      { src: 'media/live/isku_table_live.webp', cap: 'Стол по типу ISKU · опытный образец с регулируемой опорой' },
     ],
     banquette: [
       { src: 'media/live/banquette_frame_live.webp', cap: 'Банкетка со спинкой ПФ.UN.0012 · готовый покрашенный металлокаркас в цехе' },
       { src: 'media/live/banquette_joint_live.webp', cap: 'Банкетка ПФ.UN.0012 · крупный план узла соединения рамы и боковины' },
-      { src: 'media/live/banquette_foot_live.webp', cap: 'Банкетка ПФ.UN.0012 · регулируемая опора на стойке каркаса' },
     ],
     nomad: [
       { src: 'media/live/nomad_rivet_install.webp', cap: 'Обновлённый NOMAD · установка шестигранной заклёпки-гайки в трубу стойки' },
       { src: 'media/live/nomad_rivet_done.webp', cap: 'Обновлённый NOMAD · заклёпка-гайка установлена заподлицо, без сварки пластин внутри' },
     ],
     kcell: [
-      { src: 'media/live/kcell_proto_front.webp', cap: 'Стол Kcell · опытный образец в сыром металле со столешницей перед испытаниями' },
-      { src: 'media/live/kcell_proto_leg.webp', cap: 'Стол Kcell · узел опоры и крепления столешницы на опытном образце' },
-      { src: 'media/live/kcell_raw_frame.webp', cap: 'Стол Kcell · сварной каркас с траверсой в цехе' },
-      { src: 'media/live/kcell_raw_corner.webp', cap: 'Стол Kcell · крупный план углового стыка траверсы и опоры' },
       { src: 'media/live/kcell_painted_frame.webp', cap: 'Стол Kcell · каркас после порошковой окраски' },
       { src: 'media/live/kcell_partition_slot.webp', cap: 'Стол Kcell · новая перегородка: фрезерованный паз в МДФ под пластину с вваренной трубкой' },
     ],
     lab: [
-      { src: 'media/live/lab_sink_live_1.webp', cap: 'Лабораторная тумба с мойкой · реальная контрольная сборка стыка металла и корпуса в цехе' },
-      { src: 'media/live/lab_sink_live_2.webp', cap: 'Лабораторная тумба с мойкой · общий вид готового образца на участке сборки' },
+      { src: 'media/live/lab_sink_live_1.webp', cap: 'Лабораторная тумба с мойкой · контрольная сборка стыка металла и корпуса в цехе (в процессе сборки)' },
     ],
   };
 
