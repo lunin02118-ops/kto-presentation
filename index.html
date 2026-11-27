@@ -1026,8 +1026,12 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 .debt-smarty b{font-family:var(--f-display);font-weight:800;font-size:20px;color:var(--red);white-space:nowrap}
 .ai-top{display:grid;gap:12px}
 .ai-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.ai-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.ai-stats .stat{padding:16px}
+.ai-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ai-stats .stat{padding:18px 20px;gap:8px}
+.ai-stats h3{font-size:18px;color:var(--navy);margin:0}
+.ai-stats p{font-size:14.5px;color:var(--text);line-height:1.42;margin:0}
+.ai-stats .ai-ex{margin-top:auto;padding-top:10px;border-top:1px dashed var(--line);font-size:13.5px;color:var(--muted);line-height:1.38}
+.ai-stats .ai-ex b{color:var(--blue);font-family:var(--f-display);font-weight:800}
 .ai-stats .big-num{font-size:clamp(26px,2.5vw,38px)}
 .ai-stats span:last-child{font-size:13.5px;line-height:1.35}
 #ai-docs .kp-band{margin-top:16px}
@@ -1658,13 +1662,19 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
     </header>
     <div class="ai-top rise" style="--i:1">
       <div class="ai-head">
-        <span class="lbl">Пилоты для коммерции: ранняя логистика и скорость расчёта цены</span>
-        <span class="st pilot">пилоты · ИИ</span>
+        <span class="lbl">Пилоты для коммерции: предварительная логистика и расчёт цены</span>
       </div>
       <div class="ai-stats">
-        <div class="stat card"><div class="stat-top"><span class="st pilot">пилот · ИИ-логистика</span></div><span class="big-num" data-count="731">731</span><span>комплект скамьи FLS на фуру вместо 440 — укладка и конструктив проработаны с эскиза</span></div>
-        <div class="stat card"><div class="stat-top"><span class="st pilot">пилот · ИИ-логистика</span></div><span class="big-num" data-count="252">252</span><span>табурета на паллету 1200 × 1200 — штабель и вместимость проверены в 3D</span></div>
-        <div class="stat card"><div class="stat-top"><span class="st pilot">пилот · расчёт КП</span></div><span class="big-num">Дни, не недели</span><span>разработан и совершенствуется механизм расчёта себестоимости (пока пилот: металл и окраска) — ускоряем КП с ИИ-агентами и заделом связки с 1С</span></div>
+        <div class="stat card">
+          <div class="stat-top"><h3>Предварительная логистика с ИИ</h3><span class="st pilot">пилот</span></div>
+          <p>С использованием ИИ получается оперативно прорабатывать предварительные варианты логистики и упаковки по изделиям — ещё на ранней стадии</p>
+          <div class="ai-ex">Примеры: скамья FLS — <b>731</b> комплект на фуру вместо 440; табурет — <b>252</b> шт. на паллету (проверено в 3D)</div>
+        </div>
+        <div class="stat card">
+          <div class="stat-top"><h3>Расчёт себестоимости для КП</h3><span class="st pilot">пилот · металл и окраска</span></div>
+          <p>Разработан и совершенствуется механизм расчёта себестоимости изделий — ускоряем подготовку КП с ИИ-агентами и заделом связки с 1С</p>
+          <div class="ai-ex">Ориентир по скорости расчёта: <b>дни вместо недель</b> (пока пилот по металлу и окраске)</div>
+        </div>
       </div>
     </div>
     <div class="card kp-band rise" style="--i:2">
