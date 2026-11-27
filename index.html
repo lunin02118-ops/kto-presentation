@@ -976,6 +976,13 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 .rnd-filters button{padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--text);font-size:13px;font-weight:700;transition:all .2s}
 .rnd-filters button[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
 .rnd-gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.rnd-tech{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(16px,2.2vw,26px);align-items:center;margin-top:16px}
+.rnd-tech-txt{display:flex;flex-direction:column;gap:10px}
+.rnd-tech-txt h4{margin:0;font-family:var(--f-display);font-size:clamp(16px,1.3vw,19px);color:var(--navy);line-height:1.25}
+.rnd-tech-txt .specs{margin-top:4px}
+.rnd-tech-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rnd-tech-grid .rnd-shot{aspect-ratio:4/3}
+@media (max-width:960px){.rnd-tech{grid-template-columns:1fr}}
 .rnd-shot{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff;padding:0;cursor:zoom-in;aspect-ratio:4/3;box-shadow:0 8px 20px -14px rgba(10,26,110,.35);transition:transform .25s var(--ease)}
 .rnd-shot:hover{transform:translateY(-3px)}
 .rnd-shot img{width:100%;height:100%;object-fit:cover;display:block}
@@ -1841,6 +1848,32 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
       </div>
     </div>
 
+    <div class="card rnd-tech rise" style="--i:2">
+      <div class="rnd-tech-txt">
+        <div class="ai-head">
+          <span class="lbl">Поиск новых решений для типовых узлов</span>
+          <span class="st pilot">осваиваем · R&amp;D</span>
+        </div>
+        <h4>Лазерная резка трубы под ручную гибку и лазерная сварка</h4>
+        <ul class="bul" style="margin-top:2px">
+          <li><svg class="i"><use href="#i-spark"/></svg><span><b>Новые решения для типовых узлов</b> — уходим от сборки из десятка отдельных отрезков трубы к цельной заготовке с точными лазерными вырезами</span></li>
+          <li><svg class="i"><use href="#i-gauge"/></svg><span><b>Резка под ручную гибку</b> — вырезы сразу задают угол и радиус (R38,5), снижают трудозатраты и ускоряют сборку без сложной оснастки</span></li>
+          <li><svg class="i"><use href="#i-flame"/></svg><span><b>Интеграция с лазерной сваркой</b> — отрабатываем стыки подобных конструкций под лазерную сварку: узкий чистый шов и минимум зачистки</span></li>
+        </ul>
+        <div class="specs">
+          <span class="chip">Боковина банкетки ПФ.UN.0012</span>
+          <span class="chip">1 заготовка 2120,5 мм</span>
+          <span class="chip">Труба 40×40×1,5</span>
+        </div>
+      </div>
+      <div class="rnd-tech-grid">
+        <button class="rnd-shot" type="button" data-gallery="bending" data-idx="0"><img src="media/live/bokovina_blank_3d.webp" alt="3D-модель заготовки боковины банкетки с вырезами и готовая согнутая боковина" loading="lazy"><span>3D · заготовка → боковина банкетки</span></button>
+        <button class="rnd-shot" type="button" data-gallery="bending" data-idx="1"><img src="media/live/bokovina_notch_3d.webp" alt="Крупный план лазерного выреза под ручную гибку трубы 40х40" loading="lazy"><span>3D · лазерный вырез под гибку (R38,5)</span></button>
+        <button class="rnd-shot" type="button" data-gallery="bending" data-idx="2"><img src="media/live/bend_laser_frame_live.webp" alt="Живой образец опоры, согнутой из одной трубы и проваренной лазером" loading="lazy"><span>Вживую · цельногнутая опора</span></button>
+        <button class="rnd-shot" type="button" data-gallery="bending" data-idx="3"><img src="media/live/bend_laser_weld_closeup.webp" alt="Крупный план гибов и швов лазерной сварки на опытной опоре" loading="lazy"><span>Вживую · гибы + лазерная сварка</span></button>
+      </div>
+    </div>
+
     <div class="rnd-sec-head rise" style="--i:3">
       <h3>Три живых испытания — без лишнего, по 16–19 секунд</h3>
     </div>
@@ -2078,6 +2111,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
                'Обновлённый NOMAD: узел регулировки высоты перевели на заклёпки-гайки вместо сварных пластин внутри трубы — 4 винта вместо 8, снаружи головок не видно. Ползунок «Было / Стало» можно открыть во весь экран (кнопка в правом нижнем углу картинки). Чертежи на проверке, до серии — пробный образец.',
                'Стол и стул по типу ISKU — экспортный заказ в Ригу (ростовые группы 5–7), опытные образцы изготовлены. ARco Duo — доступная двухместная парта 5–7, модель переносим в SolidWorks; стул 5–7 уже продаётся, по 3–5 покажем образцы после доработки.'],
     rnd: ['Это главный ответ на вопрос «не оторваны ли конструкторы от реальности»: отдел ведёт полный R&D-цикл — от 3D и расчёта узлов до живого образца и нагрузочных тестов в цехе.',
+          'Отдельное направление R&D — поиск новых технологических решений для типовых узлов: осваиваем лазерную резку трубы под ручную гибку (снижение трудозатрат и рост скорости сборки без лишних стыков) и отрабатываем интеграцию таких конструкций с лазерной сваркой. На примере боковины банкетки ПФ.UN.0012 — одна заготовка длиной 2120,5 мм с тремя радиусными вырезами R38,5 превращается в цельную боковину; рядом — живые фото цельногнутой опоры со швами лазерной сварки.',
           'Наверху — 29-секундный промо-ролик с главными моментами. Ниже — три короткие вырезки живых тестов по 16–19 секунд (открываются крупно со звуком): испытание стола Kcell под двойной живой нагрузкой, контрольная сборка покрашенного образца и тест устойчивости опытной парты.',
           'Внизу — 9 живых кадров (по 1–2 на каждое изделие: Kcell, ISKU, Банкетка, NOMAD, лабмебель) с фильтром и просмотром галереей ← →.'],
     rules: ['<b>Вкладка 1 · Заявки и 6 правил.</b> Всё, что тормозит работу на входе: нет единой формы, на фото одно, в описании другое, 20 столов под одним наименованием без артикулов, согласование после запуска, и пример общежития (заказ 89, КазУТБ) — декор сделали по картинке, на месте мешали вентиляция и свет, перепиливали на объекте.',
@@ -2287,6 +2321,12 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
     ],
     lab: [
       { src: 'media/live/lab_sink_live_1.webp', cap: 'Лабораторная тумба с мойкой · контрольная сборка стыка металла и корпуса в цехе (в процессе сборки)' },
+    ],
+    bending: [
+      { src: 'media/live/bokovina_blank_3d.webp', cap: 'Боковина банкетки ПФ.UN.0012.01.000 · 3D-модель прямой заготовки 2120,5 мм (труба 40×40×1,5) с вырезами под ручную гибку и готовая согнутая боковина' },
+      { src: 'media/live/bokovina_notch_3d.webp', cap: 'Боковина банкетки ПФ.UN.0012.01.000 · крупный план лазерного выреза под ручную гибку (радиус R38,5, технологические перемычки для отжима перед гибкой)' },
+      { src: 'media/live/bend_laser_frame_live.webp', cap: 'Опытный образец вживую · цельногнутая опора из одной трубы после резки под ручную гибку и лазерной сварки' },
+      { src: 'media/live/bend_laser_weld_closeup.webp', cap: 'Узел вживую · стыки после ручной гибки и лазерной сварки: чистый узкий шов и минимум зачистки' },
     ],
   };
 
