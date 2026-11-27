@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Технический отдел TROYA</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Сайт-презентация технического отдела TROYA для отдела продаж: технический долг, стандарты, пилот ЧПУ, новые изделия.">
+<meta name="description" content="Презентация технического отдела TROYA для продаж, снабжения и производства: единая база изделий, связка с 1С, автоматизация с ИИ и скриптами, живой R&D и общие правила работы.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
@@ -210,7 +210,6 @@ p{margin:0}
 .delta{justify-self:start;font-weight:700;font-size:13px;color:#fff;background:var(--red);padding:3px 10px;border-radius:999px}
 
 /* ===== 04 инструменты ===== */
-.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.4vw,32px);align-items:start}
 .steps{list-style:none;margin:0;padding:0;display:grid;gap:14px;position:relative}
 .steps::before{content:"";position:absolute;left:23px;top:24px;bottom:24px;width:2px;background:linear-gradient(var(--blue),var(--sky));transform-origin:top}
 .is-active .steps::before{animation:growY 1.2s var(--ease) .3s both}
@@ -219,56 +218,18 @@ p{margin:0}
 .steps .ic{background:var(--blue);color:#fff;border-radius:50%;position:relative;z-index:1}
 .steps h3{margin:10px 0 4px}
 .steps p{color:var(--muted)}
-.note-ok{display:inline-flex;align-items:center;gap:10px;margin-top:20px;padding:10px 16px;border-radius:12px;background:#E6F5EE;color:#11744A;font-weight:600}
-.scheme{text-align:center}
-.scheme .lbl{justify-content:center}
-.scheme h3{margin:6px 0 4px}
-.scheme .sub{color:var(--muted);font-size:15px}
-.model{display:grid;justify-items:center;gap:10px;margin:22px auto 0}
-.model .scene{width:86px;height:86px;perspective:500px}
-.model .cube3d{--h:43px;animation-duration:9s}
-.model .cube3d i{border-color:var(--blue);background:rgba(36,87,220,.16)}
-.model b{font-family:var(--f-display);color:var(--navy)}
-.links{width:100%;height:70px;margin:6px 0}
-.links path{fill:none;stroke:var(--blue2);stroke-width:2;stroke-dasharray:6 6;vector-effect:non-scaling-stroke;animation:flowDash .9s linear infinite}
 @keyframes flowDash{to{stroke-dashoffset:-12}}
-.outs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.outs div{display:grid;justify-items:center;gap:8px;padding:14px 8px;border-radius:16px;background:var(--ice);font-weight:700;color:var(--navy);font-size:15px}
-.outs .ic{background:#fff}
-.scheme .res{margin-top:16px;font-weight:600;color:var(--blue)}
 
 /* ===== 05 стандарты ===== */
-.lib .tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
-.lib .tiles div{display:flex;align-items:center;gap:12px;padding:14px;border-radius:14px;background:var(--ice);font-weight:700;color:var(--navy)}
-.lib .tiles .ic{width:42px;height:42px;background:#fff}
-.lib .meth{display:flex;gap:10px;align-items:center;color:var(--muted);font-weight:600}
-.compare{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:stretch}
-.compare .arrow{display:grid;place-items:center;color:var(--blue)}
-.compare .arrow svg{width:32px;height:32px}
 .was{background:#F1F2F7;border-radius:var(--r);padding:20px;display:grid;gap:12px;align-content:start}
 .was .lbl{color:#8B92AE}
 .was p{font-weight:700;color:#5B6283;font-size:17px}
-.qs{display:flex;gap:10px;font-family:var(--f-display);font-weight:800;font-size:28px;color:#B4BAD2}
-.is-active .qs span{animation:wobble 2.4s ease-in-out infinite;animation-delay:calc(var(--i) * .3s)}
 @keyframes wobble{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-6px) rotate(-8deg)}}
 .now{background:linear-gradient(140deg,var(--navy),var(--blue));border-radius:var(--r);padding:20px;display:grid;gap:12px;align-content:start;color:#fff}
 .now .lbl{color:var(--sky)}
 .now p{font-weight:700;font-size:17px}
-.search{display:flex;align-items:center;gap:10px;background:#fff;color:var(--navy);border-radius:12px;padding:10px 12px;font-weight:600;font-size:14px;min-width:0}
-.typed{display:inline-block;overflow:hidden;white-space:nowrap;width:16ch;border-right:2px solid var(--blue)}
-.is-active .typed{animation:type 1.5s steps(16) .7s both,caret .8s step-end infinite}
 @keyframes type{from{width:0}to{width:16ch}}
 @keyframes caret{50%{border-color:transparent}}
-.found{display:flex;gap:6px;flex-wrap:wrap}
-.found span{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:600;background:rgba(255,255,255,.14);padding:4px 10px;border-radius:999px}
-.found svg{width:14px;height:14px;color:#7BE0AE}
-.is-active .found span{animation:pop .45s var(--ease) both;animation-delay:calc(var(--i) * 140ms + 2.3s)}
-.gains{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
-.gain{display:flex;flex-direction:column;gap:10px}
-.gain p{color:var(--muted)}
-.gain.hot{background:linear-gradient(150deg,#FFF6E6,#fff 60%);border:2px solid var(--orange);transform:translateY(-4px)}
-.gain.hot .ic{background:var(--orange);color:var(--navy)}
-.gain.hot h3::after{content:"Главное";display:inline-block;margin-left:8px;vertical-align:middle;font-family:var(--f-body);font-size:11px;letter-spacing:.06em;text-transform:uppercase;background:var(--orange);color:var(--navy);padding:3px 8px;border-radius:999px}
 
 /* ===== 06 пилот ===== */
 .pipe{position:relative;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
@@ -329,44 +290,8 @@ p{margin:0}
 .keyline.warnline svg{color:var(--orange)}
 .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .pair .vcard img{cursor:zoom-in}
-.ex{font-size:14px;color:var(--muted);margin-top:12px}
-.speed{display:grid;gap:16px}
-.bar-row{display:grid;gap:6px}
-.bar-row .t{display:flex;justify-content:space-between;font-weight:700;color:var(--navy)}
-.bar-row .t span{color:var(--muted);font-weight:600}
-.bar{height:22px;border-radius:8px;background:#E7EBF7;overflow:hidden}
-.bar i{display:block;height:100%;border-radius:8px;width:calc(var(--w) * 100%);transform-origin:left}
-.bar.old i{background:repeating-linear-gradient(135deg,#C3CBE4 0 10px,#B2BBDA 10px 20px)}
-.bar.goal i{background:linear-gradient(90deg,var(--green),#43C487)}
-.is-active .is-on .bar i{animation:growX 1.2s var(--ease) both;animation-delay:calc(var(--i,0) * 300ms + 300ms)}
-.goal-cap{font-weight:700;color:var(--green)}
-.pipeline{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:6px}
-.pipeline .chip{background:#fff;border:1px solid var(--line)}
-.pipeline .chip.ai{background:var(--blue);color:#fff;border-color:var(--blue)}
-.pipeline .arr{color:var(--blue2)}
-.pipeline .arr svg{width:18px;height:18px}
-.fan{position:relative;height:clamp(300px,30vw,400px)}
-.fan button{position:absolute;left:50%;top:6%;width:44%;padding:0;border:0;background:none;border-radius:6px;transform-origin:50% 110%;transition:transform .5s var(--ease),box-shadow .3s;box-shadow:0 18px 40px -16px rgba(10,26,110,.45)}
-.fan button img{border-radius:6px;width:100%;height:auto;background:#fff}
-.fan button:nth-child(1){transform:translateX(-50%) rotate(-14deg) translateX(-14%)}
-.fan button:nth-child(2){transform:translateX(-50%) rotate(-5deg) translateX(-4%)}
-.fan button:nth-child(3){transform:translateX(-50%) rotate(5deg) translateX(4%)}
-.fan button:nth-child(4){transform:translateX(-50%) rotate(14deg) translateX(14%)}
-.fan:hover button:nth-child(1),.fan:focus-within button:nth-child(1){transform:translateX(-50%) rotate(-20deg) translateX(-34%)}
-.fan:hover button:nth-child(2),.fan:focus-within button:nth-child(2){transform:translateX(-50%) rotate(-7deg) translateX(-12%)}
-.fan:hover button:nth-child(3),.fan:focus-within button:nth-child(3){transform:translateX(-50%) rotate(7deg) translateX(12%)}
-.fan:hover button:nth-child(4),.fan:focus-within button:nth-child(4){transform:translateX(-50%) rotate(20deg) translateX(34%)}
-.fan button:hover{z-index:5;box-shadow:0 30px 50px -16px rgba(10,26,110,.6)}
-.std{text-align:center;font-size:14px;color:var(--muted);font-weight:600}
 
 /* ===== 08 номенклатура ===== */
-.formula{display:flex;align-items:center;justify-content:center;gap:10px 12px;flex-wrap:wrap;margin-bottom:clamp(18px,2.4vw,30px)}
-.formula .f{display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:16px;background:#fff;box-shadow:var(--shadow);font-weight:700;color:var(--navy)}
-.formula .f .ic{width:38px;height:38px;border-radius:10px}
-.formula .f .ic svg{width:20px;height:20px}
-.formula .op{font-family:var(--f-display);font-weight:800;font-size:26px;color:var(--orange)}
-.formula .f.res{background:linear-gradient(120deg,var(--navy),var(--blue));color:#fff}
-.formula .f.res .ic{background:var(--orange);color:var(--navy)}
 .prods{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .prod{display:flex;flex-direction:column;gap:12px}
 .prod .vcard{box-shadow:var(--shadow);border:1px solid var(--line)}
@@ -375,16 +300,10 @@ p{margin:0}
 .mini-seg{display:inline-flex;gap:4px;padding:4px;background:var(--ice);border-radius:12px;align-self:flex-start}
 .mini-seg button{border:0;background:transparent;padding:6px 12px;border-radius:9px;font-weight:700;font-size:13px;color:var(--muted)}
 .mini-seg button[aria-pressed="true"]{background:#fff;color:var(--navy);box-shadow:0 2px 6px rgba(10,26,110,.12)}
-.cond{font-size:13px;color:var(--muted)}
-.more{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:clamp(18px,2.4vw,28px);font-weight:700;color:var(--navy);font-size:clamp(16px,1.4vw,20px);text-align:center}
-.more svg{color:var(--orange);width:28px;height:28px}
 
 /* ===== 09 в серию: ARco Duo и стулья ===== */
-.kick-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .live{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#7A4D00;background:#FFF1D6;padding:5px 12px;border-radius:999px}
 .live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--orange);animation:blink 1.4s infinite}
-.series-top{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(16px,2.4vw,32px);align-items:start}
-.values{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .value{display:grid;grid-template-columns:48px 1fr;gap:4px 14px;align-content:start}
 .value .ic{grid-row:span 2}
 .value h3{align-self:end}
@@ -393,83 +312,24 @@ p{margin:0}
 .value.hot .ic{background:var(--orange);color:var(--navy)}
 .specs{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .specs .chip{background:#fff;border:1px solid var(--line)}
-.stepper{list-style:none;margin:12px 0 0;padding:0}
-.stepper li{position:relative;display:grid;grid-template-columns:34px 1fr;gap:12px;padding-bottom:14px;align-items:start}
-.stepper li:last-child{padding-bottom:0}
-.stepper li:not(:last-child)::before{content:"";position:absolute;left:16px;top:34px;bottom:0;width:2px;background:var(--line)}
-.stepper li.done:not(:last-child)::before{background:var(--green)}
-.stepper .mk{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--line);background:#fff;color:var(--muted);font-weight:700;font-size:14px;position:relative;z-index:1}
-.stepper .done .mk{background:var(--green);border-color:var(--green);color:#fff}
-.stepper .cur .mk{border-color:var(--orange);color:#B87200;background:#FFF6E6}
-.is-active .stepper .cur .mk{animation:ring 1.8s ease-out infinite}
 @keyframes ring{0%{box-shadow:0 0 0 0 rgba(245,165,36,.55)}100%{box-shadow:0 0 0 14px rgba(245,165,36,0)}}
-.stepper b{display:block;color:var(--navy);line-height:1.25;padding-top:6px}
-.stepper .cur b::after{content:"идёт";margin-left:8px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--orange);color:var(--navy);padding:2px 8px;border-radius:999px;vertical-align:2px}
-.stepper small{display:block;color:var(--muted);font-size:13px;line-height:1.35;margin-top:2px}
-.soon{margin-top:16px;border:2px dashed var(--sky);border-radius:16px;padding:14px 16px;display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;background:repeating-linear-gradient(135deg,#F7F9FF 0 12px,#EEF3FF 12px 24px)}
-.is-active .soon{animation:stripes 3s linear infinite}
 @keyframes stripes{to{background-position:34px 0}}
-.soon .scene{width:44px;height:44px;margin:6px;perspective:300px}
-.soon .cube3d{--h:22px;animation-duration:7s}
-.soon .cube3d i{border-color:var(--blue);background:rgba(36,87,220,.14)}
-.soon p{font-weight:600;color:var(--navy);font-size:15px;line-height:1.4}
-.soon small{display:block;color:var(--muted);font-weight:500;font-size:13px;margin-top:2px}
-.chairs-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:clamp(24px,3vw,38px) 0 14px}
-.chairs{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:16px;align-items:stretch}
-.ranges .grid{display:grid;grid-template-columns:120px 1fr;gap:10px 12px;align-items:center;margin-top:12px}
-.ranges .axis{display:grid;grid-template-columns:repeat(5,1fr);font-size:12px;font-weight:700;color:var(--muted);text-align:center}
-.ranges .name{font-weight:700;color:var(--navy);font-size:14px;line-height:1.2}
-.ranges .track{position:relative;height:34px;border-radius:10px;background:linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/20% 100%,var(--paper)}
-.ranges .rbar{position:absolute;top:4px;bottom:4px;left:calc((var(--a) - 3) * 20% + 3px);width:calc((var(--b) - var(--a) + 1) * 20% - 6px);border-radius:8px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:13px;transform-origin:left}
-.ranges .rbar.desk{background:linear-gradient(90deg,var(--navy),var(--blue2))}
-.ranges .rbar.ok{background:linear-gradient(90deg,var(--green),#43C487)}
-.ranges .rbar.wip{background:repeating-linear-gradient(135deg,var(--orange) 0 10px,#FFC25A 10px 20px);color:var(--navy)}
-.is-active .ranges .rbar{animation:growX 1s var(--ease) both;animation-delay:calc(var(--i) * 250ms + 600ms)}
 .chair{display:flex;flex-direction:column;gap:10px}
 .chair.ok{border-top:4px solid var(--green)}
-.chair.wip{border-top:4px solid var(--orange)}
-.chair .chead{display:flex;align-items:center;justify-content:space-between;gap:10px}
 .st{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 10px;border-radius:999px;white-space:nowrap}
 .st svg{width:14px;height:14px}
 .st.ok{background:#E6F5EE;color:#11744A}
-.st.wip{background:#FFF1D6;color:#7A4D00}
 .chair h3 small{display:block;font-family:var(--f-body);font-size:13px;font-weight:600;color:var(--muted);margin-top:4px}
 .chair .bul{margin-top:0}
-.chair.wip .bul svg{color:var(--orange)}
 
 /* ===== 10 куда идём ===== */
-.road{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.rcard{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;align-content:start}
-.rcard .num{grid-row:span 2;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;color:#fff;background:linear-gradient(140deg,var(--blue),var(--blue2))}
-.rcard h3{align-self:end}
-.rcard p{color:var(--muted)}
-.rcard .viz{grid-column:1/-1;margin-top:12px}
 .minis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;background:var(--ice);border-radius:16px;padding:12px}
 .minis .lbl{grid-column:1/-1}
 .minis div{display:flex;flex-direction:column}
 .minis b{font-family:var(--f-display);font-size:clamp(26px,2.4vw,34px);color:var(--blue);line-height:1.05}
 .minis span{font-size:13px;color:var(--muted);line-height:1.25}
-.route{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding-top:4px}
-.route::before{content:"";position:absolute;left:12.5%;right:12.5%;top:21px;height:2px;background:var(--sky)}
-.route div{position:relative;display:grid;justify-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--navy);text-align:center}
-.route div i{width:36px;height:36px;border-radius:50%;background:#fff;border:2px solid var(--sky);display:grid;place-items:center;font-style:normal;font-size:13px;color:var(--blue);position:relative;z-index:1}
-.route div:nth-child(2) i{border-color:var(--orange);color:#B87200}
-.route .tk{position:absolute;top:13px;left:calc(12.5% - 9px);width:18px;height:18px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 5px rgba(245,165,36,.25);z-index:2}
-.is-active .route .tk{animation:routeGo 5s var(--ease) infinite}
 @keyframes routeGo{0%{left:calc(12.5% - 9px);opacity:0}8%{opacity:1}30%,36%{left:calc(37.5% - 9px)}60%,66%{left:calc(62.5% - 9px)}90%{left:calc(87.5% - 9px);opacity:1}100%{left:calc(87.5% - 9px);opacity:0}}
-.hettich{display:grid;grid-template-columns:auto auto 1fr;gap:10px 12px;align-items:center}
-.hettich .chip.ok{background:#E6F5EE;color:#11744A}
-.hettich .arr{color:var(--muted)}
-.hettich .arr svg{width:22px;height:22px}
-.many{display:flex;flex-wrap:wrap;gap:4px}
-.many span{font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px;background:#FDECEC;color:#B03A3A}
-.is-active .many span{animation:jit 1.6s ease-in-out infinite;animation-delay:calc(var(--i) * -.17s)}
 @keyframes jit{0%,100%{transform:translate(0,0)}25%{transform:translate(1px,-2px)}75%{transform:translate(-1px,2px)}}
-.hettich .bad{grid-column:1/-1;font-weight:700;color:var(--red);font-size:14px}
-.machines{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.machines .src{background:var(--navy);color:#fff}
-.machines .chip{background:var(--ice)}
-.is-active .machines .m{animation:lit 3s ease-in-out infinite;animation-delay:calc(var(--i) * .5s)}
 @keyframes lit{0%,100%{background:var(--ice);color:var(--navy)}20%,40%{background:var(--green);color:#fff}}
 
 /* ===== 10 как помочь ===== */
@@ -490,18 +350,7 @@ p{margin:0}
 
 /* ===== 11 итог ===== */
 .final .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(24px,4vw,56px);align-items:center;min-height:calc(100svh - var(--top) - var(--bottom) - 110px)}
-.concl{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:14px}
-.concl li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:center;font-size:clamp(17px,1.45vw,21px);font-weight:600}
-.concl .ck{width:40px;height:40px;border-radius:50%;background:rgba(123,224,174,.16);display:grid;place-items:center}
-.concl .ck svg{width:22px;height:22px;fill:none;stroke:#7BE0AE;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:24;stroke-dashoffset:0}
-.is-active .concl .ck svg{animation:draw .6s var(--ease) both;animation-delay:calc(var(--i) * 250ms + 500ms)}
 @keyframes draw{from{stroke-dashoffset:24}to{stroke-dashoffset:0}}
-.quote{font-family:var(--f-display);font-weight:800;font-size:clamp(26px,3.2vw,46px);line-height:1.12;color:#fff}
-.quote em{font-style:normal;color:var(--orange)}
-.final-side{display:grid;gap:22px;position:relative}
-.final-side .plan{position:relative;z-index:1;background:rgba(10,26,110,.82)}
-.final-side .scene{position:absolute;right:0;top:-30px;width:150px;height:150px;perspective:700px;opacity:.5;pointer-events:none}
-.final-side .cube3d{--h:75px;animation-duration:16s}
 .thanks{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 
 /* ===== заметки докладчика ===== */
@@ -524,13 +373,6 @@ dialog.viewer::backdrop{background:rgba(5,12,50,.82);-webkit-backdrop-filter:blu
 
 /* ===== 09 NOMAD на заклёпках ===== */
 @property --x{syntax:'<percentage>';inherits:true;initial-value:50%}
-.nm-grid{display:grid;grid-template-columns:1fr .82fr 1fr;gap:clamp(14px,2vw,24px);align-items:start}
-.nm-left{display:grid;gap:12px}
-.nm-left .vcard{box-shadow:var(--shadow);border:1px solid var(--line)}
-.nm-left .specs{margin-top:0}
-.nm-steps .stepper{margin-top:8px}
-.nm-cmp{display:grid;gap:12px}
-.nm-row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .ba{position:relative;border-radius:16px;overflow:hidden;background:#fff;aspect-ratio:4/5;touch-action:pan-y;-webkit-user-select:none;user-select:none;border:1px solid var(--line)}
 .ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .ba-was{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--x)) 0 0)}
@@ -547,99 +389,25 @@ dialog.viewer::backdrop{background:rgba(5,12,50,.82);-webkit-backdrop-filter:blu
 .ba:hover .ba-knob{transform:scale(1.08)}
 .is-active .ba:not(.touched){animation:baHint 2.8s var(--ease) .9s 1 both}
 @keyframes baHint{0%{--x:50%}30%{--x:18%}68%{--x:82%}100%{--x:50%}}
-.nm-legend{font-size:13px;line-height:1.45;color:var(--muted)}
-.nm-legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin:0 6px 0 2px}
-.nm-legend i.o{background:var(--orange)}
-.nm-legend i.b{background:var(--blue2)}
-.diff{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:16px}
-.diff li{display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:start}
-.diff .ic{width:42px;height:42px;border-radius:12px}
-.diff .ic svg{width:22px;height:22px}
-.diff li.hot .ic{background:var(--orange);color:var(--navy)}
-.diff b{display:block;color:var(--navy);line-height:1.25;padding-top:2px}
-.diff small{display:block;color:var(--muted);font-size:14px;line-height:1.4;margin-top:3px}
-.diff .old{color:#8B92AE;text-decoration:line-through;text-decoration-color:rgba(217,72,72,.6)}
-.go-nm{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--blue);font-size:15px;text-decoration:none}
-.go-nm svg{width:18px;height:18px}
 
 /* ===== новые: путь изделия ===== */
 .flow6 .tagc{display:inline-block;margin-top:4px;font-size:12px;font-weight:700;color:#7A4D00;background:#FFF1D6;padding:3px 9px;border-radius:999px;white-space:nowrap}
 .flow6 li.gate .ic{border-color:var(--orange);background:#FFF6E6;color:#B87200}
-.oldway{display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap;margin-top:clamp(18px,2.4vw,28px);padding:12px 16px;border-radius:14px;background:#F1F2F7;color:#5B6283;font-size:15px}
-.oldway .lbl{color:#8B92AE}
-.oldway s{font-weight:700;text-decoration-color:rgba(217,72,72,.7);text-decoration-thickness:2px}
-.oldway .arr{color:#B4BAD2}
-.oldway em{font-style:normal;flex:1 1 260px;min-width:0}
 
 /* ===== металл + корпус ===== */
-.duo{--g:clamp(12px,1.6vw,20px);display:grid;grid-template-columns:1fr auto 1fr;gap:var(--g);align-items:stretch}
-.duo .card{display:flex;flex-direction:column;gap:10px}
 .side-k{border-top:5px solid #C98B4A}
 .side-k .ic{background:#F8EEE3;color:#9A5F22}
 .side-m{border-top:5px solid var(--blue2)}
 .mini{list-style:none;margin:0;padding:0;display:grid;gap:8px}
 .mini li{display:flex;gap:8px;align-items:center;font-size:15px}
 .mini li::before{content:"";width:7px;height:7px;border-radius:2px;background:currentColor;opacity:.4;flex:none}
-.joint{position:relative;display:grid;justify-items:center;align-content:start;padding-top:30px;gap:8px;text-align:center;width:clamp(170px,17vw,220px)}
-.joint .q{width:72px;height:72px;border-radius:50%;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:34px;color:var(--navy);background:#FFF6E6;border:3px dashed var(--orange)}
-.is-active .joint .q{animation:ring 1.8s ease-out infinite}
-.joint b{font-family:var(--f-display);color:var(--navy);font-size:18px}
-.joint small{font-size:13px;color:var(--muted);line-height:1.35}
-.joint em{font-style:normal;font-weight:700;color:var(--red);font-size:14px}
-.joint::before,.joint::after{content:"";position:absolute;top:66px;height:2px;background:repeating-linear-gradient(90deg,var(--orange) 0 6px,transparent 6px 11px);animation:dashX 1s linear infinite}
-.joint::before{left:calc(-1 * var(--g));width:calc(var(--g) + 50% - 36px)}
-.joint::after{right:calc(-1 * var(--g));width:calc(var(--g) + 50% - 36px)}
-.combo-low{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(16px,2.4vw,32px);align-items:start;margin-top:clamp(18px,2.4vw,28px)}
-.combo-low .diff{margin-top:0;gap:12px}
-.diff li.bad .ic{background:#FDECEC;color:var(--red)}
 
 /* ===== механизм ===== */
-.raci-wrap{overflow-x:auto}
-.raci{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
-.raci th,.raci td{padding:9px 6px;border-bottom:1px solid var(--line);text-align:center;vertical-align:middle}
-.raci th:first-child,.raci td:first-child{text-align:left;padding-left:0}
-.raci thead th{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-.raci td:first-child{color:var(--navy);font-weight:600;line-height:1.3}
-.raci td:first-child small{display:block;font-weight:500;color:var(--muted);font-size:12.5px}
-.raci th:nth-child(2),.raci td:nth-child(2){background:#FFF6E6}
-.raci thead th:nth-child(2){color:#7A4D00;border-radius:10px 10px 0 0}
-.raci .r,.raci .p,.raci-leg .r,.raci-leg .p{display:inline-block;width:16px;height:16px;border-radius:50%;vertical-align:middle}
-.raci .r,.raci-leg .r{background:var(--blue)}
-.raci .p,.raci-leg .p{border:2px solid var(--blue2)}
-.raci .n{color:#C3CCE8;font-weight:700}
-.is-active .raci .r{animation:pop .45s var(--ease) both;animation-delay:calc(var(--i,0) * 120ms + 500ms)}
-.raci-leg{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:13px;color:var(--muted)}
-.raci-leg>span{display:inline-flex;align-items:center;gap:6px}
 
 /* ===== единый архив чертежей (id pdm) ===== */
-.defrow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px 12px;align-items:stretch;margin:0 0 clamp(16px,2.2vw,26px)}
-.defrow>.lbl{grid-column:1/-1}
-.defrow .d{display:grid;grid-template-columns:22px 1fr;gap:2px 10px;align-items:center;padding:11px 14px;border-radius:14px;background:var(--ice)}
-.defrow .d svg{width:20px;height:20px;color:var(--blue);grid-row:1/span 2}
-.defrow .d b{color:var(--navy);line-height:1.25;font-size:15px}
-.defrow .d small{color:var(--muted);font-size:13px;line-height:1.3}
-.defrow>svg{width:18px;height:18px;color:var(--muted);align-self:center}
 .pdm-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.4vw,32px);align-items:start}
 .pdm-grid .minis{margin-top:12px}
-.tree{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
-.tree li.root{display:flex;align-items:center;gap:10px;font-family:var(--f-display);font-weight:700;color:var(--navy);font-size:clamp(15px,1.2vw,17px)}
-.tree li.root .ic{width:40px;height:40px;background:var(--navy);color:#fff}
-.tree li.sub{position:relative;margin-left:20px;display:grid;grid-template-columns:22px 1fr auto;gap:2px 10px;align-items:center;padding:9px 12px;border-radius:12px;background:var(--paper);border:1px solid var(--line);font-size:15px}
-.tree li.sub::before{content:"";position:absolute;left:-14px;top:-9px;height:calc(50% + 9px);width:12px;border-left:2px solid var(--sky);border-bottom:2px solid var(--sky);border-bottom-left-radius:6px}
-.tree li.sub svg{width:20px;height:20px;color:var(--blue);grid-column:1;grid-row:1/span 2}
-.tree li.sub b{grid-column:2;grid-row:1;color:var(--navy);line-height:1.25}
-.tree li.sub small{grid-column:2;grid-row:2;color:var(--muted);font-size:13px;line-height:1.3}
-.tree li.sub .st{grid-column:3;grid-row:1/span 2}
-.tree li.k{border-left:4px solid #C98B4A}
-.tree li.k svg{color:#9A5F22}
-.tree li.m{border-left:4px solid var(--blue2)}
-.is-active .tree li{animation:rise .5s var(--ease) both;animation-delay:calc(var(--i,0) * 120ms + 300ms)}
 .st.plan{background:#EEF1FA;color:#5E6890;border:1px dashed #AEB8DA}
-.states{display:flex;align-items:center;gap:6px 8px;flex-wrap:wrap;margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:13px;font-weight:700;color:var(--navy)}
-.states .lbl{flex-basis:100%}
-.states .s{padding:5px 10px;border-radius:999px;background:var(--ice)}
-.is-active .states .s{animation:lit 3s ease-in-out infinite;animation-delay:calc(var(--i) * .6s)}
-.states svg{width:16px;height:16px;color:var(--muted)}
 .gives{list-style:none;margin:0;padding:0;display:grid;gap:12px}
 .gives li{display:grid;grid-template-columns:42px 1fr auto;gap:12px;align-items:start;background:#fff;border-radius:16px;padding:14px;box-shadow:var(--shadow);border:1px solid rgba(217,226,251,.7)}
 .gives .ic{width:42px;height:42px;border-radius:12px}
@@ -649,73 +417,17 @@ dialog.viewer::backdrop{background:rgba(5,12,50,.82);-webkit-backdrop-filter:blu
 .gives .st{align-self:start}
 
 /* ===== линейка ===== */
-.card.five{display:flex;align-items:center;gap:12px 16px;flex-wrap:wrap;margin-bottom:18px}
-.five .ic{background:var(--orange);color:var(--navy)}
-.five h3{margin-right:6px}
-.five .chip{background:#fff;border:1px solid var(--line)}
-.is-active .five .chip{animation:pop .45s var(--ease) both;animation-delay:calc(var(--i) * 110ms + 400ms)}
-.rod{display:grid;gap:14px}
-.rod-row{display:grid;gap:6px}
-.rod-row .t{display:flex;justify-content:space-between;gap:4px 10px;flex-wrap:wrap;font-weight:700;color:var(--navy);font-size:15px}
-.rod-row .t span{font-weight:600;color:var(--muted);font-size:13px}
-.rod-bar{display:flex;gap:2px;height:34px;border-radius:8px;overflow:hidden;background:#E7EBF7}
-.rod-bar i{flex:var(--w) 0 0%;display:grid;place-items:center;font-style:normal;font-size:11px;font-weight:700;color:#fff;min-width:0;overflow:hidden;white-space:nowrap;transform-origin:left}
-.rod-row.old .rod-bar i{background:#9AA6CF}
-.rod-row.goal .rod-bar i.a{background:var(--blue)}
-.rod-row.goal .rod-bar i.c{background:#5B83F0}
-.rod-bar i.x{background:repeating-linear-gradient(135deg,#F3B9B9 0 6px,#E89A9A 6px 12px)!important;color:#8A2222}
-.rod-bar i.x0{background:var(--green)!important}
-.is-active .is-on .rod-bar i{animation:growX .6s var(--ease) both;animation-delay:calc(var(--i,0) * 120ms + 300ms)}
-.rod-scale{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
-.bar.mid i{background:linear-gradient(90deg,var(--blue2),#5B83F0)}
-.card.nom{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center}
-.nom .box{border-radius:16px;padding:14px;display:grid;gap:10px;align-content:start}
-.nom .was-box{background:#F1F2F7}
-.nom .goal-box{background:var(--ice)}
-.nom .sq20{display:flex;flex-wrap:wrap;gap:6px;align-items:flex-end}
-.nom .sq20 i{display:block;width:var(--s);height:var(--s);border-radius:4px;background:#B4BAD2}
-.nom .grps{display:flex;flex-wrap:wrap;gap:8px}
-.nom .grp{display:flex;align-items:flex-end;gap:4px;padding:6px;border-radius:10px;background:#fff}
-.nom .grp i{width:22px;height:22px;border-radius:4px;background:var(--blue)}
-.nom .grp i+i{background:#8FA8F5;width:14px;height:14px}
-.nom small{font-size:13px;color:var(--muted)}
-.nom .arr{color:var(--blue)}
-.nom .arr svg{width:28px;height:28px}
 
 /* ===== команда ===== */
-.team-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(16px,2.4vw,32px);align-items:start}
 
 /* ===== Москва 2.0 ===== */
-.m20-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(16px,2.4vw,32px);align-items:start}
-.m20-side{display:grid;gap:14px}
-.m20-side .keyline{margin-top:0}
-.m20-side .diff{gap:12px}
-.sq{display:grid;grid-template-columns:repeat(17,1fr);gap:4px;margin-top:16px}
-.sq i{aspect-ratio:1;border-radius:4px;background:#DDE3F5}
-.sq i.d{background:var(--green)}
-.sq i.w{background:var(--orange)}
-.is-active .sq i{animation:pop .4s var(--ease) both;animation-delay:calc(var(--k) * 50ms + 400ms)}
-.sq-leg{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;font-size:13px;color:var(--muted)}
-.sq-leg span{display:inline-flex;align-items:center;gap:6px}
-.sq-leg i{width:12px;height:12px;border-radius:3px;background:#DDE3F5}
-.sq-leg i.d{background:var(--green)}
-.sq-leg i.w{background:var(--orange)}
 
 /* ===== куда идём: широкая карточка, как помочь ===== */
-.rcard.wide{grid-column:1/-1;border:2px solid var(--orange);background:linear-gradient(150deg,#FFF6E6,#fff 55%)}
-.rcard.wide .num{background:var(--orange);color:var(--navy)}
-.merge{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.merge .chip.k{background:#F8EEE3;color:#7A4A16}
-.merge .chip.res{background:var(--navy);color:#fff;white-space:normal}
-.merge .op{font-family:var(--f-display);font-weight:800;color:var(--orange);font-size:22px}
 .ask.hot{border:2px solid var(--orange);background:linear-gradient(150deg,#FFF6E6,#fff 60%)}
 .ask.hot .ic{background:var(--orange);color:var(--navy)}
 .ask.hot .n{color:#FFE2B0}
 
 /* ===== чего не ждать ===== */
-.exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.4vw,32px);align-items:start}
-.exp-side{display:grid;gap:16px}
-.exp-grid h3{margin-top:8px}
 .exp-sub{margin:8px 0 0;color:var(--muted);font-size:15px;line-height:1.45}
 .lvl{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:8px}
 .lvl li{display:grid;grid-template-columns:34px 1fr auto;gap:12px;align-items:center;padding:10px 12px;border-radius:14px;background:#F1F8F4}
@@ -726,21 +438,6 @@ dialog.viewer::backdrop{background:rgba(5,12,50,.82);-webkit-backdrop-filter:blu
 .lvl b{display:block;color:var(--navy);line-height:1.25}
 .lvl small{display:block;color:var(--muted);font-size:13px;line-height:1.35;margin-top:2px}
 .st.no{background:#FDECEC;color:#A12C2C}
-.exp-pts{margin:14px 0 0;padding-left:20px;display:grid;gap:6px;color:var(--ink,#1B2440);line-height:1.45}
-.exp-pts li::marker{color:var(--orange)}
-.specs.miss .chip{background:#FFF7EE;border-color:#F2D7B8;color:#6E4312}
-.specs.miss .chip svg{width:16px;height:16px;color:var(--orange)}
-.tscale{margin-top:14px;display:grid;gap:10px}
-.ts-row,.ts-ax{display:grid;grid-template-columns:minmax(0,190px) 1fr;gap:12px;align-items:center}
-.ts-row .t{font-weight:600;color:var(--navy);font-size:14px;line-height:1.3}
-.ts-track{position:relative;height:28px;border-radius:8px;background:#EEF1F9}
-.ts-track i{position:absolute;top:0;bottom:0;left:var(--a);width:var(--w);border-radius:8px;background:var(--orange);display:grid;place-items:center;font-style:normal;font-size:12px;font-weight:700;color:var(--navy);transform-origin:left;white-space:nowrap}
-.ts-track i.long{background:var(--red);color:#fff}
-.is-active .ts-track i{animation:growX .7s var(--ease) both;animation-delay:calc(var(--i,0) * 180ms + 450ms)}
-.ts-ax>div{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
-.exp-side .diff{gap:12px}
-.team-grid .keyline{margin-top:18px}
-.team-grid .keyline a{color:inherit}
 
 /* ===== знания остаются в компании (вкладка 06) ===== */
 .pdm-side{display:grid;gap:12px}
@@ -753,23 +450,8 @@ dialog.viewer::backdrop{background:rgba(5,12,50,.82);-webkit-backdrop-filter:blu
 .keep .specs .chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);color:#fff}
 
 /* ===== заявка и KPI ===== */
-.kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.4vw,32px);align-items:start}
-.kpi-side{display:grid;gap:16px}
-.kpi-grid h3{margin-top:8px}
-.kpi-grid .diff{gap:12px}
-.diff.st3 li{grid-template-columns:42px 1fr auto}
-.diff.st3 .st{align-self:start;margin-top:2px}
-.route.r5{grid-template-columns:repeat(5,1fr);margin-top:14px}
-.route.r5::before{left:10%;right:10%}
-.kpi-grid .specs .chip svg{width:16px;height:16px;color:var(--blue)}
 
 /* ===== вариант А (11 экранов) ===== */
-.stats.s4{grid-template-columns:repeat(4,1fr)}
-.does-card{margin-top:14px;padding:14px 18px}
-.does{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-.does li{display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 8px;border-radius:12px;background:var(--paper);border:1px solid var(--line);font-weight:600;font-size:13.5px;color:var(--navy)}
-.does .ic{width:28px;height:28px;border-radius:8px;background:#fff}
-.does .ic svg{width:16px;height:16px}
 /* ===== срок выдачи КД (экран 02) ===== */
 .kdm{margin-top:clamp(18px,2.4vw,28px)}
 .kdm-row{display:grid;grid-template-columns:minmax(0,.9fr) auto minmax(0,1.7fr);gap:clamp(14px,2vw,28px);align-items:center;margin-top:12px}
@@ -799,7 +481,6 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 @media (max-width:640px){.kdm-goal li{grid-template-columns:1fr;gap:2px}}
 .cascade.c5{grid-template-columns:repeat(5,1fr)}
 .is-active .cascade.c5 li:last-child{animation-delay:calc(4 * 160ms + 200ms),1.45s}
-.intake-route{margin-top:16px}
 .scope-block{margin-top:clamp(18px,2.4vw,28px)}
 .flow-lbl{margin-bottom:14px}
 .flow6.f5{grid-template-columns:repeat(5,1fr)}
@@ -830,8 +511,6 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 .is-active .pipe.p5 .token{animation:ride5 6s linear infinite}
 @keyframes ride5{0%{left:calc(10% - 16px);opacity:0}4%{opacity:1}80%{left:calc(90% - 16px);opacity:1}92%,100%{left:calc(90% - 16px);opacity:0}}
 /* ===== библиотека проектирования (id library) ===== */
-.lib-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.4vw,32px);align-items:start}
-.lib-left{display:grid;gap:14px;min-width:0}
 .case.mis{grid-template-columns:128px 1fr;align-items:center}
 .case.mis .pic{width:128px;height:auto;display:block}
 .case.mis .txt{display:grid;gap:10px;min-width:0}
@@ -848,10 +527,6 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 .libflow .ic svg{width:21px;height:21px}
 .libflow li.has .ic{background:var(--navy);border:2px solid var(--navy);color:#fff}
 .is-active .libflow li{animation:pop .45s var(--ease) both;animation-delay:calc(var(--i) * 140ms + 450ms)}
-.flow-leg{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px;font-size:13px;color:var(--muted)}
-.flow-leg span{display:inline-flex;align-items:center;gap:6px}
-.flow-leg i{width:12px;height:12px;border-radius:4px;background:var(--navy)}
-.flow-leg i.t{background:#fff;border:2px dashed #AEB8DA}
 .srow{margin-top:14px;display:grid;grid-template-columns:1.25fr 1fr 1fr 1.05fr;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--paper)}
 .srow>div{display:grid;gap:2px;padding:9px 10px;border-left:1px solid var(--line);min-width:0}
 .srow>div:first-child{border-left:0}
@@ -871,8 +546,6 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   .srow>div:nth-child(3){border-left:0}
   .srow>div:nth-child(n+3){border-top:1px solid var(--line)}
 }
-.econ-band{margin-top:clamp(20px,2.6vw,32px);display:grid;gap:12px}
-.ai-band .kdm-how{margin:0}
 .dark .stat .big-num{background:linear-gradient(120deg,#fff,var(--orange));-webkit-background-clip:text;background-clip:text;color:transparent;font-size:clamp(34px,3.8vw,54px)}
 .dark .stat span:last-child{color:var(--sky)}
 .prod-head{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
@@ -889,8 +562,6 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 .chair-rows li{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;border-radius:12px;background:var(--paper);border:1px solid var(--line);font-size:15px}
 .chair-rows b{color:var(--navy)}
 .kp-band{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(16px,2.4vw,32px);align-items:center;margin-top:clamp(18px,2.4vw,28px)}
-.kp-band .fan{height:clamp(210px,21vw,270px)}
-.kp-band .fan button{width:38%;top:4%}
 /* паспорт (А5, книжный) и схема сборки (А4, альбомный) NOMAD V */
 .docs{position:relative;aspect-ratio:3/2;max-width:100%}
 .docs button{position:absolute;padding:0;border:0;background:#fff;border-radius:6px;cursor:zoom-in;box-shadow:0 18px 40px -16px rgba(10,26,110,.45);transition:transform .5s var(--ease),box-shadow .3s}
@@ -908,22 +579,6 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 /* ===== экран «Что изменилось за 5 месяцев» ===== */
 #changes .head{margin-bottom:clamp(12px,1.5vw,18px)}
 #changes .head h2{font-size:clamp(24px,2.4vw,36px)}
-.chg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.chg-card{display:flex;flex-direction:column;gap:7px;min-width:0;padding:15px 16px 14px}
-.chg-h{display:grid;grid-template-columns:34px 1fr;column-gap:10px;align-items:center}
-.chg-h .ic{width:34px;height:34px;border-radius:10px;grid-row:1/span 2}
-.chg-h .ic svg{width:18px;height:18px}
-.chg-h h3{min-width:0;font-size:16px}
-.chg-h .st{grid-column:2;justify-self:start;margin-top:3px;font-size:10px;padding:3px 7px}
-.chg-card p{margin:0;font-size:13.5px;line-height:1.34}
-.chg-card .t{display:inline-block;margin-right:6px;vertical-align:1px;padding:2px 7px;border-radius:999px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
-.chg-card .cw{color:var(--muted)}
-.chg-card .cw .t{background:#F1F2F7;color:#5B6283}
-.chg-card .cn{color:var(--navy);font-weight:600;padding-top:8px;border-top:1px dashed var(--line)}
-.chg-card .cn .t{background:var(--navy);color:#fff}
-.chg-card b{font-family:var(--f-display);font-weight:800}
-.chg-next{background:var(--paper);border:1px dashed #AEB8DA;box-shadow:none}
-.chg-next .cn .t{background:var(--blue)}
 @media (max-width:1200px){.chg{grid-template-columns:1fr 1fr}}
 @media (max-width:640px){.chg{grid-template-columns:1fr}}
 
@@ -1030,13 +685,10 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 .fact-pill{display:inline-flex;align-items:center;gap:7px;padding:7px 12px;border-radius:12px;background:#fff;border:1px solid var(--line);font-size:13.5px;color:var(--text);font-weight:500;box-shadow:0 4px 12px -10px rgba(10,26,110,.35)}
 .fact-pill b{font-family:var(--f-display);font-weight:800;color:var(--blue);font-size:13.5px}
 .fact-pill.warn b{color:var(--red)}
-.debt-split{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
-.debt-col{display:grid;gap:12px}
-.debt-smarty{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;background:#FDECEC;border:1px solid #F6CACA;color:#7A1F1F;font-size:14px;line-height:1.38}
-.debt-smarty b{font-family:var(--f-display);font-weight:800;font-size:20px;color:var(--red);white-space:nowrap}
 .ai-top{display:grid;gap:12px}
 .ai-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .ai-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ai-stats.s3{grid-template-columns:repeat(3,1fr)}
 .ai-stats .stat{padding:18px 20px;gap:8px}
 .ai-stats h3{font-size:18px;color:var(--navy);margin:0}
 .ai-stats p{font-size:14.5px;color:var(--text);line-height:1.42;margin:0}
@@ -1045,12 +697,6 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 .ai-stats .big-num{font-size:clamp(26px,2.5vw,38px)}
 .ai-stats span:last-child{font-size:13.5px;line-height:1.35}
 #ai-docs .kp-band{margin-top:16px}
-.help-sys{margin-top:16px;display:grid;gap:10px}
-.help-sys-list{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.help-sys-item{display:flex;flex-direction:column;justify-content:space-between;gap:8px;padding:12px 14px;border-radius:14px;background:var(--paper);border:1px solid var(--line)}
-.help-sys-item b{color:var(--navy);font-size:14px;line-height:1.25}
-.help-sys-item small{display:block;color:var(--muted);font-size:12.5px;line-height:1.32;margin-top:3px}
-.help-sys-item .st{align-self:flex-start;font-size:10.5px;padding:3px 8px}
 .intake-strip{margin-bottom:16px;display:grid;gap:10px}
 .intake-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .intake-card{padding:11px 13px;border-radius:14px;background:#FDF2F2;border:1px solid #F6D0D0;display:grid;gap:4px;align-content:start}
@@ -1108,15 +754,19 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 .fcol.ok li svg{color:#3CD08B}
 .fcol.pilot li svg{color:var(--orange)}
 .fcol.plan li svg{color:var(--sky)}
-.final-foot{margin-top:clamp(18px,2.2vw,26px);display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding-top:16px;border-top:1px solid rgba(255,255,255,.14)}
+.final-team{margin-top:16px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.final-team div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:12px 14px;display:grid;gap:4px;align-content:start}
+.final-team div.all{background:rgba(245,165,36,.15);border-color:rgba(245,165,36,.48)}
+.final-team b{font-family:var(--f-display);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--orange)}
+.final-team div.all b{color:#FFD37A}
+.final-team span{font-size:13px;line-height:1.36;color:#E6EEFF}
+.final-foot{margin-top:clamp(16px,2vw,22px);display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding-top:16px;border-top:1px solid rgba(255,255,255,.14)}
 .final-foot .sign{margin:0}
-.final .concl .ck{background:var(--orange);color:var(--navy);border:0}
-.final .concl .ck svg{stroke:var(--navy);stroke-width:2.6;fill:none;width:16px;height:16px}
 .final .plan{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.26);color:#EEF3FF}
 .final .plan b{color:var(--orange)}
 
-@media (max-width:1050px){.rnd-hero{grid-template-columns:1fr}.rnd-tests{grid-template-columns:1fr 1fr}.rnd-gal{grid-template-columns:repeat(3,1fr)}.ai-stats,.help-sys-list{grid-template-columns:1fr 1fr}.final-cols{grid-template-columns:1fr}.debt-split{grid-template-columns:1fr}}
-@media (max-width:640px){.rnd-tests,.rnd-gal{grid-template-columns:1fr 1fr}.rnd-tests,.ai-stats,.help-sys-list{grid-template-columns:1fr}}
+@media (max-width:1050px){.rnd-hero{grid-template-columns:1fr}.rnd-tests{grid-template-columns:1fr 1fr}.rnd-gal{grid-template-columns:repeat(3,1fr)}.ai-stats,.ai-stats.s3,.help-sys-list{grid-template-columns:1fr}.final-cols{grid-template-columns:1fr}.final-team{grid-template-columns:1fr 1fr}.debt-split{grid-template-columns:1fr}}
+@media (max-width:640px){.rnd-tests,.rnd-gal{grid-template-columns:1fr 1fr}.rnd-tests,.ai-stats,.ai-stats.s3,.help-sys-list,.final-team{grid-template-columns:1fr}}
 
 /* ===== адаптив ===== */
 @media (max-width:1100px){
@@ -1262,6 +912,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
     <symbol id="i-hook" viewBox="0 0 24 24"><path d="M6 3h7"/><path d="M9.5 3v9.5a3.5 3.5 0 0 0 7 0V10"/></symbol>
     <symbol id="i-swap" viewBox="0 0 24 24"><path d="M8 7 3 12l5 5M16 7l5 5-5 5M3 12h18"/></symbol>
     <symbol id="i-chair" viewBox="0 0 24 24"><path d="M7 3h10l-1 8H8z"/><path d="M5 12h14v2.5H5z"/><path d="M7 14.5 6 21M17 14.5l1 6.5"/></symbol>
+    <symbol id="i-cam" viewBox="0 0 24 24"><path d="M4 8h3.5L9 6h6l1.5 2H20v11H4z"/><circle cx="12" cy="13.5" r="3.2"/></symbol>
     <symbol id="i-cube" viewBox="0 0 100 104"><g fill="currentColor" stroke="currentColor" stroke-width="6" stroke-linejoin="round"><path d="M50 7 89 28 50 49 11 28z"/><path d="M7 35 45 56v41L7 76z"/><path d="M55 56 93 35v41L55 97z"/></g></symbol>
   </defs>
 </svg>
@@ -1274,7 +925,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
     <a href="#debt"><span class="n">03</span>Техдолг</a>
     <a href="#arch"><span class="n">04</span>Карта</a>
     <a href="#system"><span class="n">05</span>Система</a>
-    <a href="#ai-docs"><span class="n">06</span>Продажам</a>
+    <a href="#ai-docs"><span class="n">06</span>Продажи и закуп</a>
     <a href="#products"><span class="n">07</span>Изделия</a>
     <a href="#rnd"><span class="n">08</span>R&amp;D</a>
     <a href="#rules"><span class="n">09</span>Правила</a>
@@ -1295,10 +946,10 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   </div>
   <div class="wrap">
     <div>
-      <span class="pill rise" style="--i:0">Итоги 5 месяцев · для продаж и компании · ноябрь 2026</span>
+      <span class="pill rise" style="--i:0">Итоги 5 месяцев · для продаж, снабжения и производства · ноябрь 2026</span>
       <h1 class="rise" style="--i:1">От ручных чертежей — <span class="mark">к единой инженерной системе TROYA</span></h1>
-      <p class="lead rise" style="--i:2">Заложили фундамент единой базы изделий и задел для будущей связки с 1С — сейчас это пилоты и MVP. Главный приоритет — отлаженная база данных изделий</p>
-      <ul class="tags rise" style="--i:3"><li>KPI и учёт</li><li>База изделий</li><li>Задел под 1С</li><li>Базис — станок</li><li>ИИ и MCP</li><li>R&amp;D и тесты</li></ul>
+      <p class="lead rise" style="--i:2">Чтобы продажи быстрее считали КП, снабжение закупало без путаницы, а цех выпускал без переделок — мы строим единую базу изделий и связку с 1С. За 5 месяцев заложили фундамент и первые пилоты</p>
+      <ul class="tags rise" style="--i:3"><li>KPI и учёт</li><li>База изделий</li><li>Снабжение и 1С</li><li>Базис — станок</li><li>ИИ и скрипты</li><li>R&amp;D и тесты</li></ul>
       <div class="hero-cta rise" style="--i:4">
         <a class="btn btn-light" href="#numbers">Начать <svg class="i"><use href="#i-arrow"/></svg></a>
         <span class="hint">или стрелки ← → на клавиатуре</span>
@@ -1388,7 +1039,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         <div>
           <span class="lbl">Корневая проблема 1</span>
           <h3>Нет единого справочника номенклатуры (1С ↔ КД)</h3>
-          <p>Автозагрузка ЭСФ от поставщиков создаёт в 1С дубли кодов и единиц (один материал — в листах и в м²), а у готовой продукции почти нет сквозных артикулов. Конструктор работает под одним названием, склад — под разными кодами. <b>Планируем решать через единый справочник номенклатуры и соответствий</b></p>
+          <p>Исторически в 1С накопились дубли кодов и единиц измерения (один материал — в листах и в м²), а у готовой продукции (ГП) почти нет сквозных артикулов. Из-за этого страдают все: конструктор, снабжение, склад и цех. <b>Вместе со снабжением и ИТ закладываем единый справочник номенклатуры и соответствий</b></p>
         </div>
       </article>
       <article class="card root-card rise" style="--i:6">
@@ -1425,8 +1076,8 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   <div class="wrap">
     <header class="head rise">
       <span class="kicker">04 · 5 месяцев перестройки · Большая картина</span>
-      <h2>Фундамент единой базы и задел под 1С — сейчас это пилоты и MVP</h2>
-      <p class="lead">Основной приоритет — отлаженная база данных изделий: без неё теряется смысл всех остальных систем, интеграций и автоматизации</p>
+      <h2>Фундамент единой базы и задел под 1С — первые пилоты и рабочие инструменты</h2>
+      <p class="lead">Отлаженная база данных изделий — главный приоритет и опора, которая связывает продажи, снабжение, 1С и производство в одну систему</p>
     </header>
     <div class="arch-grid">
       <article class="acard ok rise" style="--i:1">
@@ -1437,20 +1088,20 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
       </article>
       <article class="acard pilot rise" style="--i:2;background:rgba(245,165,36,.12);border-color:rgba(245,165,36,.5)">
         <div class="acard-top"><span class="an">02 · БАЗА</span><span class="ab">приоритет №1</span></div>
-        <h3>База данных изделий и ПО</h3>
-        <p><b>Главный фокус:</b> Шифратор, Ограничительный перечень, <b>TROYA_PDM</b> (металл и лабмебель) и <b>Базис</b> (корпус). Без отлаженной базы теряется смысл всего</p>
+        <h3>База данных изделий и перечень</h3>
+        <p><b>Главный фокус:</b> Шифратор, Ограничительный перечень материалов, <b>TROYA_PDM</b> (металл и лабмебель) и <b>Базис</b> (корпус) — опора для всех отделов</p>
         <div class="atags"><span>SolidWorks PDM</span><span>Базис</span><span>Перечень</span></div>
       </article>
       <article class="acard prog rise" style="--i:3">
-        <div class="acard-top"><span class="an">03 · НАВИГАТОР</span><span class="ab">MVP · пилот</span></div>
+        <div class="acard-top"><span class="an">03 · НАВИГАТОР</span><span class="ab">пилот</span></div>
         <h3>Навигатор по базе данных изделий</h3>
-        <p><b>В перспективе — единственный источник истины по изделиям:</b> каталог 3D, ЛЗК, 1D-раскрой, механизм расчёта себестоимости (пока пилот: металл и окраска) и задел под будущую связку с 1С</p>
+        <p><b>В перспективе — единственный источник истины по изделиям:</b> каталог 3D, ведомости ЛЗК, раскрой, расчёт себестоимости (пока пилот: металл и окраска) и задел под 1С</p>
         <div class="atags"><span>Источник истины</span><span>Металл + окраска</span><span>Задел 1С</span></div>
       </article>
       <article class="acard pilot rise" style="--i:4">
-        <div class="acard-top"><span class="an">04 · ЦЕХ И ИИ</span><span class="ab">пилот · MVP</span></div>
+        <div class="acard-top"><span class="an">04 · ЦЕХ И ИИ</span><span class="ab">пилот</span></div>
         <h3>ИИ, скрипты и станки</h3>
-        <p><b>ИИ + скриптовая автоматизация</b> разработки изделий для металла и корпуса: собственные инструменты и скрипты (ESKD-AUTO, SWDraw, Draw, Базис), пилот «Базис — станок» и <b>опыты с MCP</b></p>
+        <p><b>ИИ + скриптовая автоматизация</b> разработки изделий для металла и корпуса: собственные инструменты для CAD, пилот «Базис — станок» и <b>опыты управления программами через ИИ (MCP)</b></p>
         <div class="atags"><span>ИИ + скрипты</span><span>Металл и корпус</span><span>Базис — станок</span></div>
       </article>
       <article class="acard ok rise" style="--i:5">
@@ -1467,8 +1118,8 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
       </div>
       <div class="arch-nums rise" style="--i:7">
         <div><b>№ 1</b><span>приоритет — отлаженная база изделий</span></div>
-        <div><b>MVP</b><span>портал, задел под 1С, MCP и станки</span></div>
-        <div><b>Сквозно</b><span>от заявки и 1С до станка и клиента</span></div>
+        <div><b>Пилоты</b><span>портал, задел под 1С, ИИ и станки</span></div>
+        <div><b>Сквозно</b><span>от заявки и закупа до станка и клиента</span></div>
       </div>
     </div>
   </div>
@@ -1589,11 +1240,11 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
             <em>Сейчас стык держится на опыте сборщиков — переводим его на единое правило и общую базу</em>
           </div>
           <div class="pair">
-            <figure class="vcard rise" style="--i:4"><img class="still" src="media/lab_shv.webp" alt="Шкаф вытяжной демонстрационный: камера со стеклом на стальных стойках, основание из ЛДСП, мойка и вентилятор — рендер изделия" width="1200" height="900" loading="lazy" data-view="media/lab_shv.webp" data-cap="Шкаф вытяжной демонстрационный · камера на стойках из стальной трубы, основание из ЛДСП, мойка со смесителем, вытяжка с вентилятором, свет и розетки · рендер изделия из каталога"><figcaption><span>Вытяжной шкаф · металл + ЛДСП</span></figcaption></figure>
-            <figure class="vcard rise" style="--i:5"><img class="still" src="media/lab_sd.webp" alt="Стол демонстрационный для химии: металлокаркас, тумбы из ЛДСП, мойка со смесителем и розетки — рендер изделия" width="1200" height="900" loading="lazy" data-view="media/lab_sd.webp" data-cap="Стол демонстрационный для химии · металлокаркас, тумбы из ЛДСП, мойка со смесителем и розетки · рендер изделия из каталога"><figcaption><span>Демо-стол · каркас + тумбы + мойка</span></figcaption></figure>
+            <figure class="vcard rise" style="--i:4"><img class="still" src="media/lab_shv.webp" alt="Шкаф вытяжной демонстрационный: камера со стеклом на стальных стойках, основание из ЛДСП, мойка и вентилятор — 3D-модель изделия" width="1200" height="900" loading="lazy" data-view="media/lab_shv.webp" data-cap="Шкаф вытяжной демонстрационный · камера на стойках из стальной трубы, основание из ЛДСП, мойка со смесителем, вытяжка с вентилятором, свет и розетки · 3D-модель изделия из каталога"><figcaption><span>Вытяжной шкаф · металл + ЛДСП</span></figcaption></figure>
+            <figure class="vcard rise" style="--i:5"><img class="still" src="media/lab_sd.webp" alt="Стол демонстрационный для химии: металлокаркас, тумбы из ЛДСП, мойка со смесителем и розетки — 3D-модель изделия" width="1200" height="900" loading="lazy" data-view="media/lab_sd.webp" data-cap="Стол демонстрационный для химии · металлокаркас, тумбы из ЛДСП, мойка со смесителем и розетки · 3D-модель изделия из каталога"><figcaption><span>Демо-стол · каркас + тумбы + мойка</span></figcaption></figure>
           </div>
           <div class="story-links rise" style="--i:6">
-            <button class="sbtn" type="button" data-gallery="lab">📷 Живая тумба с мойкой в процессе сборки</button>
+            <button class="sbtn" type="button" data-gallery="lab"><svg class="i"><use href="#i-cam"/></svg>Живая тумба с мойкой в процессе сборки</button>
           </div>
         </div>
         <div class="card rise" style="--i:3">
@@ -1663,19 +1314,19 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   </div>
 </section>
 
-<!-- 06 ДЛЯ ПРОДАЖ: ЛОГИСТИКА, СКОРОСТЬ КП И ПАСПОРТА -->
-<section class="page" id="ai-docs" data-title="Продажам">
+<!-- 06 ДЛЯ ПРОДАЖ И СНАБЖЕНИЯ: ЛОГИСТИКА, СКОРОСТЬ КП, НОРМЫ И ПАСПОРТА -->
+<section class="page" id="ai-docs" data-title="Продажи и закуп">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">06 · Инструменты для продаж</span>
-      <h2>Что КТО даёт продажам: паспорта, логистика и скорость КП</h2>
-      <p class="lead">Новые паспорта и схемы сборки уже работают для покупателя и тендеров, а раннюю логистику и ускорение расчёта цены для КП отрабатываем в пилотах</p>
+      <span class="kicker">06 · Польза для продаж и снабжения</span>
+      <h2>Что система КТО даёт продажам и снабжению</h2>
+      <p class="lead">Новые паспорта и схемы сборки уже работают для покупателя и тендеров; раннюю логистику, ускорение расчёта КП и единые нормы для снабжения отрабатываем в пилотах</p>
     </header>
     <div class="ai-top rise" style="--i:1">
       <div class="ai-head">
-        <span class="lbl">Пилоты для коммерции: предварительная логистика и расчёт цены</span>
+        <span class="lbl">Пилоты для коммерции и закупа: логистика, себестоимость и единые нормы</span>
       </div>
-      <div class="ai-stats">
+      <div class="ai-stats s3">
         <div class="stat card">
           <div class="stat-top"><h3>Предварительная логистика с ИИ</h3><span class="st pilot">пилот</span></div>
           <p>С использованием ИИ получается оперативно прорабатывать предварительные варианты логистики и упаковки по изделиям — ещё на ранней стадии</p>
@@ -1685,6 +1336,11 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
           <div class="stat-top"><h3>Расчёт себестоимости для КП</h3><span class="st pilot">пилот · металл и окраска</span></div>
           <p>Разработан и совершенствуется механизм расчёта себестоимости изделий — ускоряем подготовку КП с ИИ-агентами и заделом связки с 1С</p>
           <div class="ai-ex">Ориентир по скорости расчёта: <b>дни вместо недель</b> (пока пилот по металлу и окраске)</div>
+        </div>
+        <div class="stat card">
+          <div class="stat-top"><h3>Единые нормы для снабжения</h3><span class="st pilot">пилот · в работе</span></div>
+          <p>Ограничительный перечень сокращает разносортицу профилей и фурнитуры, а ведомости ЛЗК, 1D-раскрой и справочник 1С убирают срочные дозакупки и путаницу кодов</p>
+          <div class="ai-ex">Плюс единая база цен без НДС — <b>проще закуп и лучше цена от поставщиков</b></div>
         </div>
       </div>
     </div>
@@ -1729,7 +1385,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         <h3>Банкетка со спинкой</h3>
         <p>сварной металлокаркас — готов образец в цехе</p>
         <div class="story-links">
-          <button class="sbtn" type="button" data-gallery="banquette">📷 Живой каркас (2 фото)</button>
+          <button class="sbtn" type="button" data-gallery="banquette"><svg class="i"><use href="#i-cam"/></svg>Живой каркас (2 фото)</button>
         </div>
       </article>
       <article class="prod rise" style="--i:2">
@@ -1743,17 +1399,17 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         <h3>Столы с перегородкой Kcell</h3>
         <p>вариант с царгой под запрос клиента · прошёл живой тест нагрузки</p>
         <div class="story-links">
-          <button class="sbtn" type="button" data-gallery="kcell">📷 Цех и узел (2)</button>
+          <button class="sbtn" type="button" data-gallery="kcell"><svg class="i"><use href="#i-cam"/></svg>Цех и узел (2)</button>
           <button class="sbtn vid" type="button" data-view="media/live/test_kcell_load.mp4" data-sound="1" data-cap="Испытание стола Kcell на прочность · 19 с · проверка жёсткости и двойная живая нагрузка на столешницу">▶ Тест · 19 с</button>
         </div>
       </article>
       <article class="prod rise" style="--i:3">
         <div class="ba" id="ba">
-          <img data-v="in" src="media/nm_in_0013.webp" alt="Стало: заклёпки-гайки в стойке, вид изнутри" width="960" height="1200">
-          <img data-v="out" hidden src="media/nm_out_0013.webp" alt="Стало: окно с номером ростовой группы и знак TROYA, вид снаружи" width="960" height="1200">
+          <img data-v="in" src="media/nm_in_0013.webp" alt="Стало: заклёпки-гайки в стойке, вид изнутри" width="960" height="1200" loading="lazy">
+          <img data-v="out" hidden src="media/nm_out_0013.webp" alt="Стало: окно с номером ростовой группы и знак TROYA, вид снаружи" width="960" height="1200" loading="lazy">
           <div class="ba-was">
-            <img data-v="in" src="media/nm_in_0001.webp" alt="Было: закладные пластины внутри стойки, вид изнутри" width="960" height="1200">
-            <img data-v="out" hidden src="media/nm_out_0001.webp" alt="Было: головки винтов снаружи стойки" width="960" height="1200">
+            <img data-v="in" src="media/nm_in_0001.webp" alt="Было: закладные пластины внутри стойки, вид изнутри" width="960" height="1200" loading="lazy">
+            <img data-v="out" hidden src="media/nm_out_0001.webp" alt="Было: головки винтов снаружи стойки" width="960" height="1200" loading="lazy">
           </div>
           <span class="ba-tag l was">Было · пластины</span>
           <span class="ba-tag r now">Стало · заклёпки</span>
@@ -1766,7 +1422,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         <h3>Обновлённый NOMAD</h3>
         <p>Снаружи без головок винтов, высота — 4 винтами вместо 8. Чертежи на проверке, до серии — опытный образец</p>
         <div class="story-links">
-          <button class="sbtn" type="button" data-gallery="nomad">📷 Заклёпки вживую (2)</button>
+          <button class="sbtn" type="button" data-gallery="nomad"><svg class="i"><use href="#i-cam"/></svg>Заклёпки вживую (2)</button>
           <button class="sbtn vid" type="button" data-view="media/live/proto_desk_test.mp4" data-sound="1" data-cap="Опытный образец ученической парты · 17 с · обзор узлов и проверка устойчивости">▶ Образец · 17 с</button>
         </div>
       </article>
@@ -1781,7 +1437,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         <h3>Стол и стул по типу ISKU</h3>
         <p>экспорт в Латвию, ростовые группы 5⁠–⁠7. КД и расчёт — КТО, образцы готовы</p>
         <div class="story-links">
-          <button class="sbtn" type="button" data-gallery="isku">📷 Опытные образцы (2 фото)</button>
+          <button class="sbtn" type="button" data-gallery="isku"><svg class="i"><use href="#i-cam"/></svg>Опытные образцы (2 фото)</button>
         </div>
       </article>
     </div>
@@ -1845,9 +1501,9 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
           </ol>
         </div>
         <div class="rnd-kpis">
-          <div><b>5</b><span>изделий на фото</span></div>
+          <div><b>5</b><span>изделий в галерее</span></div>
           <div><b>3</b><span>живых теста</span></div>
-          <div><b>9</b><span>кадров из цеха</span></div>
+          <div><b>11</b><span>живых кадров</span></div>
         </div>
       </div>
     </div>
@@ -1860,13 +1516,13 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         </div>
         <h4>Лазерная резка трубы под ручную гибку и лазерная сварка</h4>
         <ul class="bul" style="margin-top:2px">
-          <li><svg class="i"><use href="#i-spark"/></svg><span><b>Новые решения для типовых узлов</b> — уходим от сборки из десятка отдельных отрезков трубы к цельной заготовке с точными лазерными вырезами</span></li>
+          <li><svg class="i"><use href="#i-spark"/></svg><span><b>Новые решения для типовых узлов</b> — переходим от сварки из 4–6 отдельных отрезков трубы к 1 цельной заготовке с точными вырезами</span></li>
           <li><svg class="i"><use href="#i-gauge"/></svg><span><b>Резка под ручную гибку</b> — вырезы сразу задают угол и радиус (R38,5), снижают трудозатраты и ускоряют сборку без сложной оснастки</span></li>
           <li><svg class="i"><use href="#i-flame"/></svg><span><b>Интеграция с лазерной сваркой</b> — отрабатываем стыки подобных конструкций под лазерную сварку: узкий чистый шов и минимум зачистки</span></li>
         </ul>
         <div class="specs">
           <span class="chip">Боковина банкетки ПФ.UN.0012</span>
-          <span class="chip">1 заготовка 2120,5 мм</span>
+          <span class="chip">1 заготовка вместо 4 отрезков</span>
           <span class="chip">Труба 40×40×1,5</span>
         </div>
       </div>
@@ -1945,7 +1601,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
     <header class="head rise">
       <span class="kicker">09 · Как работаем вместе</span>
       <h2>Как ускорить ваш заказ</h2>
-      <p class="lead">Сегодня до старта чертежей мы днями выясняем исходные по заявке. Чем точнее вход — тем быстрее расчёт цены и выше качество изделия</p>
+      <p class="lead">Чем точнее исходные на старте — тем быстрее расчёт цены для продаж, точнее закуп для снабжения и выше качество изделия в цехе</p>
     </header>
     <div class="seg-wrap rise" style="--i:1">
       <div class="seg" role="tablist" aria-label="Правила работы с продажами">
@@ -1958,7 +1614,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
     <!-- вкладка 1: Заявки и 6 правил -->
     <div class="subpanel is-on" id="p-help" role="tabpanel" aria-labelledby="t-help">
       <div class="card intake-strip rise" style="--i:1">
-        <span class="lbl">Почему сегодня тормозят заявки — уточняем днями, иногда неделями</span>
+        <span class="lbl">Где сегодня теряем дни до старта чертежей — и как убираем это вместе</span>
         <div class="intake-cards">
           <div class="intake-card"><b>На фото одно, в тексте другое</b><small>На картинке стандартное изделие, по описанию — нестандарт</small></div>
           <div class="intake-card"><b>20 столов под одним именем</b><small>Разные размеры без своих артикулов — отличаются только техописанием</small></div>
@@ -1971,7 +1627,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         <div class="card ask rise" style="--i:2"><span class="n">2</span><span class="ic"><svg><use href="#i-files"/></svg></span><h3>Документы объекта — запросите у клиента</h3><p>Проект здания, обмерные планы, фото, видео — для предварительного расчёта часто хватает без замера</p></div>
         <div class="card ask rise" style="--i:3"><span class="n">3</span><span class="ic"><svg><use href="#i-pen"/></svg></span><h3>Изменения — только через СЗ</h3><p>Все правки клиента фиксируем в СЗ — не в чатах и не на словах</p></div>
         <div class="card ask rise" style="--i:4"><span class="n">4</span><span class="ic"><svg><use href="#i-gauge"/></svg></span><h3>Реалистичный срок в КП</h3><p>Закладывайте время на расчёт, конструктив и КД — поможем оценить до КП</p></div>
-        <div class="card ask rise" style="--i:5"><span class="n">5</span><span class="ic"><svg><use href="#i-bulb"/></svg></span><h3>Новое изделие, свет, несущие конструкции — сначала к нам</h3><p>Оценим до обещания клиенту и скажем, нужен ли подрядчик</p></div>
+        <div class="card ask rise" style="--i:5"><span class="n">5</span><span class="ic"><svg><use href="#i-bulb"/></svg></span><h3>Новое изделие, свет, несущие конструкции — сначала к нам</h3><p>Оценим до обещания клиенту — сразу скажем сроки, формат проработки и границы компетенций</p></div>
         <div class="card ask hot rise" style="--i:6"><span class="n">6</span><span class="ic"><svg><use href="#i-users"/></svg></span><h3>На объекте — один ответственный с первого дня</h3><p>Размещение согласовано с вентиляцией, светом и отделкой до чертежей</p></div>
       </div>
       <div class="result">
@@ -2018,7 +1674,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
     <div class="final-head">
       <span class="kicker rise">10 · Итог на ноябрь 2026</span>
       <h2 class="rise" style="--i:1">Главный приоритет — <span class="mark">отлаженная база данных изделий</span></h2>
-      <p class="lead rise" style="--i:2">Не будет отлаженной базы — теряется смысл всех остальных систем. Честная карта состояния: что работает, что в пилотах/MVP и план на 2027</p>
+      <p class="lead rise" style="--i:2">Отлаженная база — опора, которая объединяет продажи, снабжение, 1С и производство в одну систему. Честная карта состояния и наш общий вектор на 2027</p>
     </div>
     <div class="final-cols">
       <article class="fcol ok rise" style="--i:3">
@@ -2026,16 +1682,16 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         <ul>
           <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Фундамент KPI:</b> агентский учёт СЗ в Bitrix24 (содержание, исполнители, сроки готовности)</span></li>
           <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Паспорта и сборка:</b> 37 паспортов ПС/РЭ в новом стиле и 28 схем сборки картинками</span></li>
-          <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Живой R&amp;D:</b> опытные образцы и нагрузочные испытания в цехе до запуска серии</span></li>
+          <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Живой R&amp;D:</b> опытные образцы, нагрузочные тесты и отработка новых узлов в цехе</span></li>
         </ul>
       </article>
       <article class="fcol pilot rise" style="--i:4">
-        <div class="fcol-h"><h3>Пилоты и MVP</h3><span class="fbadge">Пилоты · MVP</span></div>
+        <div class="fcol-h"><h3>Пилоты и разработка</h3><span class="fbadge">Пилоты</span></div>
         <ul>
           <li><svg class="i"><use href="#i-layers"/></svg><span><b>Приоритет №1 — фундамент единой базы:</b> Шифратор, Ограничительный перечень, TROYA_PDM (NOMAD 18, Smarty 8) и Базис</span></li>
-          <li><svg class="i"><use href="#i-db"/></svg><span><b>Задел под будущую связку с 1С (MVP):</b> прототип Навигатора PDM, справочника соответствий 1С и расчёта себестоимости</span></li>
-          <li><svg class="i"><use href="#i-cnc"/></svg><span><b>ИИ + скриптовая автоматизация и станки:</b> разработка инструментов и скриптов для металла и корпуса (ESKD-AUTO, SWDraw, Draw, Базис), пилот «Базис — станок», ИИ-логистика и опыты с MCP</span></li>
-          <li><svg class="i"><use href="#i-swap"/></svg><span><b>Стык металл + корпус:</b> пытаемся реализовать схему с одним ведущим конструктором</span></li>
+          <li><svg class="i"><use href="#i-db"/></svg><span><b>Задел под связку с 1С и закуп:</b> Навигатор базы изделий, справочник соответствий 1С и механизм себестоимости (металл и окраска)</span></li>
+          <li><svg class="i"><use href="#i-cnc"/></svg><span><b>ИИ + скриптовая автоматизация и станки:</b> разработка инструментов для металла и корпуса, пилот «Базис — станок», ИИ-логистика и опыты управления CAD через ИИ (MCP)</span></li>
+          <li><svg class="i"><use href="#i-swap"/></svg><span><b>Стык металл + корпус:</b> отрабатываем схему с одним ведущим конструктором</span></li>
         </ul>
       </article>
       <article class="fcol plan rise" style="--i:5">
@@ -2043,11 +1699,17 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         <ul>
           <li><svg class="i"><use href="#i-gauge"/></svg><span><b>Стандарт в производство:</b> металл — без участия конструктора (в тот же день), корпус — только оптимальный раскрой на заказ (≤ 1 дня)</span></li>
           <li><svg class="i"><use href="#i-tag"/></svg><span><b>Станки и этикетки:</b> часть серийных проектов с этикетками, раскрой 6 м трубы на труборез</span></li>
-          <li><svg class="i"><use href="#i-link"/></svg><span><b>Единый справочник 1С ↔ КД:</b> сквозные артикулы ГП, закуп и комплектация напрямую по 3D-модели</span></li>
+          <li><svg class="i"><use href="#i-link"/></svg><span><b>Единый справочник 1С ↔ КД:</b> сквозные артикулы готовой продукции, закуп и комплектация напрямую по 3D-модели</span></li>
         </ul>
       </article>
     </div>
-    <div class="final-foot rise" style="--i:6">
+    <div class="final-team rise" style="--i:6">
+      <div><b>Продажам</b><span>быстрые КП, ранняя логистика, новые паспорта и меньше рекламаций</span></div>
+      <div><b>Снабжению</b><span>единый перечень материалов, понятные коды 1С, точные нормы и база цен</span></div>
+      <div><b>Производству</b><span>проверенные чертежи, этикетки на станок и технологичные узлы</span></div>
+      <div class="all"><b>Общая цель TROYA</b><span>двигаемся в одном направлении — от точной заявки до довольного клиента</span></div>
+    </div>
+    <div class="final-foot rise" style="--i:7">
       <p class="sign">Руководитель технического отдела · ТОО Компания «TROYA»<br><b>Лунин В.И.</b></p>
       <div class="thanks"><a class="btn btn-orange" href="#home"><svg class="i"><use href="#i-back"/></svg>К началу</a><span class="hint">Спасибо! Готов ответить на вопросы</span></div>
     </div>
@@ -2090,42 +1752,42 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   'use strict';
   const L = (t) => '<b>' + t + '</b>';
   const NOTES = {
-    home: ['Коллеги, добрый день. Покажу, что делает технический отдел, что реально работает уже сейчас, что внедряем в пилотах и чем это поможет вам в продажах.',
-           'Главная мысль: мы не просто чертим по СЗ — отвечаем за изделие целиком, от заявки и расчёта до проверенного образца в цехе. Пойдём в четыре коротких акта: реальность, фундамент, живое доказательство и общие правила.'],
+    home: ['Коллеги, добрый день. Сегодня покажу продажам, снабжению и производству, что именно делает технический отдел, куда мы движемся и зачем это нужно каждому из нас.',
+           'Главная мысль: мы строим не просто «архив для конструкторов», а единую инженерную систему TROYA — чтобы продажи быстрее считали КП, снабжение закупало без путаницы кодов, а цех собирал без переделок. Двигаемся вместе к одной цели.'],
     numbers: ['Точка А — реальный поток заявок. За пять месяцев — 917 служебных записок, 8–9 в каждый рабочий день. Две из трёх — 591 (64 %) — проходят через конструкторов. По оценке, 63 % СЗ с участием КТО содержат нестандартные позиции. Медиана листа согласования — 1 день, по рекламациям — 1,5 дня.',
               'По KPI важно понимать контекст: раньше KPI, метрики и анализ по СЗ отсутствовали совсем — не было даже фундамента. Сейчас фундамент есть: уже работает агентский учёт СЗ из Bitrix24 — ведётся база по содержанию, исполнителям и срокам готовности. Теперь можно оценивать KPI и рост.',
               'На старте медиана от СЗ до выдачи КД — 6 календарных дней. Сегодня конструктор нужен для запуска каждого изделия — в том числе стандартного. Цель по стандартным изделиям — убрать лишние потери: по металлу запуск в производство вообще без конструктора (в тот же день), а по корпусной мебели — только работа конструктора на оптимальный раскрой под конкретный заказ (не больше 1 дня, включая покупные и ведомости).',
               'Сократить срок помогут единая библиотека и автоматизированная система формирования документации в цех по стандартным изделиям; по корпусной части — пилот «конструктор-технолог → станок». Эффект увидим по этой же медиане.'],
-    debt: ['Главный технический долг за 10+ лет — отсутствие единого справочника номенклатуры, который связывает 1С, склад, 3D-модели и чертежи. Поставщики везут комплектующие под разными артикулами, склад приходует их в 1С как разные позиции — в базе множатся дубли кодов. Конструктор в чертеже работает под одним названием. В итоге чертёж один, а на комплектацию уходят разные детали — отсюда путаница и рекламации. Нужен единый справочник номенклатуры и таблица соответствий (артикул поставщика ↔ код 1С ↔ модель КТО).',
-           'Из-за этого возникает двойная работа и ошибки. Пример — ' + L('СЗ 794-М', 29365) + ': о папке со схемами присадки знали 2 конструктора из 10, чертежи для цеха потеряны — собирали по памяти. Второй пример — ' + L('СЗ 182/1 Аст', 29211) + ': одни и те же стеллажи вышли глубиной 430 и 450 мм из-за разных версий КД — рекламация.'],
-    arch: ['Это главный экран презентации — честная карта того, что мы заложили за 5 месяцев. Важно сразу подчеркнуть: фундамент единой базы, портал и задел для будущей связки с 1С — сейчас это всё пилоты и MVP.',
-           'Главный приоритет №1 — отлаженная база данных изделий (Шифратор, Ограничительный перечень, TROYA_PDM для металла и лабмебели, Базис для серийного корпуса). Не будет отлаженной базы — теряется смысл всех остальных систем, интеграций с 1С и автоматизации.',
-           'Навигатор по базе данных изделий (MVP): в перспективе он должен стать единственным источником истины по изделиям — каталог 3D, ЛЗК, 1D-раскрой, механизм расчёта себестоимости (пока пилот по металлу и окраске) и задел для будущей связки с 1С.',
-           'Цех и ИИ (пилот): ведётся разработка инструментов и скриптов для автоматизации работы как с металлом (ESKD-AUTO, SWDraw, Draw, выгрузка ЧПУ и ЛЗК), так и с корпусной мебелью (Базис, пилот «Базис — станок»), плюс опыты с MCP. Это связка «ИИ + скриптовая автоматизация» процесса разработки изделий, где принцип неизменный: машина и скрипты делают — человек контролирует, доводит до идеала в ручном режиме и утверждает.',
+    debt: ['Главный технический долг за 10+ лет — отсутствие единого справочника номенклатуры, который связывает 1С, снабжение, склад, 3D-модели и чертежи. Исторически в 1С накопились дубли кодов и единиц измерения, а у готовой продукции почти нет сквозных артикулов. Из-за этого страдают все: конструктор, снабжение, склад и цех. Вместе со снабжением и ИТ закладываем единый справочник номенклатуры и таблицу соответствий (коды 1С ↔ материал КТО).',
+           'Из-за отсутствия сквозного цикла КД возникают двойная работа и ошибки. Пример — ' + L('СЗ 794-М', 29365) + ': о папке со схемами присадки знали 2 конструктора из 10, чертежи для цеха потеряны — собирали по памяти. Второй пример — ' + L('СЗ 182/1 Аст', 29211) + ': одни и те же стеллажи вышли глубиной 430 и 450 мм из-за разных версий КД — рекламация.'],
+    arch: ['Это главный экран презентации — честная карта того, что мы заложили за 5 месяцев. Важно подчеркнуть: отлаженная база данных изделий — приоритет №1 и опора, которая связывает продажи, снабжение, 1С и производство в одну систему.',
+           'База изделий (Шифратор, Ограничительный перечень материалов, TROYA_PDM для металла и лабмебели, Базис для серийного корпуса): параллельно держим поток 8–9 СЗ в день и пошагово переводим серии в единую базу.',
+           'Навигатор по базе данных изделий (пилот): в перспективе он должен стать единственным источником истины по изделиям — каталог 3D, ведомости ЛЗК, раскрой, механизм расчёта себестоимости (пока пилот по металлу и окраске) и задел под будущую связку с 1С.',
+           'Цех и ИИ (пилот): ведётся разработка инструментов и скриптов для автоматизации работы как с металлом (ESKD-AUTO, SWDraw, Draw, выгрузка ЧПУ и ЛЗК), так и с корпусной мебелью (Базис, пилот «Базис — станок»), плюс опыты управления CAD через ИИ (MCP). Принцип неизменный: машина и скрипты делают — человек контролирует, доводит до идеала в ручном режиме и утверждает.',
            'Что уже работает для клиента прямо сейчас: 37 паспортов ПС/РЭ, 28 схем сборки картинками и живые испытания образцов в цехе.'],
-    system: ['<b>Вкладка 1 · Архив и библиотека.</b> Строим централизованную базу — одну для всех: переносим серии (18 изделий NOMAD на проверке до выдачи в цех, 8 изделий Smarty чертим заново, тумба/шкаф «Москвы 2.0», 3D ARco Duo), собираем 3D-модели крепежа, покупных изделий, фурнитуры и профилей (178 файлов), формируем ограничительный перечень металла. Параллельно переходим на новое гибкое ПО и активно внедряем ИИ по принципу: машина делает — человек контролирует, доводит до идеала в ручном режиме и утверждает. В Навигаторе PDM уже собран справочник соответствий («много кодов 1С → 1 материал КТО») и подтяжка живых цен 1С — готовим к пилоту.',
-             '<b>Вкладка 2 · Металл + корпус.</b> Большая часть линейки — комбинированные изделия (в одном вытяжном шкафу до 60 позиций крепежа; живые фото тумбы с мойкой открываются по кнопке). Сейчас стык держится на опыте сборщиков — пытаемся реализовать схему из 5 правил с одним ведущим конструктором, схемой стыков, одной 3D-сборкой и контрольной сборкой.',
-             '<b>Вкладка 3 · Конструктор-технолог → станок.</b> Ведётся подготовка конструкторского отдела к быстрой интеграции в общую систему — пилот «Базис — станок» по корпусу: раскрой из модели, распил на HOMAG, этикетки по порядку выхода, присадка KDT читает штрихкод. Техническая возможность подтверждена, нюансы решаем; цель на 2027 — перевести часть серийных проектов на этикетки. Эффект увидим по медиане КД.'],
-    'ai-docs': ['Две самые ощутимые пользы продажам уже сейчас: ИИ для логистики/себестоимости и новый стандарт паспорта.',
-                'По логистике и укладке отлаживаем схему работы с ИИ: уже на ранней стадии можно оперативно прикинуть количество изделий и схему упаковки для предварительного расчёта логистики, сравнить оптимальные варианты и проработать конструктив под удобную перевозку. Пример — скамья FLS: до 731 комплекта на машину вместо 440; табурет на экспорт — 252 штуки на паллету, проверено в 3D.',
-                'По себестоимости: по моделям в базе уже получаем чистый расход металла на деталь (теоретическая себестоимость); следующий этап — раскрой 6-метровых труб на труборез для фактической цены. Ускоряем просчёты для КП с помощью ИИ-агентов (пример — ' + L('СЗ Аст-268', 32147) + '). Решение и ответственность всегда за конструктором.',
-                'Вторая часть экрана — уже работающий инструмент: 37 паспортов в новом стиле и 28 схем сборки картинками. На экране — страницы стола NOMAD V (кликабельны). Вводим постепенно для действующих серий, новой линейки, экспорта и тендеров (' + L('СЗ 840', 30985) + ', ' + L('СЗ 872', 31511) + ').'],
+    system: ['<b>Вкладка 1 · Архив и библиотека.</b> Строим централизованную базу — одну для всех: переносим серии (18 изделий NOMAD на проверке до выдачи в цех, 8 изделий Smarty чертим заново, тумба/шкаф «Москвы 2.0», 3D ARco Duo), собираем 3D-модели крепежа, покупных изделий, фурнитуры и профилей (178 файлов), формируем ограничительный перечень металла. Параллельно разрабатываем собственные инструменты и скрипты автоматизации (ESKD-AUTO, SWDraw, Draw, Базис) и готовим задел под 1С в Навигаторе базы изделий.',
+             '<b>Вкладка 2 · Металл + корпус.</b> Большая часть линейки — комбинированные изделия (в одном вытяжном шкафу до 60 позиций крепежа; живое фото тумбы с мойкой открывается по кнопке). Сейчас стык держится на опыте сборщиков — отрабатываем схему из 5 правил с одним ведущим конструктором, схемой стыков, одной 3D-сборкой и контрольной сборкой.',
+             '<b>Вкладка 3 · Конструктор-технолог → станок.</b> Ведётся подготовка конструкторского отдела к быстрой интеграции в общую систему — пилот «Базис — станок» по корпусу: раскрой из модели, распил на пильном центре, этикетки по порядку выхода, присадка читает штрихкод. Техническая возможность подтверждена, нюансы решаем; цель на 2027 — перевести часть серийных проектов на этикетки.'],
+    'ai-docs': ['Здесь собрана конкретная польза для продаж и для снабжения.',
+                'Для продаж (пилоты): с использованием ИИ получается оперативно прорабатывать предварительные варианты логистики и упаковки ещё на ранней стадии (примеры — скамья FLS: 731 комплект на фуру вместо 440; табурет: 252 шт. на паллету, проверено в 3D). По себестоимости разработан и совершенствуется механизм расчёта (пока пилот по металлу и окраске, ориентир — дни вместо недель; пример ускорения КП — ' + L('СЗ Аст-268', 32147) + ').',
+                'Для снабжения (пилот · в работе): ограничительный перечень материалов сокращает разносортицу профилей и фурнитуры — проще держать складской остаток и получать объёмную цену у поставщиков. Точные ведомости ЛЗК и 1D-раскрой 6-метровых хлыстов убирают срочные дозакупки, а единый справочник 1С и база цен без НДС снимают путаницу кодов.',
+                'Для покупателя (уже работает): разработан новый стандарт схем сборки и паспортов — часть изделий уже имеет инструкции в новом виде (37 паспортов и 28 схем сборки картинками; примеры ' + L('СЗ 840', 30985) + ', ' + L('СЗ 872', 31511) + '). На экране кликабельные страницы стола NOMAD V.'],
     products: ['Акт III — живое доказательство. Чистая витрина новых и обновлённых изделий: у каждой карточки можно открыть живые фото из цеха и короткие тесты.',
                'Банкетка со спинкой — ' + L('СЗ Аст-261', 32015) + '; столы Kcell с перегородкой — ' + L('СЗ Ал-70', 31697) + ', вариант с царгой подготовили быстро по просьбе клиента.',
                'Обновлённый NOMAD: узел регулировки высоты перевели на заклёпки-гайки вместо сварных пластин внутри трубы — 4 винта вместо 8, снаружи головок не видно. Ползунок «Было / Стало» можно открыть во весь экран (кнопка в правом нижнем углу картинки). Чертежи на проверке, до серии — пробный образец.',
                'Стол и стул по типу ISKU — экспортный заказ в Ригу (ростовые группы 5–7), опытные образцы изготовлены. ARco Duo — доступная двухместная парта 5–7, модель переносим в SolidWorks; стул 5–7 уже продаётся, по 3–5 покажем образцы после доработки.'],
     rnd: ['Это главный ответ на вопрос «не оторваны ли конструкторы от реальности»: отдел ведёт полный R&D-цикл — от 3D и расчёта узлов до живого образца и нагрузочных тестов в цехе.',
-          'Отдельное направление R&D — поиск новых технологических решений для типовых узлов: осваиваем лазерную резку трубы под ручную гибку (снижение трудозатрат и рост скорости сборки без лишних стыков) и отрабатываем интеграцию таких конструкций с лазерной сваркой. На примере боковины банкетки ПФ.UN.0012 — одна заготовка длиной 2120,5 мм с тремя радиусными вырезами R38,5 превращается в цельную боковину; рядом — живые фото цельногнутой опоры со швами лазерной сварки.',
+          'Отдельное направление R&D — поиск новых технологических решений для типовых узлов: осваиваем лазерную резку трубы под ручную гибку (1 цельная заготовка вместо 4–6 отдельных отрезков — снижение трудозатрат и рост скорости сборки) и отрабатываем интеграцию таких конструкций с лазерной сваркой. На примере боковины банкетки ПФ.UN.0012 — одна заготовка длиной 2120,5 мм с тремя радиусными вырезами R38,5 превращается в цельную боковину; рядом — живые фото цельногнутой опоры со швами лазерной сварки.',
           'Наверху — 29-секундный промо-ролик с главными моментами. Ниже — три короткие вырезки живых тестов по 16–19 секунд (открываются крупно со звуком): испытание стола Kcell под двойной живой нагрузкой, контрольная сборка покрашенного образца и тест устойчивости опытной парты.',
-          'Внизу — 9 живых кадров (по 1–2 на каждое изделие: Kcell, ISKU, Банкетка, NOMAD, лабмебель) с фильтром и просмотром галереей ← →.'],
-    rules: ['<b>Вкладка 1 · Заявки и 6 правил.</b> Всё, что тормозит работу на входе: нет единой формы, на фото одно, в описании другое, 20 столов под одним наименованием без артикулов, согласование после запуска, и пример общежития (заказ 89, КазУТБ) — декор сделали по картинке, на месте мешали вентиляция и свет, перепиливали на объекте.',
-            'Поэтому шесть практических правил для ускорения: полная СЗ до старта; запросите у клиента документы здания (был случай — выехали на замер, а у завхоза лежали обмерные планы и проект); правки только через СЗ; реалистичный срок в КП; новое/свет/несущие сначала к нам; на крупном объекте один ответственный с первого дня. Внизу — 4 шага, которые внедряем вместе.',
-            '<b>Вкладка 2 · Путь нового изделия.</b> Спешка на старте бьёт по себестоимости. Новое изделие идёт через оценку с производством, опытный образец (цена образца), решение и серию (цена серии). По образцу делаем при наличии нужной оснастки либо адаптируем под наши возможности; разработка новых изделий с нуля от концепта до серии — можем, но это отдельный длительный процесс; по светодизайну и несущим конструкциям компетенций нет (нужна лицензия). Пример — «Москва 2.0» (17 позиций: 2 готовы, 5 в работе): сроки только через оценку КТО.'],
-    final: ['Честный итог на ноябрь 2026 — в трёх колонках, без приукрашивания.',
+          'Внизу — 9 живых кадров в галерее (по 1–2 на каждое изделие: Kcell, ISKU, Банкетка, NOMAD, лабмебель) плюс 2 живых кадра цельногнутой опоры выше — итого 11 живых кадров с просмотром ← →.'],
+    rules: ['<b>Вкладка 1 · Заявки и 6 правил.</b> Где сегодня мы вместе теряем дни до старта чертежей: на фото одно, в описании другое; 20 столов под одним наименованием без артикулов; согласование после запуска; пример общежития (заказ 89, КазУТБ) — декор сделали по картинке, на месте мешали вентиляция и свет, перепиливали на объекте.',
+            'Поэтому шесть практических правил, которые ускоряют заказ для всех: полная СЗ до старта; запросить у клиента документы здания (был случай — выехали на замер, а у завхоза лежали обмерные планы и проект); правки только через СЗ; реалистичный срок в КП; новое/свет/несущие сначала к нам; на крупном объекте один ответственный с первого дня.',
+            '<b>Вкладка 2 · Путь нового изделия.</b> Спешка на старте бьёт по себестоимости. Новое изделие идёт через оценку с производством и снабжением, опытный образец (цена образца), решение и серию (цена серии). По образцу делаем при наличии нужной оснастки либо адаптируем под наши возможности; разработка новых изделий с нуля от концепта до серии — можем, но это отдельный длительный процесс; по светодизайну и несущим конструкциям компетенций нет (нужна лицензия). Пример — «Москва 2.0» (17 позиций: 2 готовы, 5 в работе): сроки только через оценку КТО.'],
+    final: ['Честный итог на ноябрь 2026 и наш общий вектор на 2027 — без приукрашивания.',
             'Уже работает: фундамент KPI (агентский учёт СЗ в Bitrix24), 37 паспортов и 28 схем сборки в новом стиле, живой R&D и испытания образцов в цехе.',
-            'Внедряем в пилотах: единый архив (NOMAD 18, Smarty 8) и проверка вторым конструктором, библиотека 178 файлов, пилот «конструктор-технолог → станок» по корпусу, стык «металл + корпус», ранний расчёт логистики и себестоимости с ИИ.',
-            'План на 2027: запуск стандартных изделий по металлу без конструктора (в тот же день), по корпусу — только оптимальный раскрой на заказ (≤ 1 дня), часть проектов с этикетками, единый выпуск комплекта и привязка библиотеки к 1С, раскрой 6 м трубы на труборез.',
-            'Мы не просто чертим по СЗ — мы отвечаем за изделие целиком. Спасибо, готов ответить на вопросы!']
+            'В пилотах и разработке: приоритет №1 — отлаженная база изделий (Шифратор, Ограничительный перечень, TROYA_PDM и Базис), Навигатор базы и задел под 1С + себестоимость металла и окраски, ИИ + скриптовая автоматизация для металла и корпуса, пилот «Базис — станок», стык «металл + корпус».',
+            'План на 2027 и зачем это каждому отделу: продажам — быстрые КП, логистика, паспорта и меньше рекламаций; снабжению — единый перечень, понятные коды 1С, точные нормы и база цен; производству — проверенные чертежи, этикетки на станок и технологичные узлы.',
+            'У нас одна общая цель — чтобы TROYA выпускала качественные изделия быстрее и прибыльнее. Двигаемся в одном направлении! Спасибо, готов ответить на вопросы.']
   };
 
   const root = document.documentElement;
