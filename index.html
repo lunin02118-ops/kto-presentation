@@ -600,7 +600,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 .opt-compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:stretch}
 .opt-side{display:flex;flex-direction:column;gap:12px}
 .opt-side.drop{border-top:4px solid var(--red);background:linear-gradient(180deg,#FFF7F7 0%,#fff 18%)}
-.opt-side.keep{border-top:4px solid var(--green);background:linear-gradient(180deg,#F2FBF6 0%,#fff 18%)}
+.opt-side.stay{border-top:4px solid var(--green);background:linear-gradient(180deg,#F2FBF6 0%,#fff 18%)}
 .opt-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .opt-head h3{font-size:clamp(16px,1.3vw,19px);margin:0}
 .opt-head small{display:block;font-size:12.5px;color:var(--muted);font-weight:600;margin-top:2px}
@@ -609,12 +609,12 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 .opt-pic:hover img{transform:scale(1.03)}
 .opt-pic .opt-cap{position:absolute;left:10px;bottom:10px;padding:4px 10px;border-radius:999px;font-size:11.5px;font-weight:700;background:rgba(10,26,110,.86);color:#fff}
 .opt-side.drop .opt-pic .opt-cap{background:rgba(190,46,46,.92)}
-.opt-side.keep .opt-pic .opt-cap{background:rgba(24,132,82,.92)}
+.opt-side.stay .opt-pic .opt-cap{background:rgba(24,132,82,.92)}
 .opt-pts{list-style:none;margin:0;padding:0;display:grid;gap:8px}
 .opt-pts li{display:grid;grid-template-columns:20px 1fr;gap:8px;align-items:start;font-size:14px;line-height:1.38;color:var(--text)}
 .opt-pts li svg{width:18px;height:18px;margin-top:2px;flex:none}
 .opt-side.drop .opt-pts svg{color:var(--red)}
-.opt-side.keep .opt-pts svg{color:var(--green)}
+.opt-side.stay .opt-pts svg{color:var(--green)}
 .opt-pts b{color:var(--navy)}
 .opt-slots{margin-top:16px;display:grid;grid-template-columns:1.35fr .9fr;gap:clamp(16px,2.2vw,28px);align-items:center}
 .opt-slots-txt{display:flex;flex-direction:column;gap:10px}
@@ -1128,7 +1128,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         <div class="atags"><span>Живые тесты</span><span>Лазерная гибка</span><span>Образцы</span></div>
       </article>
       <article class="acard ok rise" style="--i:3">
-        <div class="acard-top"><span class="an">03 · КОММЕРЦИЯ</span><span class="ab">работает + пилот</span></div>
+        <div class="acard-top"><span class="an">03 · КОММЕРЦИЯ</span><span class="ab">в деле</span></div>
         <h3>Инструменты для продаж и закупа</h3>
         <p><b>37 паспортов и 28 схем сборки</b> картинками, ранняя <b>ИИ-логистика</b>, расчёт себестоимости (металл и окраска) и <b>единые нормы ЛЗК</b> для снабжения</p>
         <div class="atags"><span>Паспорта</span><span>ИИ-логистика</span><span>Нормы ЛЗК</span></div>
@@ -1443,7 +1443,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
           </div>
         </article>
 
-        <article class="card opt-side keep rise" style="--i:2">
+        <article class="card opt-side stay rise" style="--i:2">
           <div class="opt-head">
             <div>
               <h3>Smarty Plus</h3>
