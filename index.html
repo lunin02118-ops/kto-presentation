@@ -742,10 +742,29 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 .ai-stats span:last-child{font-size:13.5px;line-height:1.35}
 #ai-docs .kp-band{margin-top:16px}
 .intake-strip{margin-bottom:16px;display:grid;gap:10px}
-.intake-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.intake-card{padding:11px 13px;border-radius:14px;background:#FDF2F2;border:1px solid #F6D0D0;display:grid;gap:4px;align-content:start}
-.intake-card b{color:#8E1E1E;font-size:13.5px;line-height:1.25}
-.intake-card small{color:#5E3B3B;font-size:12.5px;line-height:1.34}
+.intake-cards{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.intake-card{padding:11px 12px;border-radius:14px;background:#FDF2F2;border:1px solid #F6D0D0;display:grid;gap:4px;align-content:start}
+.intake-card b{color:#8E1E1E;font-size:13px;line-height:1.25}
+.intake-card small{color:#5E3B3B;font-size:12px;line-height:1.34}
+.ssot-box{margin-top:16px;padding:16px 20px;border-radius:var(--r);background:linear-gradient(135deg,#F0F5FF,#FFFFFF 70%);border:1px solid #C8DBFF;border-left:4px solid var(--blue2);display:grid;grid-template-columns:1.35fr 1fr;gap:18px;align-items:center}
+.ssot-copy{display:grid;gap:6px}
+.ssot-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.ssot-copy h3{margin:0;font-size:clamp(15.5px,1.25vw,18px);color:var(--navy);line-height:1.25}
+.ssot-copy p{margin:0;font-size:13.5px;line-height:1.42;color:var(--muted)}
+.ssot-copy p b{color:var(--navy)}
+.ssot-flow{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center}
+.ssot-src{padding:12px 13px;border-radius:14px;background:var(--navy);color:#fff;display:grid;gap:3px;text-align:center}
+.ssot-src b{font-size:13.5px;line-height:1.2}
+.ssot-src small{font-size:11.5px;color:var(--sky);line-height:1.25}
+.ssot-arr{color:var(--orange);font-weight:800;font-size:18px;text-align:center}
+.ssot-outs{display:grid;gap:7px}
+.ssot-out{padding:8px 11px;border-radius:12px;background:#fff;border:1px solid #D4E2FF;display:flex;align-items:center;gap:8px;font-size:12.5px;line-height:1.25;color:var(--navy)}
+.ssot-out b{display:block;font-size:13px}
+.ssot-out small{display:block;color:var(--muted);font-size:11.5px}
+.ssot-out .i{width:18px;height:18px;color:var(--blue2);flex:none}
+.flow6 li.ok .ic{border-color:var(--green);background:#E8F8EF;color:#14784B}
+@media (max-width:1050px){.ssot-box{grid-template-columns:1fr}}
+@media (max-width:640px){.ssot-flow{grid-template-columns:1fr}.ssot-arr{transform:rotate(90deg)}}
 /* экран 04: Большая карта системы за 5 месяцев (v32) */
 .arch-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;position:relative;margin-top:4px}
 .acard{position:relative;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:var(--r);padding:16px 15px;display:flex;flex-direction:column;gap:9px;min-width:0}
@@ -1795,6 +1814,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
       <div class="card intake-strip rise" style="--i:1">
         <span class="lbl">Где сегодня теряем дни до старта чертежей — и как убираем это вместе</span>
         <div class="intake-cards">
+          <div class="intake-card"><b>Разные каталоги и цвета «на словах»</b><small>У каждого свой каталог и сайт; в СЗ пишут цвет без RAL, фактуры (глянец/шагрень) и кода ЛДСП</small></div>
           <div class="intake-card"><b>На фото одно, в тексте другое</b><small>На картинке стандартное изделие, по описанию — нестандарт</small></div>
           <div class="intake-card"><b>20 столов под одним именем</b><small>Разные размеры без своих артикулов — отличаются только техописанием</small></div>
           <div class="intake-card"><b>Согласование после запуска</b><small>Задачу поняли по-разному — переделка уже в цехе</small></div>
@@ -1802,12 +1822,27 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         </div>
       </div>
       <div class="asks">
-        <div class="card ask rise" style="--i:1"><span class="n">1</span><span class="ic"><svg><use href="#i-doc"/></svg></span><h3>Полная СЗ и исходные — до старта</h3><p>Все позиции, материалы, размеры, ТЗ</p></div>
+        <div class="card ask rise" style="--i:1"><span class="n">1</span><span class="ic"><svg><use href="#i-doc"/></svg></span><h3>Полная СЗ, цвет и фактура — до старта</h3><p>Артикул из единого каталога, однозначный цвет и фактура (RAL + глянец/шагрень, декор ЛДСП и кромка), размеры, ТЗ</p></div>
         <div class="card ask rise" style="--i:2"><span class="n">2</span><span class="ic"><svg><use href="#i-files"/></svg></span><h3>Документы объекта — запросите у клиента</h3><p>Проект здания, обмерные планы, фото, видео — для предварительного расчёта часто хватает без замера</p></div>
         <div class="card ask rise" style="--i:3"><span class="n">3</span><span class="ic"><svg><use href="#i-pen"/></svg></span><h3>Изменения — только через СЗ</h3><p>Все правки клиента фиксируем в СЗ — не в чатах и не на словах</p></div>
         <div class="card ask rise" style="--i:4"><span class="n">4</span><span class="ic"><svg><use href="#i-gauge"/></svg></span><h3>Реалистичный срок в КП</h3><p>Закладывайте время на расчёт, конструктив и КД — поможем оценить до КП</p></div>
         <div class="card ask rise" style="--i:5"><span class="n">5</span><span class="ic"><svg><use href="#i-bulb"/></svg></span><h3>Новое изделие, свет, несущие конструкции — сначала к нам</h3><p>Оценим до обещания клиенту — сразу скажем сроки, формат проработки и границы компетенций</p></div>
         <div class="card ask hot rise" style="--i:6"><span class="n">6</span><span class="ic"><svg><use href="#i-users"/></svg></span><h3>На объекте — один ответственный с первого дня</h3><p>Размещение согласовано с вентиляцией, светом и отделкой до чертежей</p></div>
+      </div>
+      <div class="ssot-box rise" style="--i:7">
+        <div class="ssot-copy">
+          <div class="ssot-head"><span class="lbl" style="margin:0">Перспектива · Единый источник истины</span><span class="st plan">цель</span></div>
+          <h3>Один утверждённый каталог вместо «своих» файлов у каждого менеджера</h3>
+          <p>Цель — <b>одна согласованная с производством картотека на сервере</b>: из неё работает <b>единое приложение-шаблон СЗ</b> по стандартным изделиям (выбор модели, кода RAL, фактуры и декора без ошибок) и оттуда же автоматически берётся актуальная <b>КД в цех</b></p>
+        </div>
+        <div class="ssot-flow" aria-label="Схема единого источника истины">
+          <div class="ssot-src"><b>Единая картотека</b><small>утверждённый каталог на сервере</small></div>
+          <div class="ssot-arr" aria-hidden="true">→</div>
+          <div class="ssot-outs">
+            <div class="ssot-out"><svg class="i"><use href="#i-doc"/></svg><div><b>Приложение-шаблон СЗ</b><small>стандарт, цвет RAL и фактура без ошибок</small></div></div>
+            <div class="ssot-out"><svg class="i"><use href="#i-factory"/></svg><div><b>Актуальная КД в цех</b><small>чертежи, модели и комплектация</small></div></div>
+          </div>
+        </div>
       </div>
       <div class="result">
         <div class="pop" style="--i:8">Полная СЗ и документы объекта</div>
@@ -1822,15 +1857,16 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 
     <!-- вкладка 2: Путь нового изделия -->
     <div class="subpanel" id="p-scope" role="tabpanel" aria-labelledby="t-scope" hidden>
-      <span class="lbl flow-lbl rise" style="--i:1">Путь нового изделия</span>
-      <ol class="flow6 f5">
+      <span class="lbl flow-lbl rise" style="--i:1">Путь нового изделия — документированная процедура допуска в каталог</span>
+      <ol class="flow6">
         <li style="--i:0"><span class="ic"><svg><use href="#i-doc"/></svg></span><b>Задача</b><small>от продаж, тендера, рынка</small></li>
         <li style="--i:1"><span class="ic"><svg><use href="#i-users"/></svg></span><b>Оценка</b><small>с производством и снабжением: технология, материалы, оснастка</small></li>
-        <li style="--i:2"><span class="ic"><svg><use href="#i-cubeplus"/></svg></span><b>Опытный образец</b><small>3D, чертежи, сборка</small><span class="tagc">₸ себестоимость образца</span></li>
-        <li class="gate" style="--i:3"><span class="ic"><svg><use href="#i-target"/></svg></span><b>Решение</b><small>производим или нет, какими сериями</small></li>
-        <li style="--i:4"><span class="ic"><svg><use href="#i-factory"/></svg></span><b>Серия</b><small>чертежи серии, паспорт и схема сборки</small><span class="tagc">₸ себестоимость серии</span></li>
+        <li style="--i:2"><span class="ic"><svg><use href="#i-cubeplus"/></svg></span><b>Опытный образец</b><small>3D, чертежи, сборка</small><span class="tagc">₸ цена образца</span></li>
+        <li class="gate" style="--i:3"><span class="ic"><svg><use href="#i-checkc"/></svg></span><b>ОПИ и приёмка</b><small>испытания, доводка и согласование с цехом</small></li>
+        <li style="--i:4"><span class="ic"><svg><use href="#i-factory"/></svg></span><b>Серия</b><small>чертежи серии, паспорт и схема сборки</small><span class="tagc">₸ цена серии</span></li>
+        <li class="ok" style="--i:5"><span class="ic"><svg><use href="#i-book"/></svg></span><b>Единый каталог</b><small>утверждённое изделие в картотеку для СЗ и КД</small></li>
       </ol>
-      <div class="banner rise" style="--i:5"><svg class="i"><use href="#i-target"/></svg><p><b>Зачем это продажам:</b> спешка на старте бьёт по себестоимости и даёт переделки в серии. Через образец изделие выходит с проверенной технологией и честной ценой</p></div>
+      <div class="banner rise" style="--i:5"><svg class="i"><use href="#i-target"/></svg><p><b>Строго по процедуре:</b> в единый каталог попадают только изделия, прошедшие опытный образец, ОПИ и согласование с производством — никаких «сырых» позиций в продажах. Индивидуальный нестандарт идёт отдельно через оценку КТО</p></div>
       <div class="card scope-block rise" style="--i:6">
         <span class="lbl">Что можем сами, а где есть ограничения</span>
         <ol class="lvl">
@@ -1877,7 +1913,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         <ul>
           <li><svg class="i"><use href="#i-cubeplus"/></svg><span><b>Упрощённая линейка и серия:</b> унифицированные узлы, компактная логистика и быстрый выпуск проверенных серий</span></li>
           <li><svg class="i"><use href="#i-gauge"/></svg><span><b>Стандарт в цех без задержек:</b> металл — в производство в тот же день, корпус — только оптимальный раскрой (≤ 1 дня) и этикетки на станок</span></li>
-          <li><svg class="i"><use href="#i-link"/></svg><span><b>Сквозная связка 1С ↔ КД:</b> понятные артикулы, точный закуп и комплектация напрямую по 3D-модели</span></li>
+          <li><svg class="i"><use href="#i-link"/></svg><span><b>Единый каталог, шаблон СЗ и 1С:</b> один источник истины на сервере — для приложения заявок, КД в цех и сквозной связки с 1С</span></li>
         </ul>
       </article>
     </div>
@@ -1957,13 +1993,13 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
           'Отдельное направление R&D — поиск новых технологических решений для типовых узлов: осваиваем лазерную резку трубы под ручную гибку (1 цельная заготовка вместо 4–6 отдельных отрезков — снижение трудозатрат и рост скорости сборки) и отрабатываем интеграцию таких конструкций с лазерной сваркой. На примере боковины банкетки ПФ.UN.0012 — одна заготовка длиной 2120,5 мм с тремя радиусными вырезами R38,5 превращается в цельную боковину; рядом — живые фото цельногнутой опоры со швами лазерной сварки.',
           'Наверху — обновлённый 38-секундный промо-ролик с главными моментами (включая живой NOMAD с брендингом TROYA, тесты жёсткости и живую нагрузку весом). Ниже — четыре короткие вырезки живых тестов по 16–19 секунд (открываются крупно со звуком): тест жёсткости и нагрузки обновлённого NOMAD, испытание стола Kcell под двойной живой нагрузкой, контрольная сборка покрашенного образца и тест устойчивости опытной парты.',
           'Внизу — 12 живых кадров в галерее (NOMAD — 5, Kcell — 2, ISKU — 2, Банкетка — 2, лабмебель — 1) плюс 2 живых кадра цельногнутой опоры выше — итого 14 живых кадров с просмотром ← →.'],
-    rules: ['<b>Вкладка 1 · Заявки и 6 правил.</b> Где сегодня мы вместе теряем дни до старта чертежей: на фото одно, в описании другое; 20 столов под одним наименованием без артикулов; согласование после запуска; пример общежития (заказ 89, КазУТБ) — декор сделали по картинке, на месте мешали вентиляция и свет, перепиливали на объекте.',
-            'Поэтому шесть практических правил, которые ускоряют заказ для всех: полная СЗ до старта; запросить у клиента документы здания (был случай — выехали на замер, а у завхоза лежали обмерные планы и проект); правки только через СЗ; реалистичный срок в КП; новое/свет/несущие сначала к нам; на крупном объекте один ответственный с первого дня.',
-            '<b>Вкладка 2 · Путь нового изделия.</b> Спешка на старте бьёт по себестоимости. Новое изделие идёт через оценку с производством и снабжением, опытный образец (цена образца), решение и серию (цена серии). По образцу делаем при наличии нужной оснастки либо адаптируем под наши возможности; разработка новых изделий с нуля от концепта до серии — можем, но это отдельный длительный процесс; по светодизайну и несущим конструкциям компетенций нет (нужна лицензия). Пример — «Москва 2.0» (17 позиций: 2 готовы, 5 в работе): сроки только через оценку КТО.'],
+    rules: ['<b>Вкладка 1 · Заявки и 6 правил.</b> Где сегодня мы вместе теряем дни до старта чертежей: у каждого менеджера свой каталог и сайт, а в СЗ пишут цвет «на словах» без RAL, фактуры (глянец/шагрень) и кода ЛДСП; на фото одно, в описании другое; 20 столов под одним наименованием без артикулов; согласование после запуска; пример общежития (заказ 89, КазУТБ) — декор сделали по картинке, на месте мешали вентиляция и свет, перепиливали на объекте.',
+            'Поэтому шесть практических правил: полная СЗ с однозначным цветом и фактурой (RAL + глянец/шагрень, декор ЛДСП и кромка) до старта; запросить у клиента документы здания; правки только через СЗ; реалистичный срок в КП; новое/свет/несущие сначала к нам; на крупном объекте один ответственный с первого дня. А целевая перспектива — единый источник истины на сервере: одна утверждённая и согласованная с производством картотека изделий, из которой работает и приложение-шаблон формирования СЗ для продаж, и берётся актуальная КД для цеха.',
+            '<b>Вкладка 2 · Путь нового изделия.</b> В единый каталог новинка попадает строго по документированной процедуре: Задача → Оценка с производством и снабжением → Опытный образец (цена образца) → ОПИ (опытно-промышленные испытания и приёмка с цехом) → Серия (цена серии) → Единый каталог. Индивидуальный нестандарт идёт отдельным маршрутом через оценку КТО. По образцу делаем при наличии нужной оснастки либо адаптируем под наши возможности; разработка с нуля — отдельный длительный процесс; по светодизайну и несущим конструкциям компетенций нет (нужна лицензия). Пример — «Москва 2.0» (17 позиций: 2 готовы, 5 в работе): сроки только через оценку КТО.'],
     final: ['Честный итог на ноябрь 2026 и наш общий вектор на 2027 — не «про одну базу», а про продукт, цех и коммерческий результат.',
-            'Уже работает: решения по упрощению линейки (Smarty Plus, отказ от слотов), живой R&D и лазерная гибка/сварка, 37 паспортов и 28 схем сборки, агентский учёт 917 СЗ и фундамент KPI.',
+            'Уже работает: решения по упрощению линейки (Smarty Plus, отказ от слотов, лазерный брендинг TROYA на NOMAD), живой R&D и лазерная гибка/сварка, 37 паспортов и 28 схем сборки, агентский учёт 917 СЗ и фундамент KPI.',
             'В пилотах и разработке: ИИ-логистика и себестоимость для продаж, единый формат документации и ограничительный перечень для снабжения, ИИ + скрипты для металла и корпуса, пилот «Базис — станок», стык «металл + корпус», единый архив PDM / Базис и задел под 1С.',
-            'Общий вектор на 2027: проще продукт, быстрее расчёт, сильнее производство. У нас одна общая цель — двигаемся в одном направлении! Спасибо, готов ответить на вопросы.']
+            'В плане на 2027 — единый утверждённый каталог и приложение-шаблон СЗ из одной картотеки на сервере (и для заявок продаж, и для КД в цех, и для связки с 1С). Общий вектор: проще продукт, быстрее расчёт, сильнее производство. У нас одна общая цель — двигаемся в одном направлении! Спасибо, готов ответить на вопросы.']
   };
 
   const root = document.documentElement;
