@@ -621,11 +621,12 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 .opt-slots-txt h3{font-size:clamp(17px,1.4vw,21px);margin:0}
 .opt-slots-txt p{font-size:14.5px;color:var(--text);line-height:1.42}
 .gost-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:2px}
-.gost-box{border-radius:14px;padding:12px 14px;display:grid;gap:4px;align-content:start;font-size:13.5px;line-height:1.38}
+.gost-box{border-radius:14px;padding:12px 14px;display:grid;gap:6px;align-content:start;font-size:13.5px;line-height:1.4}
 .gost-box.ok{background:#EDFAF3;border:1px solid #B7E8CE}
-.gost-box.warn{background:#FFF7E8;border:1px solid #F5CE86}
-.gost-box b{color:var(--navy);font-size:13.5px;display:flex;align-items:center;justify-content:space-between;gap:6px;flex-wrap:wrap}
-.gost-box span{color:var(--text)}
+.gost-box.caut{background:#FFF7E8;border:1px solid #F5CE86}
+.gost-box .gost-h{color:var(--navy);font-weight:700;font-size:13.5px;display:flex;align-items:center;justify-content:space-between;gap:6px;flex-wrap:wrap}
+.gost-box .gost-t{color:var(--text)}
+.gost-box .gost-t b{color:var(--navy)}
 .opt-bridge{margin-top:14px;padding:14px 18px;border-radius:16px;background:var(--ice);border:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:14.5px;color:var(--navy)}
 .opt-bridge .sbtn{background:var(--blue);border-color:var(--blue);color:#fff;padding:8px 14px;font-size:13.5px}
 .opt-bridge .sbtn:hover{background:var(--navy);border-color:var(--navy)}
@@ -1476,12 +1477,12 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
           <p>Практической необходимости в них нет, зато они дают лишнюю фрезеровку на ЧПУ, отдельную пластиковую деталь в закупе/комплектации и уязвимое место для влаги и сколов ЛДСП.</p>
           <div class="gost-grid">
             <div class="gost-box ok">
-              <b>Горизонтальные парты <span class="st ok">не обязательны</span></b>
-              <span><b>100% без слотов:</b> ГОСТ 11015-93 (п. 2.6) прямо разрешает без углублений; ГОСТ 35278-2025, ГОСТ 22046-2016, СТ РК EN 1729-1 и СанПиН РК не требуют</span>
+              <div class="gost-h">Горизонтальные парты <span class="st ok">не обязательны</span></div>
+              <div class="gost-t"><b>100% без слотов:</b> ГОСТ 11015-93 (п. 2.6) прямо разрешает без углублений; ГОСТ 35278-2025, ГОСТ 22046-2016, СТ РК EN 1729-1 и СанПиН РК не требуют</div>
             </div>
-            <div class="gost-box warn">
-              <b>Наклонные столешницы (RN) <span class="st pilot">нюанс РК</span></b>
-              <span>В <b>РФ</b> (ГОСТ 35278-2025 п. 4.1.2) и по <b>EN 1729-1</b> обязательность снята; в <b>РК</b> при прямой ссылке ТЗ на ГОСТ 11015-93 (п. 2.6) место для ручек формально нужно — ставим опциональный лоток только под такое ТЗ</span>
+            <div class="gost-box caut">
+              <div class="gost-h">Наклонные столешницы (RN) <span class="st pilot">нюанс РК</span></div>
+              <div class="gost-t">В <b>РФ</b> (ГОСТ 35278-2025 п. 4.1.2) и по <b>EN 1729-1</b> обязательность снята; в <b>РК</b> при прямой ссылке ТЗ на ГОСТ 11015-93 (п. 2.6) место для ручек формально нужно — ставим опциональный лоток только под такое ТЗ</div>
             </div>
           </div>
         </div>
