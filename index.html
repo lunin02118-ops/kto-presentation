@@ -630,7 +630,15 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 .opt-bridge{margin-top:14px;padding:14px 18px;border-radius:16px;background:var(--ice);border:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:14.5px;color:var(--navy)}
 .opt-bridge .sbtn{background:var(--blue);border-color:var(--blue);color:#fff;padding:8px 14px;font-size:13.5px}
 .opt-bridge .sbtn:hover{background:var(--navy);border-color:var(--navy)}
+.opt-brand{border-top:4px solid var(--blue)}
+.opt-brand .opt-pts svg{color:var(--blue)}
+.brand-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.brand-pair .opt-pic{aspect-ratio:4/5}
+.brand-pair .opt-pic img{object-fit:cover;object-position:center top}
+.brand-pair .opt-pic.was .opt-cap{background:rgba(91,98,131,.92)}
+.brand-pair .opt-pic.now .opt-cap{background:rgba(26,63,203,.92)}
 @media (max-width:960px){.opt-compare,.opt-slots,.gost-grid{grid-template-columns:1fr}}
+@media (max-width:540px){.brand-pair{grid-template-columns:1fr}}
 
 /* экран 12: R&D и испытания */
 .rnd-hero{display:grid;grid-template-columns:1.38fr 1fr;gap:clamp(16px,2.2vw,28px);align-items:stretch;margin-bottom:clamp(18px,2.2vw,26px)}
@@ -1118,9 +1126,9 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
     <div class="arch-grid">
       <article class="acard prog rise" style="--i:1;background:rgba(245,165,36,.12);border-color:rgba(245,165,36,.5)">
         <div class="acard-top"><span class="an">01 · ПРОДУКТ</span><span class="ab">курс 2026–27</span></div>
-        <h3>Упрощение линейки и новинки</h3>
-        <p>Сокращаем лишнее: убираем <b>Smarty с бампером → Smarty Plus</b>, отказываемся от лишних <b>слотов</b>, переводим <b>NOMAD</b> на заклёпки и выводим новые изделия</p>
-        <div class="atags"><span>Smarty Plus</span><span>Без слотов</span><span>Новинки</span></div>
+        <h3>Упрощение линейки и брендинг</h3>
+        <p>Сокращаем лишнее: <b>Smarty с бампером → Smarty Plus</b>, отказ от лишних <b>слотов</b>, внедряем <b>брендинг TROYA</b> и заклёпки на <b>NOMAD</b>, выводим новинки</p>
+        <div class="atags"><span>Smarty Plus</span><span>Без слотов</span><span>Брендинг TROYA</span></div>
       </article>
       <article class="acard ok rise" style="--i:2">
         <div class="acard-top"><span class="an">02 · R&amp;D И ЦЕХ</span><span class="ab">работает</span></div>
@@ -1492,8 +1500,38 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         </button>
       </article>
 
-      <div class="opt-bridge rise" style="--i:4">
-        <span><b>Тот же курс по всей линейке:</b> переводим NOMAD на резьбовые заклёпки вместо сварных пластин, унифицируем трубы и крепёж — ниже себестоимость, проще закуп и доставка</span>
+      <article class="card opt-slots opt-brand rise" style="--i:4">
+        <div class="opt-slots-txt">
+          <div class="ai-head">
+            <span class="lbl">Третье продуктовое решение · узнаваемость бренда</span>
+            <span class="st prog">брендинг TROYA</span>
+          </div>
+          <h3>Внедряем брендинг прямо в конструктив изделий</h3>
+          <p>На примере обновлённого <b>NOMAD на заклёпках</b>: фирменный логотип <b>TROYA</b> и маркировка ростовых групп вырезаются прямо в металле на лазерном труборезе — долговечно и без наклеек.</p>
+          <ul class="opt-pts">
+            <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Узнаваемость на объектах и тендерах:</b> изделия TROYA сразу отличимы от дешёвых аналогов и подмен конкурентов</span></li>
+            <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Чистый лицевой вид:</b> перевод на резьбовые заклёпки-гайки убрал головки винтов снаружи — на стойке только логотип TROYA и окно РГ</span></li>
+            <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Ноль лишних операций:</b> логотип и цифры РГ режутся лазером за один проход вместе с основными отверстиями трубы</span></li>
+          </ul>
+          <div class="story-links">
+            <button class="sbtn" type="button" data-gallery="branding" data-idx="1"><svg class="i"><use href="#i-search"/></svg>Логотип TROYA на стойке (крупно)</button>
+            <button class="sbtn" type="button" data-gallery="branding" data-idx="2"><svg class="i"><use href="#i-cam"/></svg>Общий вид NOMAD</button>
+          </div>
+        </div>
+        <div class="brand-pair">
+          <button class="opt-pic was" type="button" data-gallery="branding" data-idx="0" aria-label="Открыть крупно: старый NOMAD без брендинга">
+            <img src="media/nm_out_0001.webp" alt="Было: старый NOMAD — винты снаружи стойки, без брендинга" width="960" height="1200" loading="lazy">
+            <span class="opt-cap">Было · винты снаружи</span>
+          </button>
+          <button class="opt-pic now" type="button" data-gallery="branding" data-idx="1" aria-label="Открыть крупно: новый NOMAD с логотипом TROYA и окном РГ">
+            <img src="media/nm_out_0013.webp" alt="Стало: обновлённый NOMAD на заклёпках — лазерный логотип TROYA и окно ростовой группы" width="960" height="1200" loading="lazy">
+            <span class="opt-cap">Стало · TROYA + окно РГ</span>
+          </button>
+        </div>
+      </article>
+
+      <div class="opt-bridge rise" style="--i:5">
+        <span><b>Тот же курс по всей линейке:</b> убираем нетехнологичные дубли, унифицируем трубы и крепёж, внедряем фирменный брендинг — ниже себестоимость и выше ценность для клиента</span>
         <button class="sbtn" type="button" data-open-tab="t-new">Новые и обновлённые изделия (6) →</button>
       </div>
     </div>
@@ -1546,7 +1584,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         </div>
         <div class="mini-seg" id="nmView" role="group" aria-label="Вид узла высоты"><button type="button" data-v="in" aria-pressed="true">Изнутри</button><button type="button" data-v="out" aria-pressed="false">Снаружи</button></div>
         <h3>Обновлённый NOMAD</h3>
-        <p>Снаружи без головок винтов, высота — 4 винтами вместо 8. Чертежи на проверке, до серии — опытный образец</p>
+        <p>Лазерный брендинг TROYA и окно РГ на стойке, снаружи без головок винтов, высота — 4 винтами вместо 8. Чертежи на проверке, до серии — опытный образец</p>
         <div class="story-links">
           <button class="sbtn" type="button" data-gallery="nomad"><svg class="i"><use href="#i-cam"/></svg>Заклёпки вживую (2)</button>
           <button class="sbtn vid" type="button" data-view="media/live/proto_desk_test.mp4" data-sound="1" data-cap="Опытный образец ученической парты · 17 с · обзор узлов и проверка устойчивости">▶ Образец · 17 с</button>
@@ -1807,7 +1845,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
       <article class="fcol ok rise" style="--i:3">
         <div class="fcol-h"><h3>Уже работает</h3><span class="fbadge">Работает</span></div>
         <ul>
-          <li><svg class="i"><use href="#i-layers"/></svg><span><b>Оптимизация линейки и R&amp;D:</b> решение по Smarty Plus и отказу от слотов, живые образцы, тесты и лазерная гибка/сварка в цехе</span></li>
+          <li><svg class="i"><use href="#i-layers"/></svg><span><b>Линейка, брендинг и R&amp;D:</b> курс на Smarty Plus, отказ от слотов, лазерный брендинг TROYA на NOMAD, живые тесты и лазерная гибка/сварка</span></li>
           <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Паспорта и сборка:</b> 37 паспортов ПС/РЭ в новом стиле и 28 схем сборки картинками — меньше вопросов у клиента</span></li>
           <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Прозрачность и KPI:</b> агентский учёт 917 СЗ в Bitrix24 (содержание, исполнители, сроки готовности)</span></li>
         </ul>
@@ -1899,7 +1937,8 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
     products: ['<b>Вкладка 1 · Сокращение линейки и упрощение конструктива.</b> Принято принципиальное решение: сокращаем раздутую номенклатуру и уходим от нетехнологичных узлов.',
                'Пример №1 — двухместная парта 5–7 Smarty: <b>убираем Smarty с бампером (SD2X5-7R)</b> из-за неудобной логистики и проблем с доставкой (объёмный неразборный гнутый пояс-бампер «возит воздух», бьётся при перевозке, громоздкий, без закрытой царги) — <b>остаётся Smarty Plus (SP2X5-7R / СУ.SM.0006)</b>: компактный плоский пояс, жёсткая рама, перфорированная царга 0,8 мм, плотная упаковка и полный комплект КД/паспортов. Все 4 кадра открываются крупно.',
                'Пример №2 — <b>отказываемся от врезных слотов на партах</b>: практической необходимости нет, лишняя фрезеровка ЧПУ и пластиковая деталь. Проверка по ГОСТ: на горизонтальных партах не обязательны нигде (ГОСТ 11015-93 п. 2.6 прямо разрешает без углублений; ГОСТ 35278-2025, ГОСТ 22046-2016, СТ РК EN 1729-1 и СанПиН РК не требуют). Важный нюанс для продаж по <b>наклонным столешницам (RN)</b>: в РФ (ГОСТ 35278-2025 п. 4.1.2) и по СТ РК EN 1729-1 обязательность снята, но в РК при прямой привязке ТЗ к ГОСТ 11015-93 (п. 2.6) место хранения ручек (≥ 115×45×8 мм или Ø ≥ 55 мм) формально обязательно — для таких ТЗ ставим опциональный лоток без фрезеровки серийных плит.',
-               '<b>Вкладка 2 · Новые и обновлённые изделия (6).</b> Банкетка (' + L('СЗ Аст-261', 32015) + '), столы Kcell (' + L('СЗ Ал-70', 31697) + '), обновлённый NOMAD на заклёпках (4 винта вместо 8), экспортный комплект ISKU (Рига, 5–7), доступная парта ARco Duo и стул 5–7 / 3–5.'],
+               'Пример №3 — <b>внедряем брендинг TROYA прямо в конструктив</b> (на примере обновлённого NOMAD на заклёпках): логотип TROYA и номера ростовых групп вырезаются лазером на трубе за один проход без наклеек, а переход на резьбовые заклёпки-гайки убрал головки винтов с лицевой стороны — мебель узнаваема на объектах и защищена от подмен.',
+               '<b>Вкладка 2 · Новые и обновлённые изделия (6).</b> Банкетка (' + L('СЗ Аст-261', 32015) + '), столы Kcell (' + L('СЗ Ал-70', 31697) + '), обновлённый NOMAD на заклёпках с брендингом TROYA (4 винта вместо 8), экспортный комплект ISKU (Рига, 5–7), доступная парта ARco Duo и стул 5–7 / 3–5.'],
     rnd: ['Это главный ответ на вопрос «не оторваны ли конструкторы от реальности»: отдел ведёт полный R&D-цикл — от 3D и расчёта узлов до живого образца и нагрузочных тестов в цехе.',
           'Отдельное направление R&D — поиск новых технологических решений для типовых узлов: осваиваем лазерную резку трубы под ручную гибку (1 цельная заготовка вместо 4–6 отдельных отрезков — снижение трудозатрат и рост скорости сборки) и отрабатываем интеграцию таких конструкций с лазерной сваркой. На примере боковины банкетки ПФ.UN.0012 — одна заготовка длиной 2120,5 мм с тремя радиусными вырезами R38,5 превращается в цельную боковину; рядом — живые фото цельногнутой опоры со швами лазерной сварки.',
           'Наверху — 29-секундный промо-ролик с главными моментами. Ниже — три короткие вырезки живых тестов по 16–19 секунд (открываются крупно со звуком): испытание стола Kcell под двойной живой нагрузкой, контрольная сборка покрашенного образца и тест устойчивости опытной парты.',
@@ -2122,6 +2161,11 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
       { src: 'media/live/smarty_bumper_node.webp', cap: 'УБИРАЕМ · узел пояса-бампера выделен красным · громоздкая пространственная гнутая рама с двумя пластинами, лишние гибы и сварка, сложная упаковка' },
       { src: 'media/live/smarty_plus_sp2.webp', cap: 'ОСТАВЛЯЕМ · Smarty Plus (SP2X5-7R · СУ.SM.0006, 2-местная 5–7) · компактный плоский пояс, жёсткий разборный каркас и перфорированная царга 0,8 мм; красным выделены слоты, от которых отказываемся' },
       { src: 'media/live/smarty_slots_top.webp', cap: 'ОТКАЗЫВАЕМСЯ ОТ СЛОТОВ · вид сверху на столешницу 2-местной парты (врезные слоты выделены красным) · убираем лишнюю фрезеровку ЧПУ и пластиковую деталь' },
+    ],
+    branding: [
+      { src: 'media/nm_out_0001.webp', cap: 'Было · старый NOMAD: головки винтов снаружи стойки, без фирменного брендинга и маркировки ростовых групп' },
+      { src: 'media/nm_out_0013.webp', cap: 'Стало · обновлённый NOMAD на заклёпках: лазерный логотип TROYA и окно с номером ростовой группы на стойке, чистая лицевая поверхность без винтов' },
+      { src: 'media/nm0013.webp', cap: 'Обновлённый стол NOMAD на заклёпках · общий вид с фирменным брендингом TROYA на стойке' },
     ],
   };
 
