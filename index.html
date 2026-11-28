@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Технический отдел TROYA</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Презентация технического отдела TROYA для продаж, снабжения и производства: единая база изделий, связка с 1С, автоматизация с ИИ и скриптами, живой R&D и общие правила работы.">
+<meta name="description" content="Презентация технического отдела TROYA для продаж, снабжения и производства: оптимизация линейки и конструктива, живой R&D, автоматизация с ИИ и скриптами, инструменты для КП и закупа, порядок в КД и общие правила.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
@@ -596,6 +596,41 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
 #products .prod h3{font-size:16.5px;margin:2px 0 0}
 #products .prod p{font-size:13.5px;line-height:1.35;margin:0}
 
+/* экран 07 · вкладка 1: оптимизация линейки (Smarty с бампером → Smarty Plus + отказ от слотов) */
+.opt-compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:stretch}
+.opt-side{display:flex;flex-direction:column;gap:12px}
+.opt-side.drop{border-top:4px solid var(--red);background:linear-gradient(180deg,#FFF7F7 0%,#fff 18%)}
+.opt-side.keep{border-top:4px solid var(--green);background:linear-gradient(180deg,#F2FBF6 0%,#fff 18%)}
+.opt-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.opt-head h3{font-size:clamp(16px,1.3vw,19px);margin:0}
+.opt-head small{display:block;font-size:12.5px;color:var(--muted);font-weight:600;margin-top:2px}
+.opt-pic{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff;padding:0;cursor:zoom-in;aspect-ratio:4/3;width:100%}
+.opt-pic img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .3s var(--ease)}
+.opt-pic:hover img{transform:scale(1.03)}
+.opt-pic .opt-cap{position:absolute;left:10px;bottom:10px;padding:4px 10px;border-radius:999px;font-size:11.5px;font-weight:700;background:rgba(10,26,110,.86);color:#fff}
+.opt-side.drop .opt-pic .opt-cap{background:rgba(190,46,46,.92)}
+.opt-side.keep .opt-pic .opt-cap{background:rgba(24,132,82,.92)}
+.opt-pts{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.opt-pts li{display:grid;grid-template-columns:20px 1fr;gap:8px;align-items:start;font-size:14px;line-height:1.38;color:var(--text)}
+.opt-pts li svg{width:18px;height:18px;margin-top:2px;flex:none}
+.opt-side.drop .opt-pts svg{color:var(--red)}
+.opt-side.keep .opt-pts svg{color:var(--green)}
+.opt-pts b{color:var(--navy)}
+.opt-slots{margin-top:16px;display:grid;grid-template-columns:1.35fr .9fr;gap:clamp(16px,2.2vw,28px);align-items:center}
+.opt-slots-txt{display:flex;flex-direction:column;gap:10px}
+.opt-slots-txt h3{font-size:clamp(17px,1.4vw,21px);margin:0}
+.opt-slots-txt p{font-size:14.5px;color:var(--text);line-height:1.42}
+.gost-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:2px}
+.gost-box{border-radius:14px;padding:12px 14px;display:grid;gap:4px;align-content:start;font-size:13.5px;line-height:1.38}
+.gost-box.ok{background:#EDFAF3;border:1px solid #B7E8CE}
+.gost-box.warn{background:#FFF7E8;border:1px solid #F5CE86}
+.gost-box b{color:var(--navy);font-size:13.5px;display:flex;align-items:center;justify-content:space-between;gap:6px;flex-wrap:wrap}
+.gost-box span{color:var(--text)}
+.opt-bridge{margin-top:14px;padding:14px 18px;border-radius:16px;background:var(--ice);border:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:14.5px;color:var(--navy)}
+.opt-bridge .sbtn{background:var(--blue);border-color:var(--blue);color:#fff;padding:8px 14px;font-size:13.5px}
+.opt-bridge .sbtn:hover{background:var(--navy);border-color:var(--navy)}
+@media (max-width:960px){.opt-compare,.opt-slots,.gost-grid{grid-template-columns:1fr}}
+
 /* экран 12: R&D и испытания */
 .rnd-hero{display:grid;grid-template-columns:1.38fr 1fr;gap:clamp(16px,2.2vw,28px);align-items:stretch;margin-bottom:clamp(18px,2.2vw,26px)}
 .rnd-promo{position:relative;border-radius:var(--r);overflow:hidden;background:#081450;box-shadow:var(--shadow);aspect-ratio:16/9}
@@ -922,11 +957,11 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   <nav class="tabs" aria-label="Разделы презентации">
     <a href="#home"><span class="n">01</span>Главная</a>
     <a href="#numbers"><span class="n">02</span>Точка А</a>
-    <a href="#debt"><span class="n">03</span>Техдолг</a>
-    <a href="#arch"><span class="n">04</span>Карта</a>
-    <a href="#system"><span class="n">05</span>Система</a>
+    <a href="#debt"><span class="n">03</span>Узкие места</a>
+    <a href="#arch"><span class="n">04</span>Направления</a>
+    <a href="#system"><span class="n">05</span>Технологии</a>
     <a href="#ai-docs"><span class="n">06</span>Продажи и закуп</a>
-    <a href="#products"><span class="n">07</span>Изделия</a>
+    <a href="#products"><span class="n">07</span>Продукт</a>
     <a href="#rnd"><span class="n">08</span>R&amp;D</a>
     <a href="#rules"><span class="n">09</span>Правила</a>
     <a href="#final"><span class="n">10</span>Итог</a>
@@ -947,9 +982,9 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   <div class="wrap">
     <div>
       <span class="pill rise" style="--i:0">Итоги 5 месяцев · для продаж, снабжения и производства · ноябрь 2026</span>
-      <h1 class="rise" style="--i:1">От ручных чертежей — <span class="mark">к единой инженерной системе TROYA</span></h1>
-      <p class="lead rise" style="--i:2">Чтобы продажи быстрее считали КП, снабжение закупало без путаницы, а цех выпускал без переделок — мы строим единую базу изделий и связку с 1С. За 5 месяцев заложили фундамент и первые пилоты</p>
-      <ul class="tags rise" style="--i:3"><li>KPI и учёт</li><li>База изделий</li><li>Снабжение и 1С</li><li>Базис — станок</li><li>ИИ и скрипты</li><li>R&amp;D и тесты</li></ul>
+      <h1 class="rise" style="--i:1">Технический отдел TROYA: <span class="mark">проще продукт, быстрее КП, сильнее цех</span></h1>
+      <p class="lead rise" style="--i:2">Упрощаем линейку и конструктив, внедряем новые технологии в цехе, автоматизируем расчёты и наводим порядок в КД — чтобы продажи быстрее выигрывали заказы, снабжение закупало без путаницы, а цех выпускал без переделок</p>
+      <ul class="tags rise" style="--i:3"><li>Оптимизация линейки</li><li>Живой R&amp;D и цех</li><li>Логистика и КП</li><li>Снабжение и нормы</li><li>ИИ + скрипты</li><li>Порядок в КД и 1С</li></ul>
       <div class="hero-cta rise" style="--i:4">
         <a class="btn btn-light" href="#numbers">Начать <svg class="i"><use href="#i-arrow"/></svg></a>
         <span class="hint">или стрелки ← → на клавиатуре</span>
@@ -1018,36 +1053,36 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   </div>
 </section>
 
-<!-- 03 ТЕХНИЧЕСКИЙ ДОЛГ -->
-<section class="page" id="debt" data-title="Техдолг">
+<!-- 03 УЗКИЕ МЕСТА -->
+<section class="page" id="debt" data-title="Узкие места">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">03 · Технический долг</span>
-      <h2>Технический долг: нет единой номенклатурной базы — от 1С до 3D-моделей и чертежей</h2>
-      <p class="lead">Компании 10+ лет: единой базы от артикула в 1С до 3D-моделей и чертежей не было — многое живёт в личных папках и памяти сборщиков</p>
+      <span class="kicker">03 · Узкие места · Что тормозит компанию</span>
+      <h2>Четыре проблемы, которые стоят денег продажам, снабжению и цеху</h2>
+      <p class="lead">За 10+ лет накопился не только разрыв в данных — разрослась номенклатура, усложнился конструктив, а стык металла и корпуса держался на памяти сборщиков</p>
     </header>
     <ol class="cascade c5">
-      <li style="--i:0;--h:0"><span class="ic"><svg><use href="#i-db"/></svg></span>Нет единой базы (1С ↔ КД)</li>
-      <li style="--i:1;--h:.25"><span class="ic"><svg><use href="#i-files"/></svg></span>Дубли кодов и свои файлы</li>
-      <li style="--i:2;--h:.5"><span class="ic"><svg><use href="#i-factory"/></svg></span>Расхождения в КД и комплектации</li>
+      <li style="--i:0;--h:0"><span class="ic"><svg><use href="#i-layers"/></svg></span>Раздутая линейка и тяжёлый конструктив</li>
+      <li style="--i:1;--h:.25"><span class="ic"><svg><use href="#i-db"/></svg></span>Разрозненные данные (1С ↔ КД)</li>
+      <li style="--i:2;--h:.5"><span class="ic"><svg><use href="#i-route"/></svg></span>Нет сквозного цикла и стыка цехов</li>
       <li style="--i:3;--h:.75"><span class="ic"><svg><use href="#i-users"/></svg></span>Подгонка и сборка по памяти</li>
-      <li style="--i:4;--h:1"><span class="ic"><svg><use href="#i-alert"/></svg></span>Переделки и рекламации</li>
+      <li style="--i:4;--h:1"><span class="ic"><svg><use href="#i-alert"/></svg></span>Дорогая логистика, сроки и рекламации</li>
     </ol>
     <div class="debt-grid">
       <article class="card root-card rise" style="--i:5">
-        <span class="ic"><svg><use href="#i-db"/></svg></span>
+        <span class="ic"><svg><use href="#i-layers"/></svg></span>
         <div>
-          <span class="lbl">Корневая проблема 1</span>
-          <h3>Нет единого справочника номенклатуры (1С ↔ КД)</h3>
-          <p>Исторически в 1С накопились дубли кодов и единиц измерения (один материал — в листах и в м²), а у готовой продукции (ГП) почти нет сквозных артикулов. Из-за этого страдают все: конструктор, снабжение, склад и цех. <b>Вместе со снабжением и ИТ закладываем единый справочник номенклатуры и соответствий</b></p>
+          <span class="lbl">Проблема 1 · Продукт и логистика</span>
+          <h3>Раздутая номенклатура и лишний конструктив</h3>
+          <p>Дублирующие модели, громоздкие неразборные узлы и лишняя фрезеровка бьют по загрузке машин, себестоимости и сборке. <b>Приняли решение сокращать лишнее и упрощать конструктив</b> (пример — Smarty и слоты на экране 07)</p>
         </div>
       </article>
       <article class="card root-card rise" style="--i:6">
-        <span class="ic"><svg><use href="#i-route"/></svg></span>
+        <span class="ic"><svg><use href="#i-db"/></svg></span>
         <div>
-          <span class="lbl">Корневая проблема 2</span>
-          <h3>Нет сквозного цикла КД</h3>
-          <p>Разработка → проверка → выдача в цех → архив. Чертежи уходили в производство без обязательной проверки и фиксации версии</p>
+          <span class="lbl">Проблема 2 · Данные и цикл КД</span>
+          <h3>Разрыв 1С ↔ КД и нет сквозной проверки</h3>
+          <p>Дубли кодов и единиц измерения в 1С, отсутствие сквозных артикулов ГП и единого контроля версий КД создают двойную работу снабжению, складу и цеху. <b>Вместе со снабжением и ИТ закрываем этот разрыв</b></p>
         </div>
       </article>
       <article class="card case rise" style="--i:7">
@@ -1070,136 +1105,121 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   </div>
 </section>
 
-<!-- 04 БОЛЬШАЯ КАРТА: ЕДИНАЯ ИНЖЕНЕРНАЯ СИСТЕМА ЗА 5 МЕСЯЦЕВ -->
-<section class="page dark" id="arch" data-title="Карта">
+<!-- 04 ПЯТЬ НАПРАВЛЕНИЙ РАБОТЫ КТО -->
+<section class="page dark" id="arch" data-title="Направления">
   <div class="hero-bg" aria-hidden="true"><div class="grid-lines"></div></div>
   <div class="wrap">
     <header class="head rise">
       <span class="kicker">04 · 5 месяцев перестройки · Большая картина</span>
-      <h2>Фундамент единой базы и задел под 1С — первые пилоты и рабочие инструменты</h2>
-      <p class="lead">Отлаженная база данных изделий — главный приоритет и опора, которая связывает продажи, снабжение, 1С и производство в одну систему</p>
+      <h2>Пять направлений работы КТО — от продукта и цеха до автоматизации</h2>
+      <p class="lead">Порядок в данных — лишь одна из пяти равноправных опор. Параллельно упрощаем линейку, тестируем технологии в цехе и ускоряем работу продаж и снабжения</p>
     </header>
     <div class="arch-grid">
-      <article class="acard ok rise" style="--i:1">
-        <div class="acard-top"><span class="an">01 · ВХОД</span><span class="ab">работает</span></div>
-        <h3>Учёт СЗ и фундамент KPI</h3>
-        <p>Агентский учёт заявок в <b>Bitrix24</b> фиксирует содержание, исполнителей и сроки готовности — впервые есть база для оценки KPI и роста</p>
-        <div class="atags"><span>Bitrix24</span><span>База СЗ</span><span>Метрики</span></div>
+      <article class="acard prog rise" style="--i:1;background:rgba(245,165,36,.12);border-color:rgba(245,165,36,.5)">
+        <div class="acard-top"><span class="an">01 · ПРОДУКТ</span><span class="ab">курс 2026–27</span></div>
+        <h3>Упрощение линейки и новинки</h3>
+        <p>Сокращаем лишнее: убираем <b>Smarty с бампером → Smarty Plus</b>, отказываемся от лишних <b>слотов</b>, переводим <b>NOMAD</b> на заклёпки и выводим новые изделия</p>
+        <div class="atags"><span>Smarty Plus</span><span>Без слотов</span><span>Новинки</span></div>
       </article>
-      <article class="acard pilot rise" style="--i:2;background:rgba(245,165,36,.12);border-color:rgba(245,165,36,.5)">
-        <div class="acard-top"><span class="an">02 · БАЗА</span><span class="ab">приоритет №1</span></div>
-        <h3>База данных изделий и перечень</h3>
-        <p><b>Главный фокус:</b> Шифратор, Ограничительный перечень материалов, <b>TROYA_PDM</b> (металл и лабмебель) и <b>Базис</b> (корпус) — опора для всех отделов</p>
-        <div class="atags"><span>SolidWorks PDM</span><span>Базис</span><span>Перечень</span></div>
+      <article class="acard ok rise" style="--i:2">
+        <div class="acard-top"><span class="an">02 · R&amp;D И ЦЕХ</span><span class="ab">работает</span></div>
+        <h3>Опытные образцы и новые узлы</h3>
+        <p><b>Живые испытания</b> прочности до серии, <b>лазерная резка трубы под ручную гибку + лазерная сварка</b> (1 заготовка вместо 4–6 отрезков)</p>
+        <div class="atags"><span>Живые тесты</span><span>Лазерная гибка</span><span>Образцы</span></div>
       </article>
-      <article class="acard prog rise" style="--i:3">
-        <div class="acard-top"><span class="an">03 · НАВИГАТОР</span><span class="ab">пилот</span></div>
-        <h3>Навигатор по базе данных изделий</h3>
-        <p><b>В перспективе — единственный источник истины по изделиям:</b> каталог 3D, ведомости ЛЗК, раскрой, расчёт себестоимости (пока пилот: металл и окраска) и задел под 1С</p>
-        <div class="atags"><span>Источник истины</span><span>Металл + окраска</span><span>Задел 1С</span></div>
+      <article class="acard ok rise" style="--i:3">
+        <div class="acard-top"><span class="an">03 · КОММЕРЦИЯ</span><span class="ab">работает + пилот</span></div>
+        <h3>Инструменты для продаж и закупа</h3>
+        <p><b>37 паспортов и 28 схем сборки</b> картинками, ранняя <b>ИИ-логистика</b>, расчёт себестоимости (металл и окраска) и <b>единые нормы ЛЗК</b> для снабжения</p>
+        <div class="atags"><span>Паспорта</span><span>ИИ-логистика</span><span>Нормы ЛЗК</span></div>
       </article>
       <article class="acard pilot rise" style="--i:4">
-        <div class="acard-top"><span class="an">04 · ЦЕХ И ИИ</span><span class="ab">пилот</span></div>
-        <h3>ИИ, скрипты и станки</h3>
-        <p><b>ИИ + скриптовая автоматизация</b> разработки изделий для металла и корпуса: собственные инструменты для CAD, пилот «Базис — станок» и <b>опыты управления программами через ИИ (MCP)</b></p>
+        <div class="acard-top"><span class="an">04 · АВТОМАТИЗАЦИЯ</span><span class="ab">пилот</span></div>
+        <h3>ИИ + скрипты и станки ЧПУ</h3>
+        <p>Собственные инструменты и скрипты для <b>металла и корпуса</b>, пилот <b>«Базис — станок»</b> с этикетками и опыты управления CAD через ИИ (MCP)</p>
         <div class="atags"><span>ИИ + скрипты</span><span>Металл и корпус</span><span>Базис — станок</span></div>
       </article>
-      <article class="acard ok rise" style="--i:5">
-        <div class="acard-top"><span class="an">05 · КЛИЕНТ</span><span class="ab">работает</span></div>
-        <h3>Документы и живой R&amp;D</h3>
-        <p>Новый стандарт паспортов и схем сборки картинками, ранняя ИИ-логистика (пилот) и <b>живые испытания</b> опытных образцов в цехе</p>
-        <div class="atags"><span>Паспорта и схемы</span><span>Логистика</span><span>Живой R&amp;D</span></div>
+      <article class="acard prog rise" style="--i:5">
+        <div class="acard-top"><span class="an">05 · ПОРЯДОК</span><span class="ab">в работе</span></div>
+        <h3>Учёт СЗ, архив КД и задел 1С</h3>
+        <p>Учёт <b>917 СЗ</b> и фундамент KPI, <b>Ограничительный перечень</b>, единый архив (<b>TROYA_PDM</b> + <b>Базис</b>), Навигатор и справочник соответствий 1С</p>
+        <div class="atags"><span>KPI и СЗ</span><span>PDM / Базис</span><span>Задел 1С</span></div>
       </article>
     </div>
     <div class="arch-foot">
       <div class="arch-ai rise" style="--i:6">
         <svg class="i" aria-hidden="true"><use href="#i-spark"/></svg>
-        <span><b>Принцип ИИ + скриптовой автоматизации:</b> ведётся разработка инструментов и скриптов для металла и корпусной мебели — конструктор или дизайнер ставит задачу, рутину выполняют ИИ и скрипты, человек контролирует, доводит до идеала в ручном режиме и утверждает</span>
+        <span><b>Принцип ИИ + скриптовой автоматизации:</b> ведётся разработка инструментов и скриптов для металла и корпусной мебели — конструктор ставит задачу, рутину выполняют ИИ и скрипты, человек контролирует, доводит до идеала в ручном режиме и утверждает</span>
       </div>
       <div class="arch-nums rise" style="--i:7">
-        <div><b>№ 1</b><span>приоритет — отлаженная база изделий</span></div>
-        <div><b>Пилоты</b><span>портал, задел под 1С, ИИ и станки</span></div>
+        <div><b>5 опор</b><span>продукт, цех, коммерция, ИИ, порядок</span></div>
+        <div><b>− лишнее</b><span>сокращаем номенклатуру и упрощаем узлы</span></div>
         <div><b>Сквозно</b><span>от заявки и закупа до станка и клиента</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 05 СИСТЕМА КТО (3 вкладки: Архив и библиотека / Металл + корпус / Станки) -->
-<section class="page" id="system" data-title="Система">
+<!-- 05 ТЕХНОЛОГИИ И ПРОЦЕССЫ КТО (3 вкладки: Станки и автоматизация / Металл + корпус / Порядок в данных) -->
+<section class="page" id="system" data-title="Технологии">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">05 · Детали системы (вглубь по запросу)</span>
-      <h2>Как устроен фундамент: база и 1С, стык и пилот «Базис — станок»</h2>
-      <p class="lead">Три инженерных направления в деталях — переключайтесь между вкладками или перейдите сразу к инструментам для продаж</p>
+      <span class="kicker">05 · Инженерная кухня (вглубь по запросу)</span>
+      <h2>Как ускоряем разработку и цех: автоматизация, стык и порядок в данных</h2>
+      <p class="lead">Три инженерных направления в деталях — от пилота «Базис — станок» и стыка цехов до единой библиотеки и задела под 1С</p>
     </header>
     <div class="seg-wrap rise" style="--i:1">
-      <div class="seg" role="tablist" aria-label="Направления системы КТО">
-        <button type="button" role="tab" id="t-pdm" aria-controls="p-pdm" aria-selected="true"><svg class="i"><use href="#i-db"/></svg>Архив и библиотека</button>
+      <div class="seg" role="tablist" aria-label="Направления технологий КТО">
+        <button type="button" role="tab" id="t-pilot" aria-controls="p-pilot" aria-selected="true"><svg class="i"><use href="#i-cnc"/></svg>Автоматизация и станки</button>
         <button type="button" role="tab" id="t-combo" aria-controls="p-combo" aria-selected="false"><svg class="i"><use href="#i-swap"/></svg>Металл + корпус</button>
-        <button type="button" role="tab" id="t-pilot" aria-controls="p-pilot" aria-selected="false"><svg class="i"><use href="#i-cnc"/></svg>Конструктор-технолог → станок</button>
+        <button type="button" role="tab" id="t-pdm" aria-controls="p-pdm" aria-selected="false"><svg class="i"><use href="#i-db"/></svg>Архив, библиотека и 1С</button>
       </div>
       <span class="seg-hint">3 вкладки внутри экрана</span>
     </div>
 
-    <!-- вкладка 1: Архив и библиотека -->
-    <div class="subpanel is-on" id="p-pdm" role="tabpanel" aria-labelledby="t-pdm">
-      <p class="subhead">Переносим серии в централизованную базу — одну для всех: 3D-модели крепежа, покупных изделий, фурнитуры и профилей плюс ограничительный перечень металла. Переходим на новое гибкое ПО</p>
-      <div class="pdm-grid">
-        <div class="pdm-left">
-          <div class="card rise" style="--i:1">
-            <div class="minis">
-              <span class="lbl">Уже перенесли в базу</span>
-              <div><b data-count="18">18</b><span>изделий NOMAD</span></div>
-              <div><b data-count="8">8</b><span>изделий Smarty</span></div>
-              <div><b data-count="178">178</b><span>файлов библиотеки</span></div>
-            </div>
-            <p class="foot">NOMAD — на ручной проверке до выдачи в цех; Smarty перечерчиваем заново</p>
-          </div>
-          <article class="card case mis rise" style="--i:2">
-            <span class="tag"><svg class="i"><use href="#i-alert"/></svg>Зачем единая библиотека · винт не входит в отверстие</span>
-            <svg class="pic" viewBox="0 0 128 112" role="img" aria-label="Винт толще отверстия в листе"><rect x="2" y="80" width="46" height="14" rx="2" fill="#C9D6F8" stroke="#0A1A6E" stroke-width="1.5"/><rect x="80" y="80" width="46" height="14" rx="2" fill="#C9D6F8" stroke="#0A1A6E" stroke-width="1.5"/><rect x="38" y="8" width="52" height="14" rx="4" fill="#fff" stroke="#0A1A6E" stroke-width="1.5"/><rect x="44" y="22" width="40" height="56" fill="#fff" stroke="#0A1A6E" stroke-width="1.5"/><path d="M44 32 84 27M44 40 84 35M44 48 84 43M44 56 84 51M44 64 84 59M44 72 84 67" stroke="#0A1A6E" stroke-width="1" fill="none"/><path d="M40 80h12M76 80h12" stroke="#D94848" stroke-width="3.5" stroke-linecap="round"/><path d="M48 102v-6M80 102v-6M48 99h32" stroke="#D94848" stroke-width="1.5" fill="none"/><circle cx="110" cy="20" r="11" fill="#D94848"/><path d="m105 15 10 10m0-10-10 10" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
-            <div class="txt">
-              <p>Раньше у каждого конструктора в чертежах были свои винты без общих артикулов</p>
-              <ul class="mis-leg"><li><i class="a"></i>Отверстие на лазере — по одному чертежу</li><li><i class="b"></i>Винт на комплектации — по другому</li></ul>
-            </div>
-          </article>
+    <!-- вкладка 1: Автоматизация и станки -->
+    <div class="subpanel is-on" id="p-pilot" role="tabpanel" aria-labelledby="t-pilot">
+      <div class="dark-panel">
+        <p class="subhead">Пилот «Базис — станок» по корпусной мебели плюс разработка ИИ-инструментов и скриптов для металла и корпуса — сокращаем ручной ввод и ускоряем выпуск деталей в цех</p>
+        <ol class="pipe p5 rise" style="--i:1">
+          <li style="--i:0"><span class="dot"><svg><use href="#i-ruler"/></svg></span><b>Чертежи</b></li>
+          <li class="ok" style="--i:1"><span class="dot"><svg><use href="#i-grid"/></svg></span><b>Раскрой</b></li>
+          <li class="ok" style="--i:2"><span class="dot"><svg><use href="#i-saw"/></svg></span><b>Распил</b></li>
+          <li class="ok" style="--i:3"><span class="dot"><svg><use href="#i-tag"/></svg></span><b>Этикетка</b></li>
+          <li style="--i:4"><span class="dot"><svg><use href="#i-assemble"/></svg></span><b>Сборка</b></li>
+          <span class="token" aria-hidden="true"></span>
+        </ol>
+        <div class="legend rise" style="--i:2"><span><i></i>запущено в пилоте</span><span><i class="t"></i>деталь идёт по цепочке</span></div>
+        <div class="pilot-grid">
           <div class="card rise" style="--i:3">
-            <div class="ai-head" style="margin-bottom:6px">
-              <span class="lbl">Задел для будущей связки КД ↔ 1С</span>
-              <span class="st pilot">MVP · пилот</span>
-            </div>
-            <ol class="libflow">
-              <li class="has" style="--i:0"><span class="ic"><svg><use href="#i-screw"/></svg></span>3D&#8209;модель</li>
-              <li class="has" style="--i:1"><span class="ic"><svg><use href="#i-doc"/></svg></span>Нормы и ЛЗК</li>
-              <li style="--i:2"><span class="ic"><svg><use href="#i-tag"/></svg></span>Справочник 1С</li>
-              <li style="--i:3"><span class="ic"><svg><use href="#i-calc"/></svg></span>Живые цены</li>
-              <li style="--i:4"><span class="ic"><svg><use href="#i-assemble"/></svg></span>Комплек&shy;тация</li>
-            </ol>
-            <div class="srow" aria-label="Условный пример строки спецификации">
-              <div><small>Наименование</small><b>Винт</b></div>
-              <div><small>Стандарт</small><b>DIN 7985</b></div>
-              <div><small>Типоразмер</small><b>M6×20</b></div>
-              <div class="c1"><small>Связка с 1С</small><b>N кодов → 1 ID</b></div>
-            </div>
-            <p class="foot">Задел в MVP Навигатора PDM (справочник соответствий «много кодов 1С → 1 материал» и подтяжка цен) — заработает на полную после отладки базы данных изделий</p>
+            <span class="lbl">Что проверили в пилоте и разрабатываем</span>
+            <ul class="works">
+              <li><svg class="i"><use href="#i-checkc"/></svg>Программу отверстий готовит конструктор-технолог — станок запускает её по штрихкоду с этикетки</li>
+              <li><svg class="i"><use href="#i-checkc"/></svg>Раскрой — из модели, распил — на пильном центре, этикетки в порядке выхода деталей</li>
+              <li><svg class="i"><use href="#i-spark"/></svg>Собственные скрипты и ИИ-инструменты для металла (ESKD-AUTO, SWDraw, Draw, автовыгрузка ЧПУ/ЛЗК) и корпуса (Базис)</li>
+            </ul>
           </div>
-        </div>
-        <div class="pdm-side">
-          <span class="lbl rise" style="--i:1">Как это работает сейчас</span>
-          <ul class="gives">
-            <li class="rise" style="--i:2"><span class="ic"><svg><use href="#i-db"/></svg></span><div><b>Одна версия у всех</b><small>Металл и корпус в одной базе, правки — только новой версией</small></div><span class="st pilot">пилот</span></li>
-            <li class="rise" style="--i:3"><span class="ic"><svg><use href="#i-checkc"/></svg></span><div><b>Проверка вторым конструктором</b><small>На пилотных заказах чертежи проверяют до выдачи в цех</small></div><span class="st pilot">пилот</span></li>
-            <li class="rise" style="--i:4"><span class="ic"><svg><use href="#i-layers"/></svg></span><div><b>Библиотека и ограничительный перечень</b><small>Крепёж, покупные, фурнитура, профили и металл — одни 3D-модели и перечень на весь отдел</small></div><span class="st prog">в работе</span></li>
-            <li class="rise" style="--i:5"><span class="ic"><svg><use href="#i-spark"/></svg></span><div><b>ИИ + скриптовая автоматизация разработки</b><small>Ведётся разработка собственных инструментов и скриптов для металла (ESKD-AUTO, SWDraw, Draw, автопроверка и выгрузка ЧПУ) и корпусной мебели (Базис)</small></div><span class="st prog">в работе</span></li>
-            <li class="rise" style="--i:6"><span class="ic"><svg><use href="#i-search"/></svg></span><div><b>Деталь по рекламации из базы</b><small>Приедет с нужными отверстиями и встанет на место без подгонки</small></div><span class="st prog">в работе</span></li>
-            <li class="rise" style="--i:7"><span class="ic"><svg><use href="#i-link"/></svg></span><div><b>Автовыдача КД по стандарту и 1С</b><small>Готовый комплект в цех по стандарту и коды 1С прямо из 3D-модели</small></div><span class="st plan">план</span></li>
-          </ul>
-          <div class="keep rise" style="--i:7">
-            <span class="ic"><svg><use href="#i-users"/></svg></span>
-            <div><b>Готовое не изобретаем заново</b><small>Люди приходят и уходят — чертежи, библиотека и опыт остаются в компании. Права доступа — по ролям</small>
-              <div class="specs"><span class="chip">SolidWorks + Базис</span><span class="chip">История версий</span><span class="chip">Права по ролям</span></div>
+          <div class="printer rise" style="--i:4" aria-label="Условный пример этикетки детали">
+            <div class="slot"></div>
+            <div class="paper">
+              <div class="label">
+                <div class="l1"><span>TROYA</span><span>деталь 07 / 24</span></div>
+                <div class="nm">Боковина левая</div>
+                <div>720 × 560 × 16 мм · кромка 2 × 0,4</div>
+                <svg class="bc" viewBox="0 0 100 30" preserveAspectRatio="none" aria-hidden="true"><g fill="#111"><rect x="0" width="2" height="30"/><rect x="3" width="1" height="30"/><rect x="5" width="1" height="30"/><rect x="8" width="3" height="30"/><rect x="12" width="1" height="30"/><rect x="14" width="2" height="30"/><rect x="18" width="1" height="30"/><rect x="21" width="2" height="30"/><rect x="24" width="1" height="30"/><rect x="26" width="3" height="30"/><rect x="31" width="1" height="30"/><rect x="33" width="1" height="30"/><rect x="36" width="2" height="30"/><rect x="40" width="1" height="30"/><rect x="43" width="3" height="30"/><rect x="47" width="1" height="30"/><rect x="49" width="2" height="30"/><rect x="53" width="1" height="30"/><rect x="55" width="1" height="30"/><rect x="58" width="3" height="30"/><rect x="62" width="2" height="30"/><rect x="66" width="1" height="30"/><rect x="68" width="2" height="30"/><rect x="72" width="1" height="30"/><rect x="75" width="3" height="30"/><rect x="79" width="1" height="30"/><rect x="82" width="2" height="30"/><rect x="86" width="1" height="30"/><rect x="88" width="1" height="30"/><rect x="91" width="3" height="30"/><rect x="95" width="1" height="30"/><rect x="98" width="2" height="30"/></g></svg>
+                <div class="run">штрихкод → станок запускает программу отверстий</div>
+              </div>
             </div>
+            <span class="cap">условный пример этикетки</span>
+          </div>
+          <div class="side">
+            <div class="warn rise" style="--i:5"><svg class="i"><use href="#i-alert"/></svg><b>Пилот:</b><span>техническая возможность подтверждена, сложности решаем</span></div>
+            <div class="benef rise" style="--i:6">
+              <div><b>Продажам</b>быстрее чертежи в цех и запуск заказа</div>
+              <div><b>Производству</b>экономия времени без ручного ввода</div>
+            </div>
+            <p class="plan rise" style="--i:7"><b>Цель на 2027:</b> перевести часть серийных проектов на работу с этикетками</p>
+            <p class="plan rise" style="--i:8"><b>Меряем:</b> эффект увидим по стартовой медиане КД</p>
           </div>
         </div>
       </div>
@@ -1237,7 +1257,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
           <div class="joint-box rise" style="--i:3">
             <span class="q" aria-hidden="true">⇄</span>
             <div><b>Стык</b> — <small>точки крепления, крепёж, зазоры, собираемость</small></div>
-            <em>Сейчас стык держится на опыте сборщиков — переводим его на единое правило и общую базу</em>
+            <em>Сейчас стык держится на опыте сборщиков — переводим его на единое правило и общую 3D-сборку</em>
           </div>
           <div class="pair">
             <figure class="vcard rise" style="--i:4"><img class="still" src="media/lab_shv.webp" alt="Шкаф вытяжной демонстрационный: камера со стеклом на стальных стойках, основание из ЛДСП, мойка и вентилятор — 3D-модель изделия" width="1200" height="900" loading="lazy" data-view="media/lab_shv.webp" data-cap="Шкаф вытяжной демонстрационный · камера на стойках из стальной трубы, основание из ЛДСП, мойка со смесителем, вытяжка с вентилятором, свет и розетки · 3D-модель изделия из каталога"><figcaption><span>Вытяжной шкаф · металл + ЛДСП</span></figcaption></figure>
@@ -1264,49 +1284,63 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
       <div class="banner rise" style="--i:6"><svg class="i"><use href="#i-target"/></svg><p><b>Зачем это продажам:</b> цель — чтобы изделие собиралось с первого раза, без подгонки на объекте. Отрабатываем на новинках и «Москве 2.0»</p></div>
     </div>
 
-    <!-- вкладка 3: Конструктор-технолог → станок -->
-    <div class="subpanel" id="p-pilot" role="tabpanel" aria-labelledby="t-pilot" hidden>
-      <div class="dark-panel">
-        <p class="subhead">Ведётся подготовка конструкторского отдела к быстрой интеграции в общую систему — пилот «Базис — станок» по корпусной мебели: детали идут с этикеткой и штрихкодом без ручного переноса</p>
-        <ol class="pipe p5 rise" style="--i:1">
-          <li style="--i:0"><span class="dot"><svg><use href="#i-ruler"/></svg></span><b>Чертежи</b></li>
-          <li class="ok" style="--i:1"><span class="dot"><svg><use href="#i-grid"/></svg></span><b>Раскрой</b></li>
-          <li class="ok" style="--i:2"><span class="dot"><svg><use href="#i-saw"/></svg></span><b>Распил</b></li>
-          <li class="ok" style="--i:3"><span class="dot"><svg><use href="#i-tag"/></svg></span><b>Этикетка</b></li>
-          <li style="--i:4"><span class="dot"><svg><use href="#i-assemble"/></svg></span><b>Сборка</b></li>
-          <span class="token" aria-hidden="true"></span>
-        </ol>
-        <div class="legend rise" style="--i:2"><span><i></i>запущено в пилоте</span><span><i class="t"></i>деталь идёт по цепочке</span></div>
-        <div class="pilot-grid">
+    <!-- вкладка 3: Архив, библиотека и 1С -->
+    <div class="subpanel" id="p-pdm" role="tabpanel" aria-labelledby="t-pdm" hidden>
+      <p class="subhead">Порядок в конструкторских файлах и библиотеках: единые 3D-модели крепежа, фурнитуры и профилей, ограничительный перечень материалов и задел под связку с 1С</p>
+      <div class="pdm-grid">
+        <div class="pdm-left">
+          <div class="card rise" style="--i:1">
+            <div class="minis">
+              <span class="lbl">Уже перенесли в архив</span>
+              <div><b data-count="18">18</b><span>изделий NOMAD</span></div>
+              <div><b data-count="8">8</b><span>изделий Smarty</span></div>
+              <div><b data-count="178">178</b><span>файлов библиотеки</span></div>
+            </div>
+            <p class="foot">NOMAD — на ручной проверке до выдачи в цех; Smarty Plus актуализируем под обновлённую линейку</p>
+          </div>
+          <article class="card case mis rise" style="--i:2">
+            <span class="tag"><svg class="i"><use href="#i-alert"/></svg>Зачем единая библиотека · винт не входит в отверстие</span>
+            <svg class="pic" viewBox="0 0 128 112" role="img" aria-label="Винт толще отверстия в листе"><rect x="2" y="80" width="46" height="14" rx="2" fill="#C9D6F8" stroke="#0A1A6E" stroke-width="1.5"/><rect x="80" y="80" width="46" height="14" rx="2" fill="#C9D6F8" stroke="#0A1A6E" stroke-width="1.5"/><rect x="38" y="8" width="52" height="14" rx="4" fill="#fff" stroke="#0A1A6E" stroke-width="1.5"/><rect x="44" y="22" width="40" height="56" fill="#fff" stroke="#0A1A6E" stroke-width="1.5"/><path d="M44 32 84 27M44 40 84 35M44 48 84 43M44 56 84 51M44 64 84 59M44 72 84 67" stroke="#0A1A6E" stroke-width="1" fill="none"/><path d="M40 80h12M76 80h12" stroke="#D94848" stroke-width="3.5" stroke-linecap="round"/><path d="M48 102v-6M80 102v-6M48 99h32" stroke="#D94848" stroke-width="1.5" fill="none"/><circle cx="110" cy="20" r="11" fill="#D94848"/><path d="m105 15 10 10m0-10-10 10" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
+            <div class="txt">
+              <p>Раньше у каждого конструктора в чертежах были свои винты без общих артикулов</p>
+              <ul class="mis-leg"><li><i class="a"></i>Отверстие на лазере — по одному чертежу</li><li><i class="b"></i>Винт на комплектации — по другому</li></ul>
+            </div>
+          </article>
           <div class="card rise" style="--i:3">
-            <span class="lbl">Что проверили в пилоте</span>
-            <ul class="works">
-              <li><svg class="i"><use href="#i-checkc"/></svg>Программу отверстий готовит конструктор-технолог — станок запускает её по штрихкоду с этикетки</li>
-              <li><svg class="i"><use href="#i-checkc"/></svg>Раскрой — из модели, распил — на пильном центре</li>
-              <li><svg class="i"><use href="#i-checkc"/></svg>Этикетки печатаются в порядке выхода деталей с пилы</li>
-            </ul>
-          </div>
-          <div class="printer rise" style="--i:4" aria-label="Условный пример этикетки детали">
-            <div class="slot"></div>
-            <div class="paper">
-              <div class="label">
-                <div class="l1"><span>TROYA</span><span>деталь 07 / 24</span></div>
-                <div class="nm">Боковина левая</div>
-                <div>720 × 560 × 16 мм · кромка 2 × 0,4</div>
-                <svg class="bc" viewBox="0 0 100 30" preserveAspectRatio="none" aria-hidden="true"><g fill="#111"><rect x="0" width="2" height="30"/><rect x="3" width="1" height="30"/><rect x="5" width="1" height="30"/><rect x="8" width="3" height="30"/><rect x="12" width="1" height="30"/><rect x="14" width="2" height="30"/><rect x="18" width="1" height="30"/><rect x="21" width="2" height="30"/><rect x="24" width="1" height="30"/><rect x="26" width="3" height="30"/><rect x="31" width="1" height="30"/><rect x="33" width="1" height="30"/><rect x="36" width="2" height="30"/><rect x="40" width="1" height="30"/><rect x="43" width="3" height="30"/><rect x="47" width="1" height="30"/><rect x="49" width="2" height="30"/><rect x="53" width="1" height="30"/><rect x="55" width="1" height="30"/><rect x="58" width="3" height="30"/><rect x="62" width="2" height="30"/><rect x="66" width="1" height="30"/><rect x="68" width="2" height="30"/><rect x="72" width="1" height="30"/><rect x="75" width="3" height="30"/><rect x="79" width="1" height="30"/><rect x="82" width="2" height="30"/><rect x="86" width="1" height="30"/><rect x="88" width="1" height="30"/><rect x="91" width="3" height="30"/><rect x="95" width="1" height="30"/><rect x="98" width="2" height="30"/></g></svg>
-                <div class="run">штрихкод → станок запускает программу отверстий</div>
-              </div>
+            <div class="ai-head" style="margin-bottom:6px">
+              <span class="lbl">Задел для будущей связки КД ↔ 1С</span>
+              <span class="st pilot">MVP · пилот</span>
             </div>
-            <span class="cap">условный пример этикетки</span>
-          </div>
-          <div class="side">
-            <div class="warn rise" style="--i:5"><svg class="i"><use href="#i-alert"/></svg><b>Пилот:</b><span>техническая возможность подтверждена, сложности решаем</span></div>
-            <div class="benef rise" style="--i:6">
-              <div><b>Продажам</b>быстрее чертежи в цех и запуск заказа</div>
-              <div><b>Производству</b>экономия времени без ручного ввода</div>
+            <ol class="libflow">
+              <li class="has" style="--i:0"><span class="ic"><svg><use href="#i-screw"/></svg></span>3D&#8209;модель</li>
+              <li class="has" style="--i:1"><span class="ic"><svg><use href="#i-doc"/></svg></span>Нормы и ЛЗК</li>
+              <li style="--i:2"><span class="ic"><svg><use href="#i-tag"/></svg></span>Справочник 1С</li>
+              <li style="--i:3"><span class="ic"><svg><use href="#i-calc"/></svg></span>Живые цены</li>
+              <li style="--i:4"><span class="ic"><svg><use href="#i-assemble"/></svg></span>Комплек&shy;тация</li>
+            </ol>
+            <div class="srow" aria-label="Условный пример строки спецификации">
+              <div><small>Наименование</small><b>Винт</b></div>
+              <div><small>Стандарт</small><b>DIN 7985</b></div>
+              <div><small>Типоразмер</small><b>M6×20</b></div>
+              <div class="c1"><small>Связка с 1С</small><b>N кодов → 1 ID</b></div>
             </div>
-            <p class="plan rise" style="--i:7"><b>Цель на 2027:</b> перевести часть серийных проектов на работу с этикетками</p>
-            <p class="plan rise" style="--i:8"><b>Меряем:</b> эффект увидим по стартовой медиане КД</p>
+            <p class="foot">Задел в MVP Навигатора: соответствия «много кодов 1С → 1 материал» и подтяжка цен для снабжения</p>
+          </div>
+        </div>
+        <div class="pdm-side">
+          <span class="lbl rise" style="--i:1">Как это работает сейчас</span>
+          <ul class="gives">
+            <li class="rise" style="--i:2"><span class="ic"><svg><use href="#i-db"/></svg></span><div><b>Одна версия у всех</b><small>Металл и корпус в едином хранилище, правки — только новой версией</small></div><span class="st pilot">пилот</span></li>
+            <li class="rise" style="--i:3"><span class="ic"><svg><use href="#i-checkc"/></svg></span><div><b>Проверка вторым конструктором</b><small>На пилотных заказах чертежи проверяют до выдачи в цех</small></div><span class="st pilot">пилот</span></li>
+            <li class="rise" style="--i:4"><span class="ic"><svg><use href="#i-layers"/></svg></span><div><b>Библиотека и ограничительный перечень</b><small>Крепёж, покупные, фурнитура, профили и металл — одни 3D-модели и перечень на весь отдел</small></div><span class="st prog">в работе</span></li>
+            <li class="rise" style="--i:5"><span class="ic"><svg><use href="#i-search"/></svg></span><div><b>Деталь по рекламации по шифру</b><small>Приедет с нужными отверстиями и встанет на место без подгонки</small></div><span class="st prog">в работе</span></li>
+            <li class="rise" style="--i:6"><span class="ic"><svg><use href="#i-link"/></svg></span><div><b>Автовыдача КД по стандарту и 1С</b><small>Готовый комплект в цех по стандарту и коды 1С прямо из 3D-модели</small></div><span class="st plan">план</span></li>
+          </ul>
+          <div class="keep rise" style="--i:7">
+            <span class="ic"><svg><use href="#i-users"/></svg></span>
+            <div><b>Готовое не изобретаем заново</b><small>Люди приходят и уходят — чертежи, библиотека и опыт остаются в компании. Права доступа — по ролям</small>
+              <div class="specs"><span class="chip">SolidWorks + Базис</span><span class="chip">История версий</span><span class="chip">Права по ролям</span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -1319,8 +1353,8 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   <div class="wrap">
     <header class="head rise">
       <span class="kicker">06 · Польза для продаж и снабжения</span>
-      <h2>Что система КТО даёт продажам и снабжению</h2>
-      <p class="lead">Новые паспорта и схемы сборки уже работают для покупателя и тендеров; раннюю логистику, ускорение расчёта КП и единые нормы для снабжения отрабатываем в пилотах</p>
+      <h2>Практическая польза для продаж и снабжения</h2>
+      <p class="lead">Новые паспорта и схемы сборки уже работают для покупателя и тендеров; раннюю логистику, ускорение расчёта КП и точные нормы для снабжения отрабатываем в пилотах</p>
     </header>
     <div class="ai-top rise" style="--i:1">
       <div class="ai-head">
@@ -1334,13 +1368,13 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
         </div>
         <div class="stat card">
           <div class="stat-top"><h3>Расчёт себестоимости для КП</h3><span class="st pilot">пилот · металл и окраска</span></div>
-          <p>Разработан и совершенствуется механизм расчёта себестоимости изделий — ускоряем подготовку КП с ИИ-агентами и заделом связки с 1С</p>
+          <p>Разработан и совершенствуется механизм расчёта себестоимости изделий — ускоряем подготовку КП с ИИ-агентами и едиными нормами расхода</p>
           <div class="ai-ex">Ориентир по скорости расчёта: <b>дни вместо недель</b> (пока пилот по металлу и окраске)</div>
         </div>
         <div class="stat card">
-          <div class="stat-top"><h3>Единые нормы для снабжения</h3><span class="st pilot">пилот · в работе</span></div>
-          <p>Ограничительный перечень сокращает разносортицу профилей и фурнитуры, а ведомости ЛЗК, 1D-раскрой и справочник 1С убирают срочные дозакупки и путаницу кодов</p>
-          <div class="ai-ex">Плюс единая база цен без НДС — <b>проще закуп и лучше цена от поставщиков</b></div>
+          <div class="stat-top"><h3>Точные нормы для снабжения</h3><span class="st pilot">пилот · в работе</span></div>
+          <p>Ограничительный перечень сокращает разносортицу профилей и фурнитуры, а ведомости ЛЗК и 1D-раскрой хлыстов 6 м убирают срочные дозакупки</p>
+          <div class="ai-ex">Плюс единый перечень цен без НДС — <b>проще закуп и лучше цена от поставщиков</b></div>
         </div>
       </div>
     </div>
@@ -1367,14 +1401,105 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   </div>
 </section>
 
-<!-- 07 ИЗДЕЛИЯ -->
-<section class="page" id="products" data-title="Изделия">
+<!-- 07 ПРОДУКТ: ОПТИМИЗАЦИЯ ЛИНЕЙКИ + НОВЫЕ ИЗДЕЛИЯ -->
+<section class="page" id="products" data-title="Продукт">
   <div class="wrap">
     <header class="head rise">
-      <span class="kicker">07 · Новые и обновлённые изделия</span>
-      <h2>Новые изделия: больше готовых решений для заказчика</h2>
-      <p class="lead">От 3D-модели и вариантов исполнения — до живых образцов в цехе. На каждой карточке можно открыть живые фото и короткие видео</p>
+      <span class="kicker">07 · Продукт · Оптимизация линейки и новинки</span>
+      <h2>Продукт: убираем лишнее, упрощаем конструктив и выводим новинки</h2>
+      <p class="lead">Принято решение сокращать номенклатуру и уходить от нетехнологичных узлов — параллельно выводим обновлённые и новые изделия</p>
     </header>
+    <div class="seg-wrap rise" style="--i:1">
+      <div class="seg" role="tablist" aria-label="Разделы экрана Продукт">
+        <button type="button" role="tab" id="t-opt" aria-controls="p-opt" aria-selected="true"><svg class="i"><use href="#i-layers"/></svg>Сокращение линейки и конструктив</button>
+        <button type="button" role="tab" id="t-new" aria-controls="p-new" aria-selected="false"><svg class="i"><use href="#i-cubeplus"/></svg>Новые и обновлённые изделия (6)</button>
+      </div>
+      <span class="seg-hint">2 вкладки внутри экрана</span>
+    </div>
+
+    <!-- вкладка 1: Оптимизация линейки и конструктива -->
+    <div class="subpanel is-on" id="p-opt" role="tabpanel" aria-labelledby="t-opt">
+      <p class="subhead">Наглядный пример на 2-местной парте РГ 5–7: от какого конструктива уходим и почему оставляем более технологичную и удобную в логистике линейку</p>
+      <div class="opt-compare">
+        <article class="card opt-side drop rise" style="--i:1">
+          <div class="opt-head">
+            <div>
+              <h3>Smarty с бампером</h3>
+              <small>SD2X5-7R · 2-местная парта РГ 5–7</small>
+            </div>
+            <span class="st no">убираем из линейки</span>
+          </div>
+          <button class="opt-pic" type="button" data-gallery="smarty" data-idx="0" aria-label="Открыть крупно Smarty с бампером">
+            <img src="media/live/smarty_bumper_sd2.webp" alt="Стол ученический Smarty SD2X5-7R с громоздким гнутым трубным поясом-бампером" width="1200" height="900" loading="lazy">
+            <span class="opt-cap">Громоздкий неразборный бампер</span>
+          </button>
+          <ul class="opt-pts">
+            <li><svg class="i"><use href="#i-alert"/></svg><span><b>Неудобная логистика и доставка:</b> объёмная гнутая рама-бампер «возит воздух», не ложится плоско в упаковку и повреждается при перевозке</span></li>
+            <li><svg class="i"><use href="#i-alert"/></svg><span><b>Нефункциональный конструктив:</b> громоздкий, лишние гибы и сварка, сложнее покраска — при этом нет закрытого переднего экрана (просвечивают сетки)</span></li>
+            <li><svg class="i"><use href="#i-alert"/></svg><span><b>Решение:</b> выводим серию с бампером из ассортимента, убираем дубли и проблемную доставку</span></li>
+          </ul>
+          <div class="story-links">
+            <button class="sbtn" type="button" data-gallery="smarty" data-idx="1"><svg class="i"><use href="#i-search"/></svg>Узел пояса-бампера (схема)</button>
+          </div>
+        </article>
+
+        <article class="card opt-side keep rise" style="--i:2">
+          <div class="opt-head">
+            <div>
+              <h3>Smarty Plus</h3>
+              <small>SP2X5-7R · СУ.SM.0006 · 2-местная парта РГ 5–7</small>
+            </div>
+            <span class="st ok">остаётся в линейке</span>
+          </div>
+          <button class="opt-pic" type="button" data-gallery="smarty" data-idx="2" aria-label="Открыть крупно Smarty Plus">
+            <img src="media/live/smarty_plus_sp2.webp" alt="Стол ученический Smarty Plus SP2X5-7R с плоским поясом и перфорированной царгой" width="1200" height="900" loading="lazy">
+            <span class="opt-cap">Компактный каркас + перфорированная царга</span>
+          </button>
+          <ul class="opt-pts">
+            <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Компактная логистика:</b> плоский прямой пояс и разборный каркас — плотная укладка в коробку и на палету без лишнего объёма</span></li>
+            <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Технологичный конструктив:</b> проще резка, сварка и покраска, жёсткая рама и аккуратный передний экран из перфорированного листа 0,8 мм</span></li>
+            <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Готова к серии:</b> полный комплект КД, новый паспорт ПС/РЭ, схема сборки картинками и калькуляция</span></li>
+          </ul>
+          <div class="story-links">
+            <button class="sbtn" type="button" data-gallery="smarty" data-idx="2"><svg class="i"><use href="#i-cam"/></svg>Сравнить все 4 вида (← →)</button>
+          </div>
+        </article>
+      </div>
+
+      <article class="card opt-slots rise" style="--i:3">
+        <div class="opt-slots-txt">
+          <div class="ai-head">
+            <span class="lbl">Второе продуктовое решение · столешницы</span>
+            <span class="st ok">отказываемся от слотов</span>
+          </div>
+          <h3>Убираем врезные слоты (лотки для ручек) на партах</h3>
+          <p>Практической необходимости в них нет, зато они дают лишнюю фрезеровку на ЧПУ, отдельную пластиковую деталь в закупе/комплектации и уязвимое место для влаги и сколов ЛДСП.</p>
+          <div class="gost-grid">
+            <div class="gost-box ok">
+              <b>Горизонтальные парты <span class="st ok">не обязательны</span></b>
+              <span><b>100% без слотов:</b> ГОСТ 11015-93 (п. 2.6) прямо разрешает без углублений; ГОСТ 35278-2025, ГОСТ 22046-2016, СТ РК EN 1729-1 и СанПиН РК не требуют</span>
+            </div>
+            <div class="gost-box warn">
+              <b>Наклонные столешницы (RN) <span class="st pilot">нюанс РК</span></b>
+              <span>В <b>РФ</b> (ГОСТ 35278-2025 п. 4.1.2) и по <b>EN 1729-1</b> обязательность снята; в <b>РК</b> при прямой ссылке ТЗ на ГОСТ 11015-93 (п. 2.6) место для ручек формально нужно — ставим опциональный лоток только под такое ТЗ</span>
+            </div>
+          </div>
+        </div>
+        <button class="opt-pic" type="button" data-gallery="smarty" data-idx="3" aria-label="Открыть крупно столешницу со слотами">
+          <img src="media/live/smarty_slots_top.webp" alt="Вид сверху на столешницу 2-местной парты с двумя врезными слотами для ручек" width="1200" height="900" loading="lazy">
+          <span class="opt-cap">Врезные слоты — убираем из базы</span>
+        </button>
+      </article>
+
+      <div class="opt-bridge rise" style="--i:4">
+        <span><b>Тот же курс по всей линейке:</b> переводим NOMAD на резьбовые заклёпки вместо сварных пластин, унифицируем трубы и крепёж — ниже себестоимость, проще закуп и доставка</span>
+        <button class="sbtn" type="button" data-open-tab="t-new">Новые и обновлённые изделия (6) →</button>
+      </div>
+    </div>
+
+    <!-- вкладка 2: Новые и обновлённые изделия -->
+    <div class="subpanel" id="p-new" role="tabpanel" aria-labelledby="t-new" hidden>
+      <p class="subhead">От 3D-модели и вариантов исполнения — до живых образцов в цехе. На каждой карточке можно открыть живые фото и короткие видео</p>
     <div class="prods">
       <article class="prod rise" style="--i:1">
         <figure class="vcard">
@@ -1472,6 +1597,7 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
       </article>
     </div>
     <p class="foot">Цвета на 3D-моделях условные — подбираются по RAL и декорам ЛДСП под конкретный заказ</p>
+    </div>
   </div>
 </section>
 
@@ -1672,41 +1798,40 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   <div class="hero-bg" aria-hidden="true"><div class="grid-lines"></div></div>
   <div class="wrap">
     <div class="final-head">
-      <span class="kicker rise">10 · Итог на ноябрь 2026</span>
-      <h2 class="rise" style="--i:1">Главный приоритет — <span class="mark">отлаженная база данных изделий</span></h2>
-      <p class="lead rise" style="--i:2">Отлаженная база — опора, которая объединяет продажи, снабжение, 1С и производство в одну систему. Честная карта состояния и наш общий вектор на 2027</p>
+      <span class="kicker rise">10 · Итог на ноябрь 2026 · Общий курс</span>
+      <h2 class="rise" style="--i:1">Общий вектор на 2027: <span class="mark">проще продукт, быстрее расчёт, сильнее производство</span></h2>
+      <p class="lead rise" style="--i:2">КТО меняет конструктив линейки, технологии в цехе и инструменты для продаж и снабжения. Порядок в данных — лишь опора, а главная цель — выигрывать заказы быстрее и выпускать без переделок</p>
     </div>
     <div class="final-cols">
       <article class="fcol ok rise" style="--i:3">
         <div class="fcol-h"><h3>Уже работает</h3><span class="fbadge">Работает</span></div>
         <ul>
-          <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Фундамент KPI:</b> агентский учёт СЗ в Bitrix24 (содержание, исполнители, сроки готовности)</span></li>
-          <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Паспорта и сборка:</b> 37 паспортов ПС/РЭ в новом стиле и 28 схем сборки картинками</span></li>
-          <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Живой R&amp;D:</b> опытные образцы, нагрузочные тесты и отработка новых узлов в цехе</span></li>
+          <li><svg class="i"><use href="#i-layers"/></svg><span><b>Оптимизация линейки и R&amp;D:</b> решение по Smarty Plus и отказу от слотов, живые образцы, тесты и лазерная гибка/сварка в цехе</span></li>
+          <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Паспорта и сборка:</b> 37 паспортов ПС/РЭ в новом стиле и 28 схем сборки картинками — меньше вопросов у клиента</span></li>
+          <li><svg class="i"><use href="#i-checkc"/></svg><span><b>Прозрачность и KPI:</b> агентский учёт 917 СЗ в Bitrix24 (содержание, исполнители, сроки готовности)</span></li>
         </ul>
       </article>
       <article class="fcol pilot rise" style="--i:4">
         <div class="fcol-h"><h3>Пилоты и разработка</h3><span class="fbadge">Пилоты</span></div>
         <ul>
-          <li><svg class="i"><use href="#i-layers"/></svg><span><b>Приоритет №1 — фундамент единой базы:</b> Шифратор, Ограничительный перечень, TROYA_PDM (NOMAD 18, Smarty 8) и Базис</span></li>
-          <li><svg class="i"><use href="#i-db"/></svg><span><b>Задел под связку с 1С и закуп:</b> Навигатор базы изделий, справочник соответствий 1С и механизм себестоимости (металл и окраска)</span></li>
-          <li><svg class="i"><use href="#i-cnc"/></svg><span><b>ИИ + скриптовая автоматизация и станки:</b> разработка инструментов для металла и корпуса, пилот «Базис — станок», ИИ-логистика и опыты управления CAD через ИИ (MCP)</span></li>
-          <li><svg class="i"><use href="#i-swap"/></svg><span><b>Стык металл + корпус:</b> отрабатываем схему с одним ведущим конструктором</span></li>
+          <li><svg class="i"><use href="#i-calc"/></svg><span><b>Для продаж и снабжения:</b> ранняя ИИ-логистика, расчёт себестоимости (металл и окраска), нормы ЛЗК и ограничительный перечень</span></li>
+          <li><svg class="i"><use href="#i-cnc"/></svg><span><b>ИИ + скриптовая автоматизация и ЧПУ:</b> инструменты для металла и корпуса, пилот «Базис — станок» и опыты управления CAD через ИИ (MCP)</span></li>
+          <li><svg class="i"><use href="#i-swap"/></svg><span><b>Стык цехов и порядок в данных:</b> схема «металл + корпус» с ведущим конструктором, единый архив PDM / Базис и задел под справочник 1С</span></li>
         </ul>
       </article>
       <article class="fcol plan rise" style="--i:5">
         <div class="fcol-h"><h3>План на 2027</h3><span class="fbadge">План</span></div>
         <ul>
-          <li><svg class="i"><use href="#i-gauge"/></svg><span><b>Стандарт в производство:</b> металл — без участия конструктора (в тот же день), корпус — только оптимальный раскрой на заказ (≤ 1 дня)</span></li>
-          <li><svg class="i"><use href="#i-tag"/></svg><span><b>Станки и этикетки:</b> часть серийных проектов с этикетками, раскрой 6 м трубы на труборез</span></li>
-          <li><svg class="i"><use href="#i-link"/></svg><span><b>Единый справочник 1С ↔ КД:</b> сквозные артикулы готовой продукции, закуп и комплектация напрямую по 3D-модели</span></li>
+          <li><svg class="i"><use href="#i-cubeplus"/></svg><span><b>Упрощённая линейка и серия:</b> унифицированные узлы, компактная логистика и быстрый выпуск проверенных серий</span></li>
+          <li><svg class="i"><use href="#i-gauge"/></svg><span><b>Стандарт в цех без задержек:</b> металл — в производство в тот же день, корпус — только оптимальный раскрой (≤ 1 дня) и этикетки на станок</span></li>
+          <li><svg class="i"><use href="#i-link"/></svg><span><b>Сквозная связка 1С ↔ КД:</b> понятные артикулы, точный закуп и комплектация напрямую по 3D-модели</span></li>
         </ul>
       </article>
     </div>
     <div class="final-team rise" style="--i:6">
-      <div><b>Продажам</b><span>быстрые КП, ранняя логистика, новые паспорта и меньше рекламаций</span></div>
-      <div><b>Снабжению</b><span>единый перечень материалов, понятные коды 1С, точные нормы и база цен</span></div>
-      <div><b>Производству</b><span>проверенные чертежи, этикетки на станок и технологичные узлы</span></div>
+      <div><b>Продажам</b><span>простая линейка, быстрые КП, ранняя логистика, новые паспорта и меньше рекламаций</span></div>
+      <div><b>Снабжению</b><span>меньше разносортицы, единый перечень материалов, точные нормы ЛЗК и цены без НДС</span></div>
+      <div><b>Производству</b><span>технологичные узлы, лазерная гибка/сварка, проверенные чертежи и этикетки на станок</span></div>
       <div class="all"><b>Общая цель TROYA</b><span>двигаемся в одном направлении — от точной заявки до довольного клиента</span></div>
     </div>
     <div class="final-foot rise" style="--i:7">
@@ -1752,30 +1877,28 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   'use strict';
   const L = (t) => '<b>' + t + '</b>';
   const NOTES = {
-    home: ['Коллеги, добрый день. Сегодня покажу продажам, снабжению и производству, что именно делает технический отдел, куда мы движемся и зачем это нужно каждому из нас.',
-           'Главная мысль: мы строим не просто «архив для конструкторов», а единую инженерную систему TROYA — чтобы продажи быстрее считали КП, снабжение закупало без путаницы кодов, а цех собирал без переделок. Двигаемся вместе к одной цели.'],
+    home: ['Коллеги, добрый день. Сегодня покажу продажам, снабжению и производству, чем на деле занимается технический отдел, куда мы движемся и зачем это нужно каждому из нас.',
+           'Главная мысль: мы не просто «наводим порядок в папке с чертежами» — мы упрощаем сам продукт и линейку, осваиваем новые технологии в цехе, автоматизируем расчёты и КД, чтобы продажи быстрее выигрывали заказы, снабжение закупало без путаницы, а цех выпускал без переделок.'],
     numbers: ['Точка А — реальный поток заявок. За пять месяцев — 917 служебных записок, 8–9 в каждый рабочий день. Две из трёх — 591 (64 %) — проходят через конструкторов. По оценке, 63 % СЗ с участием КТО содержат нестандартные позиции. Медиана листа согласования — 1 день, по рекламациям — 1,5 дня.',
               'По KPI важно понимать контекст: раньше KPI, метрики и анализ по СЗ отсутствовали совсем — не было даже фундамента. Сейчас фундамент есть: уже работает агентский учёт СЗ из Bitrix24 — ведётся база по содержанию, исполнителям и срокам готовности. Теперь можно оценивать KPI и рост.',
-              'На старте медиана от СЗ до выдачи КД — 6 календарных дней. Сегодня конструктор нужен для запуска каждого изделия — в том числе стандартного. Цель по стандартным изделиям — убрать лишние потери: по металлу запуск в производство вообще без конструктора (в тот же день), а по корпусной мебели — только работа конструктора на оптимальный раскрой под конкретный заказ (не больше 1 дня, включая покупные и ведомости).',
-              'Сократить срок помогут единая библиотека и автоматизированная система формирования документации в цех по стандартным изделиям; по корпусной части — пилот «конструктор-технолог → станок». Эффект увидим по этой же медиане.'],
-    debt: ['Главный технический долг за 10+ лет — отсутствие единого справочника номенклатуры, который связывает 1С, снабжение, склад, 3D-модели и чертежи. Исторически в 1С накопились дубли кодов и единиц измерения, а у готовой продукции почти нет сквозных артикулов. Из-за этого страдают все: конструктор, снабжение, склад и цех. Вместе со снабжением и ИТ закладываем единый справочник номенклатуры и таблицу соответствий (коды 1С ↔ материал КТО).',
-           'Из-за отсутствия сквозного цикла КД возникают двойная работа и ошибки. Пример — ' + L('СЗ 794-М', 29365) + ': о папке со схемами присадки знали 2 конструктора из 10, чертежи для цеха потеряны — собирали по памяти. Второй пример — ' + L('СЗ 182/1 Аст', 29211) + ': одни и те же стеллажи вышли глубиной 430 и 450 мм из-за разных версий КД — рекламация.'],
-    arch: ['Это главный экран презентации — честная карта того, что мы заложили за 5 месяцев. Важно подчеркнуть: отлаженная база данных изделий — приоритет №1 и опора, которая связывает продажи, снабжение, 1С и производство в одну систему.',
-           'База изделий (Шифратор, Ограничительный перечень материалов, TROYA_PDM для металла и лабмебели, Базис для серийного корпуса): параллельно держим поток 8–9 СЗ в день и пошагово переводим серии в единую базу.',
-           'Навигатор по базе данных изделий (пилот): в перспективе он должен стать единственным источником истины по изделиям — каталог 3D, ведомости ЛЗК, раскрой, механизм расчёта себестоимости (пока пилот по металлу и окраске) и задел под будущую связку с 1С.',
-           'Цех и ИИ (пилот): ведётся разработка инструментов и скриптов для автоматизации работы как с металлом (ESKD-AUTO, SWDraw, Draw, выгрузка ЧПУ и ЛЗК), так и с корпусной мебелью (Базис, пилот «Базис — станок»), плюс опыты управления CAD через ИИ (MCP). Принцип неизменный: машина и скрипты делают — человек контролирует, доводит до идеала в ручном режиме и утверждает.',
-           'Что уже работает для клиента прямо сейчас: 37 паспортов ПС/РЭ, 28 схем сборки картинками и живые испытания образцов в цехе.'],
-    system: ['<b>Вкладка 1 · Архив и библиотека.</b> Строим централизованную базу — одну для всех: переносим серии (18 изделий NOMAD на проверке до выдачи в цех, 8 изделий Smarty чертим заново, тумба/шкаф «Москвы 2.0», 3D ARco Duo), собираем 3D-модели крепежа, покупных изделий, фурнитуры и профилей (178 файлов), формируем ограничительный перечень металла. Параллельно разрабатываем собственные инструменты и скрипты автоматизации (ESKD-AUTO, SWDraw, Draw, Базис) и готовим задел под 1С в Навигаторе базы изделий.',
-             '<b>Вкладка 2 · Металл + корпус.</b> Большая часть линейки — комбинированные изделия (в одном вытяжном шкафу до 60 позиций крепежа; живое фото тумбы с мойкой открывается по кнопке). Сейчас стык держится на опыте сборщиков — отрабатываем схему из 5 правил с одним ведущим конструктором, схемой стыков, одной 3D-сборкой и контрольной сборкой.',
-             '<b>Вкладка 3 · Конструктор-технолог → станок.</b> Ведётся подготовка конструкторского отдела к быстрой интеграции в общую систему — пилот «Базис — станок» по корпусу: раскрой из модели, распил на пильном центре, этикетки по порядку выхода, присадка читает штрихкод. Техническая возможность подтверждена, нюансы решаем; цель на 2027 — перевести часть серийных проектов на этикетки.'],
-    'ai-docs': ['Здесь собрана конкретная польза для продаж и для снабжения.',
-                'Для продаж (пилоты): с использованием ИИ получается оперативно прорабатывать предварительные варианты логистики и упаковки ещё на ранней стадии (примеры — скамья FLS: 731 комплект на фуру вместо 440; табурет: 252 шт. на паллету, проверено в 3D). По себестоимости разработан и совершенствуется механизм расчёта (пока пилот по металлу и окраске, ориентир — дни вместо недель; пример ускорения КП — ' + L('СЗ Аст-268', 32147) + ').',
-                'Для снабжения (пилот · в работе): ограничительный перечень материалов сокращает разносортицу профилей и фурнитуры — проще держать складской остаток и получать объёмную цену у поставщиков. Точные ведомости ЛЗК и 1D-раскрой 6-метровых хлыстов убирают срочные дозакупки, а единый справочник 1С и база цен без НДС снимают путаницу кодов.',
-                'Для покупателя (уже работает): разработан новый стандарт схем сборки и паспортов — часть изделий уже имеет инструкции в новом виде (37 паспортов и 28 схем сборки картинками; примеры ' + L('СЗ 840', 30985) + ', ' + L('СЗ 872', 31511) + '). На экране кликабельные страницы стола NOMAD V.'],
-    products: ['Акт III — живое доказательство. Чистая витрина новых и обновлённых изделий: у каждой карточки можно открыть живые фото из цеха и короткие тесты.',
-               'Банкетка со спинкой — ' + L('СЗ Аст-261', 32015) + '; столы Kcell с перегородкой — ' + L('СЗ Ал-70', 31697) + ', вариант с царгой подготовили быстро по просьбе клиента.',
-               'Обновлённый NOMAD: узел регулировки высоты перевели на заклёпки-гайки вместо сварных пластин внутри трубы — 4 винта вместо 8, снаружи головок не видно. Ползунок «Было / Стало» можно открыть во весь экран (кнопка в правом нижнем углу картинки). Чертежи на проверке, до серии — пробный образец.',
-               'Стол и стул по типу ISKU — экспортный заказ в Ригу (ростовые группы 5–7), опытные образцы изготовлены. ARco Duo — доступная двухместная парта 5–7, модель переносим в SolidWorks; стул 5–7 уже продаётся, по 3–5 покажем образцы после доработки.'],
+              'На старте медиана от СЗ до выдачи КД — 6 календарных дней. Сегодня конструктор нужен для запуска каждого изделия — в том числе стандартного. Цель по стандартным изделиям — убрать лишние потери: по металлу запуск в производство вообще без конструктора (в тот же день), а по корпусной мебели — только работа конструктора на оптимальный раскрой под конкретный заказ (не больше 1 дня, включая покупные и ведомости).'],
+    debt: ['За 10+ лет накопились четыре системные проблемы, которые бьют по деньгам всех отделов — и дело далеко не только в данных.',
+           'Во-первых, раздулась номенклатура и усложнился конструктив: дублирующие модели, громоздкие неразборные узлы и лишняя фрезеровка бьют по логистике, себестоимости и загрузке цеха (конкретный разбор по Smarty и слотам — на экране 07).',
+           'Во-вторых, разрыв между 1С и КД и отсутствие сквозного цикла проверки КД: дубли кодов и единиц измерения в 1С, отсутствие сквозных артикулов ГП, чертежи уходили в цех без контроля версии. Примеры — ' + L('СЗ 794-М', 29365) + ' (о схемах присадки знали 2 конструктора из 10) и ' + L('СЗ 182/1 Аст', 29211) + ' (стеллажи вышли 430 и 450 мм из-за разных версий — рекламация).'],
+    arch: ['Большая картина за 5 месяцев — пять равноправных направлений развития КТО. Важно подчеркнуть: порядок в данных и 1С — лишь одна из пяти опор, а не единственная тема работы отдела.',
+           '1) Продукт и оптимизация линейки: сокращаем лишнее (Smarty с бампером → Smarty Plus, отказ от слотов), обновляем NOMAD на заклёпках и выводим новинки. 2) Живой R&D и цех: образцы, тесты прочности, лазерная резка трубы под ручную гибку + лазерная сварка.',
+           '3) Коммерция и закуп: 37 паспортов и 28 схем сборки, ИИ-логистика, расчёт себестоимости (металл и окраска), единые нормы ЛЗК. 4) Автоматизация: ИИ + скрипты для металла и корпуса, пилот «Базис — станок», опыты управления CAD через ИИ (MCP). 5) Порядок и KPI: учёт СЗ, Ограничительный перечень, PDM/Базис и задел под 1С.'],
+    system: ['<b>Вкладка 1 · Автоматизация и станки (открыта первой).</b> Пилот «Базис — станок» по корпусной мебели: раскрой из модели, распил на пильном центре, этикетки в порядке выхода, присадка читает штрихкод. Техническая возможность подтверждена; цель на 2027 — часть серийных проектов с этикетками. Параллельно разрабатываем собственные ИИ-инструменты и скрипты для металла (ESKD-AUTO, SWDraw, Draw, автовыгрузка ЧПУ/ЛЗК) и корпуса.',
+             '<b>Вкладка 2 · Металл + корпус.</b> Большая часть линейки — комбинированные изделия (живое фото тумбы с мойкой открывается по кнопке). Отрабатываем схему из 5 правил: один ведущий конструктор, схема стыков до чертежей, одна 3D-сборка, один список деталей и контрольная сборка.',
+             '<b>Вкладка 3 · Архив, библиотека и 1С.</b> Централизованный архив и единые библиотеки (18 изделий NOMAD, 8 Smarty, 178 файлов крепежа и фурнитуры), ограничительный перечень материалов и задел под справочник соответствий 1С — чтобы не делать работу дважды.'],
+    'ai-docs': ['Практическая польза для продаж и для снабжения.',
+                'Для продаж (пилоты): с использованием ИИ оперативно прорабатываем предварительные варианты логистики и упаковки на ранней стадии (скамья FLS — 731 комплект на фуру вместо 440; табурет — 252 шт. на паллету, проверено в 3D). По себестоимости развиваем механизм расчёта (пилот по металлу и окраске, ориентир — дни вместо недель; пример — ' + L('СЗ Аст-268', 32147) + ').',
+                'Для снабжения (пилот · в работе): ограничительный перечень сокращает разносортицу профилей и фурнитуры, ведомости ЛЗК и 1D-раскрой 6 м хлыстов убирают срочные дозакупки, единый перечень цен без НДС упрощает закуп.',
+                'Для покупателя (уже работает): новый стандарт паспортов и схем сборки картинками — 37 паспортов и 28 схем (примеры ' + L('СЗ 840', 30985) + ', ' + L('СЗ 872', 31511) + ').'],
+    products: ['<b>Вкладка 1 · Сокращение линейки и упрощение конструктива.</b> Принято принципиальное решение: сокращаем раздутую номенклатуру и уходим от нетехнологичных узлов.',
+               'Пример №1 — двухместная парта 5–7 Smarty: <b>убираем Smarty с бампером (SD2X5-7R)</b> из-за неудобной логистики и проблем с доставкой (объёмный неразборный гнутый пояс-бампер «возит воздух», бьётся при перевозке, громоздкий, без закрытой царги) — <b>остаётся Smarty Plus (SP2X5-7R / СУ.SM.0006)</b>: компактный плоский пояс, жёсткая рама, перфорированная царга 0,8 мм, плотная упаковка и полный комплект КД/паспортов. Все 4 кадра открываются крупно.',
+               'Пример №2 — <b>отказываемся от врезных слотов на партах</b>: практической необходимости нет, лишняя фрезеровка ЧПУ и пластиковая деталь. Проверка по ГОСТ: на горизонтальных партах не обязательны нигде (ГОСТ 11015-93 п. 2.6 прямо разрешает без углублений; ГОСТ 35278-2025, ГОСТ 22046-2016, СТ РК EN 1729-1 и СанПиН РК не требуют). Важный нюанс для продаж по <b>наклонным столешницам (RN)</b>: в РФ (ГОСТ 35278-2025 п. 4.1.2) и по СТ РК EN 1729-1 обязательность снята, но в РК при прямой привязке ТЗ к ГОСТ 11015-93 (п. 2.6) место хранения ручек (≥ 115×45×8 мм или Ø ≥ 55 мм) формально обязательно — для таких ТЗ ставим опциональный лоток без фрезеровки серийных плит.',
+               '<b>Вкладка 2 · Новые и обновлённые изделия (6).</b> Банкетка (' + L('СЗ Аст-261', 32015) + '), столы Kcell (' + L('СЗ Ал-70', 31697) + '), обновлённый NOMAD на заклёпках (4 винта вместо 8), экспортный комплект ISKU (Рига, 5–7), доступная парта ARco Duo и стул 5–7 / 3–5.'],
     rnd: ['Это главный ответ на вопрос «не оторваны ли конструкторы от реальности»: отдел ведёт полный R&D-цикл — от 3D и расчёта узлов до живого образца и нагрузочных тестов в цехе.',
           'Отдельное направление R&D — поиск новых технологических решений для типовых узлов: осваиваем лазерную резку трубы под ручную гибку (1 цельная заготовка вместо 4–6 отдельных отрезков — снижение трудозатрат и рост скорости сборки) и отрабатываем интеграцию таких конструкций с лазерной сваркой. На примере боковины банкетки ПФ.UN.0012 — одна заготовка длиной 2120,5 мм с тремя радиусными вырезами R38,5 превращается в цельную боковину; рядом — живые фото цельногнутой опоры со швами лазерной сварки.',
           'Наверху — 29-секундный промо-ролик с главными моментами. Ниже — три короткие вырезки живых тестов по 16–19 секунд (открываются крупно со звуком): испытание стола Kcell под двойной живой нагрузкой, контрольная сборка покрашенного образца и тест устойчивости опытной парты.',
@@ -1783,11 +1906,10 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
     rules: ['<b>Вкладка 1 · Заявки и 6 правил.</b> Где сегодня мы вместе теряем дни до старта чертежей: на фото одно, в описании другое; 20 столов под одним наименованием без артикулов; согласование после запуска; пример общежития (заказ 89, КазУТБ) — декор сделали по картинке, на месте мешали вентиляция и свет, перепиливали на объекте.',
             'Поэтому шесть практических правил, которые ускоряют заказ для всех: полная СЗ до старта; запросить у клиента документы здания (был случай — выехали на замер, а у завхоза лежали обмерные планы и проект); правки только через СЗ; реалистичный срок в КП; новое/свет/несущие сначала к нам; на крупном объекте один ответственный с первого дня.',
             '<b>Вкладка 2 · Путь нового изделия.</b> Спешка на старте бьёт по себестоимости. Новое изделие идёт через оценку с производством и снабжением, опытный образец (цена образца), решение и серию (цена серии). По образцу делаем при наличии нужной оснастки либо адаптируем под наши возможности; разработка новых изделий с нуля от концепта до серии — можем, но это отдельный длительный процесс; по светодизайну и несущим конструкциям компетенций нет (нужна лицензия). Пример — «Москва 2.0» (17 позиций: 2 готовы, 5 в работе): сроки только через оценку КТО.'],
-    final: ['Честный итог на ноябрь 2026 и наш общий вектор на 2027 — без приукрашивания.',
-            'Уже работает: фундамент KPI (агентский учёт СЗ в Bitrix24), 37 паспортов и 28 схем сборки в новом стиле, живой R&D и испытания образцов в цехе.',
-            'В пилотах и разработке: приоритет №1 — отлаженная база изделий (Шифратор, Ограничительный перечень, TROYA_PDM и Базис), Навигатор базы и задел под 1С + себестоимость металла и окраски, ИИ + скриптовая автоматизация для металла и корпуса, пилот «Базис — станок», стык «металл + корпус».',
-            'План на 2027 и зачем это каждому отделу: продажам — быстрые КП, логистика, паспорта и меньше рекламаций; снабжению — единый перечень, понятные коды 1С, точные нормы и база цен; производству — проверенные чертежи, этикетки на станок и технологичные узлы.',
-            'У нас одна общая цель — чтобы TROYA выпускала качественные изделия быстрее и прибыльнее. Двигаемся в одном направлении! Спасибо, готов ответить на вопросы.']
+    final: ['Честный итог на ноябрь 2026 и наш общий вектор на 2027 — не «про одну базу», а про продукт, цех и коммерческий результат.',
+            'Уже работает: решения по упрощению линейки (Smarty Plus, отказ от слотов), живой R&D и лазерная гибка/сварка, 37 паспортов и 28 схем сборки, агентский учёт 917 СЗ и фундамент KPI.',
+            'В пилотах и разработке: ИИ-логистика и себестоимость для продаж, нормы ЛЗК и ограничительный перечень для снабжения, ИИ + скрипты для металла и корпуса, пилот «Базис — станок», стык «металл + корпус», единый архив PDM / Базис и задел под 1С.',
+            'Общий вектор на 2027: проще продукт, быстрее расчёт, сильнее производство. У нас одна общая цель — двигаемся в одном направлении! Спасибо, готов ответить на вопросы.']
   };
 
   const root = document.documentElement;
@@ -1994,6 +2116,12 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
       { src: 'media/live/bend_laser_frame_live.webp', cap: 'Опытный образец вживую · цельногнутая опора из одной трубы после резки под ручную гибку и лазерной сварки' },
       { src: 'media/live/bend_laser_weld_closeup.webp', cap: 'Узел вживую · стыки после ручной гибки и лазерной сварки: чистый узкий шов и минимум зачистки' },
     ],
+    smarty: [
+      { src: 'media/live/smarty_bumper_sd2.webp', cap: 'УБИРАЕМ · Smarty с бампером (SD2X5-7R, 2-местная 5–7) · объёмный неразборный гнутый пояс-бампер ухудшает логистику и доставку, без передней царги' },
+      { src: 'media/live/smarty_bumper_node.webp', cap: 'УБИРАЕМ · узел пояса-бампера (поз. 4 на схеме SD2X5-7R) · громоздкая пространственная гнутая рама, лишние гибы и сварка, сложная упаковка' },
+      { src: 'media/live/smarty_plus_sp2.webp', cap: 'ОСТАВЛЯЕМ · Smarty Plus (SP2X5-7R · СУ.SM.0006, 2-местная 5–7) · компактный плоский пояс, жёсткий разборный каркас и перфорированная царга 0,8 мм' },
+      { src: 'media/live/smarty_slots_top.webp', cap: 'ОТКАЗЫВАЕМСЯ ОТ СЛОТОВ · вид сверху на столешницу 2-местной парты с врезными лотками · убираем лишнюю фрезеровку ЧПУ и пластиковую деталь (для горизонтальных парт не обязательны по всем ГОСТ; на наклонных в РК по ГОСТ 11015-93 — опция под ТЗ)' },
+    ],
   };
 
   // фильтр фото-коллажа на экране R&D
@@ -2115,6 +2243,12 @@ svg.kdm-arr{width:34px;height:34px;color:var(--orange);stroke-width:2.2}
   });
 
   document.addEventListener('click', e => {
+    const ot = e.target.closest('[data-open-tab]');
+    if (ot) {
+      const tb = document.getElementById(ot.dataset.openTab);
+      if (tb) { selectSeg(tb); window.scrollTo({ top: 0, behavior: reduce.matches ? 'auto' : 'smooth' }); }
+      return;
+    }
     if (e.target.closest('[data-ba-zoom]')) {
       e.preventDefault();
       e.stopPropagation();
